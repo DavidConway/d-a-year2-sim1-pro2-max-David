@@ -15,9 +15,7 @@ public class Main extends Application {
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setScene(scene);
 			primaryStage.show();
-			
-			int x = 5; // test2
-			int aiondaowidn;
+
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
