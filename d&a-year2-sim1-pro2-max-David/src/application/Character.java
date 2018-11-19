@@ -1,8 +1,8 @@
 package application;
 
 public class Character {
-private int HashNum;
-private String Name,Gender,Description;
+private int hashNum;
+private String name,gender,description;
 
 	public Character(String name, String gender, String description) {
 		this.setDescription(description);
@@ -11,39 +11,39 @@ private String Name,Gender,Description;
 	}
 	
 	public String getName() {
-		return Name;
+		return name;
 	}
 	public String getGender() {
-		return Gender;
+		return gender;
 	}
 	public String getDescription() {
-		return Description;
+		return description;
 	}
 	public int getHashNum() {
-		return HashNum;
+		return hashNum;
 	}
 
 	
 	public void setDescription(String description) {
-		Description = description;
+		this.description = description;
 	}
 	public void setName(String name) {
-		Name = name;
+		this.name = name;
 	}
 	public void setGender(String gender) {
 		String workingName = gender.toLowerCase();
 		if(workingName.equals("f")||workingName.equals("female")){
-			this.Gender = gender;
+			this.gender = gender;
 		}
 		else if(workingName.equals("m")||workingName.equals("male")) {
-			this.Gender = gender;
+			this.gender = gender;
 		}
 		else {
-			this.Gender = "N/A";
+			this.gender = "N/A";
 		}
 	}
 	public void setHashNum(int hashNum) {
-		HashNum = hashNum;
+		this.hashNum = hashNum;
 	}
 
 	

@@ -1,7 +1,7 @@
 package application;
 
 public class HashTable<T>{
-	Object[] HashArray = new Object[10];
+	Object[] hashArray = new Object[10];
 	T hold;
 
 	public HashTable() {
@@ -9,22 +9,22 @@ public class HashTable<T>{
 	
 	public void add(T add) {
 		
-		int HashNum = (add.toString().length())%(HashArray.length);
+		int HashNum = (add.toString().length())%(hashArray.length);
 		boolean placeFound = false;
 		int Trycount = 0;
 		
 		while (placeFound == false) {
-			if (HashArray[HashNum] == null) {
-				HashArray[HashNum] = add;
+			if (hashArray[HashNum] == null) {
+				hashArray[HashNum] = add;
 				placeFound = true;
 			}
 			else {
 				HashNum++;
-				if(HashNum == HashArray.length) {
+				if(HashNum == hashArray.length) {
 					HashNum = 0;
 				}
 				Trycount++;
-				if(Trycount >= (HashArray.length/2)) {
+				if(Trycount >= (hashArray.length/2)) {
 					hold = add;
 					//rehash//
 				}
