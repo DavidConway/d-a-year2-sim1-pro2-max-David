@@ -3,15 +3,15 @@ package application;
 import java.util.Calendar;
 
 public class Book {
-private String title,author,genra,plot,imageUrl;
+private String title,author,genre,plot,imageUrl;
 private int pubYear, numOfPages, hashNum;
 
-	public Book(String title, String author, int pubYear, int numOfPages, String genra, String plot, String imageUrl) {
+	public Book(String title, String author, int pubYear, int numOfPages, String genre, String plot, String imageUrl) {
 		this.title = title;
 		this.author = author;
 		this.pubYear = pubYear;
 		this.numOfPages = numOfPages;
-		this.genra = genra;
+		this.genre = genre;
 		this.plot = plot;
 		this.imageUrl = imageUrl;
 	}
@@ -24,8 +24,8 @@ private int pubYear, numOfPages, hashNum;
 	public String getAuthor() {
 		return author;
 	}
-	public String getGenra() {
-		return genra;
+	public String getGenre() {
+		return genre;
 	}
 	public String getPlot() {
 		return plot;
@@ -50,8 +50,8 @@ private int pubYear, numOfPages, hashNum;
 	public void setAuthor(String author) {
 		this.author = author;
 	}
-	public void setGenra(String genra) {
-		this.genra = genra;
+	public void setGenre(String genre) {
+		this.genre = genre;
 	}
 	public void setPlot(String plot) {
 		this.plot = plot;
