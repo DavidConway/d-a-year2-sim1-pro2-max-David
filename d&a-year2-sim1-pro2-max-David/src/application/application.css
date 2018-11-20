@@ -13,9 +13,9 @@
 }
 
 .button{
-	-fx-border-radius: 1;
+	-fx-border-radius: 2;
 	-fx-border-color: #333333;
-	-fx-background-color: #ffffff;
+	
 	
 }
 
@@ -23,6 +23,9 @@
 	-fx-background-color: #c3c3c3;
 }
 
+.bluePanel{
+	-fx-background-image:url('file:/C:/Users/Max/Pictures/Project/bluePanel.jpg');
+}
 
 .label{
 	

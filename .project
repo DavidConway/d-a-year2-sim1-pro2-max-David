@@ -14,11 +14,4 @@
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
-	<linkedResources>
-		<link>
-			<name>d&amp;a-year2-sim1-pro2-max-David/src/application/gui.fxml</name>
-			<type>1</type>
-			<locationURI>PARENT-2-PROJECT_LOC/Projects/gui.fxml</locationURI>
-		</link>
-	</linkedResources>
 </projectDescription>
