@@ -179,7 +179,7 @@
                                                    <padding>
                                                       <Insets bottom="1.0" />
                                                    </padding>
-                                                </Button>
+                                                </Button> 
                                                 <TextField fx:id="filterPublisher" layoutX="20.0" layoutY="100.0" prefHeight="20.0" prefWidth="120.0" promptText="Publisher">
                                                    <padding>
                                                       <Insets left="5.0" />
