@@ -13,14 +13,22 @@
 }
 
 .button{
-	-fx-border-radius: 2;
-	-fx-border-color: #333333;
+	-fx-border-radius: 0;
 	
 	
+}
+.separator .line {
+    
+    -fx-border-width: .1;
+   
 }
 
 .button:hover{
 	-fx-background-color: #c3c3c3;
+	-fx-effect:innershadow(three-pass-box , white , 10  , -4 , 0 , 0 ); 
+}
+.greenPanel{
+	-fx-background-image: url('images/green.jpg');
 }
 .redPanel{
 	-fx-background-image: url('images/red.jpg');
@@ -29,12 +37,19 @@
 	-fx-background-image: url('images/blue.jpg');
 }
 
+.titled-pane:hover{
+	-fx-effect:innershadow(three-pass-box , white , 10  , -4 , 0 , 0 ); 
+	
+}
+
 .title{
-	-fx-background-image:url('images/centre.jpg') 
+	-fx-background-image:url('images/centre.jpg');
+	
 }
 
 .leftPanel{
 	-fx-background-image: url('images/centre.jpg');
+	
 }
 .label{
 	
