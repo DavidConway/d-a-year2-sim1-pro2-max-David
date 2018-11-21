@@ -12,8 +12,6 @@
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.TitledPane?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
@@ -69,16 +67,11 @@
                      <children>
                         <VBox maxWidth="177.0" prefHeight="770.0" prefWidth="177.0" style="-fx-background-color: #333333;">
                            <children>
-                              <ImageView fitHeight="133.0" fitWidth="160.0" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../Pictures/Camera%20Roll/designbig.jpg" />
-                                 </image>
-                              </ImageView>
                               <Accordion minWidth="-Infinity" prefWidth="160.0" style="-fx-background-color: #ffffff;">
                                 <panes>
                                   <TitledPane animated="false" minWidth="-Infinity" prefWidth="160.0" text="Add Book">
                                     <content>
-                                      <AnchorPane maxWidth="200.0" minWidth="-Infinity" prefHeight="253.0" prefWidth="160.0" styleClass="bluePanel" stylesheets="@../git/d-a-year2-sim1-pro2-max-David/bin/application/application.css">
+                                      <AnchorPane maxWidth="200.0" minWidth="-Infinity" prefHeight="253.0" prefWidth="160.0" styleClass="bluePanel" stylesheets="application/application.css">
                                              <children>
                                                 <TextField fx:id="textTitle" layoutX="20.0" layoutY="10.0" prefHeight="20.0" prefWidth="120.0" promptText="Title">
                                                    <padding>
@@ -171,11 +164,6 @@
                                                     </TitledPane>
                                                   </panes>
                                                 </Accordion>
-                                                <ImageView fitHeight="514.0" fitWidth="140.0">
-                                                   <image>
-                                                      <Image url="@../Pictures/Camera%20Roll/bluePanel.jpg" />
-                                                   </image>
-                                                </ImageView>
                                              </children></VBox>
                                        </left>
                                        <top>

@@ -22,12 +22,18 @@
 .button:hover{
 	-fx-background-color: #c3c3c3;
 }
-
+.redPanel{
+	-fx-background-image: url('images/red.jpg');
+}
 .bluePanel{
-	-fx-background-image:url('file:/C:/Users/Max/Pictures/Project/bluePanel.jpg');
+	-fx-background-image: url('images/blue.jpg');
 }
 
+.leftPanel{
+	-fx-background-image: url('images/centre.jpg');
+}
 .label{
+	
 	
 }
 
