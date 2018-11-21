@@ -14,13 +14,9 @@
 
 .button{
 	-fx-border-radius: 0;
-	
-	
 }
 .separator .line {
-    
     -fx-border-width: .1;
-   
 }
 
 .button:hover{
