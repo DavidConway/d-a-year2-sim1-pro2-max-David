@@ -46,5 +46,8 @@ private String name,gender,description;
 		this.hashNum = hashNum;
 	}
 
-	
+	public String toString()
+	{
+		return name;
+	}
 }

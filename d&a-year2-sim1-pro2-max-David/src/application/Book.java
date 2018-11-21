@@ -76,5 +76,10 @@ private int pubYear, numOfPages, hashNum;
 		this.hashNum = hashNum;
 	}
 	//
+	
+	public String toString()
+	{
+		return title;
+	}
 }
 
