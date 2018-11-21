@@ -28,7 +28,7 @@
 	-fx-effect:innershadow(three-pass-box , white , 10  , -4 , 0 , 0 ); 
 }
 .greenPanel{
-	-fx-background-image: url('images/green.jpg');
+	-fx-background-image: url('images/colour.jpg');
 }
 .redPanel{
 	-fx-background-image: url('images/red.jpg');
@@ -40,6 +40,11 @@
 .titled-pane:hover{
 	-fx-effect:innershadow(three-pass-box , white , 10  , -4 , 0 , 0 ); 
 	
+}
+
+.tab-pane *.tab-header-background {
+	-fx-background-image:url('images/centre.jpg');
+    -fx-effect: innershadow(two-pass-box , rgba(0,0,0,0.6) , 4, 0.0 , 0 , 0);
 }
 
 .title{
