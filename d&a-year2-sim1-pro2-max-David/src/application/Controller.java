@@ -4,6 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.Pane;
 
 public class Controller {
 	//MAIN LIST
@@ -48,6 +49,12 @@ public class Controller {
     private TextField filterLength;
     @FXML
     private TextField filterGenre;
+    
+    //GRIDS TO ADD TO
+    @FXML
+    private Pane bookPane;
+    @FXML
+    private Pane characterPane;
     
     
     @FXML
