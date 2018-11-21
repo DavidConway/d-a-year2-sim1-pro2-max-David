@@ -3,6 +3,8 @@ package application;
 import java.util.Calendar;
 
 public class Book {
+private LinkedList<Character> characters = new LinkedList<>();	//All  books will have their own list of associated characters/Or hash keys if change is needed.
+	
 private String title,author,genre,plot,imageUrl;
 private int pubYear, numOfPages, hashNum;
 
@@ -60,12 +62,12 @@ private int pubYear, numOfPages, hashNum;
 		this.imageUrl = imageUrl;
 	}
 	public void setPubYear(int pubYear) {
-		//makes sur the year has past or is the curent year else defalts to 0000
+		//makes sure the year has past or is the current year else defaults to 0
 		if(pubYear <= Calendar.getInstance().get(Calendar.YEAR)) {
 			this.pubYear = pubYear;
 		}
 		else {
-			this.pubYear = 0000;
+			this.pubYear = 0;
 		}
 		//
 	}

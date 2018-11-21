@@ -13,7 +13,7 @@ public class LinkedList<T> {
 		node.next = head;
 		head = node;
 		node.setContents(contents);
-		node.setIndex(size());
+		node.setIndex(size()-1);
 	}
 
 	public void remove(int index) {

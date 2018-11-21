@@ -6,40 +6,63 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
 public class Controller {
-	
-	//FIELDS FOR ADDING A BOOK
-	@FXML
-	private TextField textTitle;
-	@FXML
-	private TextField textAuthor;
-	@FXML
-	private TextField textYear;
-	@FXML
-	private TextField textPages;
-	@FXML
-	private TextField textGenre;
-	@FXML
-	private TextArea textPlot;
-	
-	//FIELDS FOR ADDING A CHARACTER TO LIST
-	@FXML
-	private TextField textName;
-	@FXML
-	private TextField textGender;
-	@FXML
-	private TextArea textDescription;
+	//MAIN LIST
+	LinkedList<Book> books = new LinkedList<>();
 
-	@FXML
-	void addBookOnClick(ActionEvent event) {
+	//FIELDS FOR ADD BOOKS
+    @FXML
+    private TextField textTitle;
+    @FXML
+    private TextField textAuthor;
+    @FXML
+    private TextField textPublisher;
+    @FXML
+    private TextField textYear;
+    @FXML
+    private TextField textLength;
+    @FXML
+    private TextArea textPlot;
+    @FXML
+    private TextField textGenre;
+    @FXML
+    private TextField textURL;
+    
+    //FIELDS FOR ADDING CHARACTERS
+    @FXML
+    private TextField textName;
+    @FXML
+    private TextField textGender;
+    @FXML
+    private TextArea textDescription;
 
-	}
+    //FIELDS FOR FILTERING BOOKS
+    @FXML
+    private TextField filterTitle;
+    @FXML
+    private TextField filterAuthor;
+    @FXML
+    private TextField filterPublisher;
+    @FXML
+    private TextField filterYear;
+    @FXML
+    private TextField filterLength;
+    @FXML
+    private TextField filterGenre;
+    
+    
+    @FXML
+    void addBookOnClick(ActionEvent event) {
 
-	@FXML
-	void addCharOnClick(ActionEvent event) {
+    }
 
-	}
+    @FXML
+    void addCharOnClick(ActionEvent event) {
+
+    }
+
+    @FXML
+    void resetBookSearch(ActionEvent event) {
+
+    }
 
 }
-
-
-
