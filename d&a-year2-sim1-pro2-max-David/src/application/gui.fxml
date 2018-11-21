@@ -7,6 +7,7 @@
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.SeparatorMenuItem?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
@@ -154,27 +155,27 @@
                                                       <Insets left="5.0" />
                                                    </padding>
                                                 </TextField>
-                                                <TextField fx:id="textAuthor1" layoutX="20.0" layoutY="40.0" prefHeight="20.0" prefWidth="120.0" promptText="Author">
+                                                <TextField fx:id="filterAuthor" layoutX="20.0" layoutY="40.0" prefHeight="20.0" prefWidth="120.0" promptText="Author">
                                                    <padding>
                                                       <Insets left="5.0" />
                                                    </padding>
                                                 </TextField>
-                                                <TextField fx:id="textYear1" layoutX="20.0" layoutY="70.0" prefHeight="20.0" prefWidth="120.0" promptText="Year">
+                                                <TextField fx:id="filterYear" layoutX="20.0" layoutY="70.0" prefHeight="20.0" prefWidth="120.0" promptText="Year">
                                                    <padding>
                                                       <Insets left="5.0" />
                                                    </padding>
                                                 </TextField>
-                                                <TextField fx:id="textPages1" layoutX="20.0" layoutY="160.0" prefHeight="20.0" prefWidth="120.0" promptText="Length">
+                                                <TextField fx:id="filterLength" layoutX="20.0" layoutY="160.0" prefHeight="20.0" prefWidth="120.0" promptText="Length">
                                                    <padding>
                                                       <Insets left="5.0" />
                                                    </padding>
                                                 </TextField>
-                                                <TextField fx:id="textGenre1" layoutX="20.0" layoutY="130.0" prefHeight="20.0" prefWidth="120.0" promptText="Genre">
+                                                <TextField fx:id="filterGenre" layoutX="20.0" layoutY="130.0" prefHeight="20.0" prefWidth="120.0" promptText="Genre">
                                                    <padding>
                                                       <Insets left="5.0" />
                                                    </padding>
                                                 </TextField>
-                                                <Button layoutX="20.0" layoutY="190.0" mnemonicParsing="false" onAction="#addBookOnClick" prefHeight="20.0" prefWidth="120.0" text="Add">
+                                                <Button layoutX="20.0" layoutY="190.0" mnemonicParsing="false" onAction="#addBookOnClick" prefHeight="20.0" prefWidth="120.0" styleClass="greenPanel" stylesheets="@application.css" text="Reset Search">
                                                    <padding>
                                                       <Insets bottom="1.0" />
                                                    </padding>
@@ -184,6 +185,36 @@
                                                       <Insets left="5.0" />
                                                    </padding>
                                                 </TextField>
+                                                <Button layoutX="115.0" layoutY="10.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0" styleClass="filterButton" stylesheets="@application.css">
+                                                   <padding>
+                                                      <Insets left="1.0" right="1.0" />
+                                                   </padding>
+                                                </Button>
+                                                <Button layoutX="115.0" layoutY="40.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0" styleClass="filterButton" stylesheets="@application.css">
+                                                   <padding>
+                                                      <Insets left="1.0" right="1.0" />
+                                                   </padding>
+                                                </Button>
+                                                <Button layoutX="115.0" layoutY="70.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0" styleClass="filterButton" stylesheets="@application.css">
+                                                   <padding>
+                                                      <Insets left="1.0" right="1.0" />
+                                                   </padding>
+                                                </Button>
+                                                <Button layoutX="115.0" layoutY="100.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0" styleClass="filterButton" stylesheets="@application.css">
+                                                   <padding>
+                                                      <Insets left="1.0" right="1.0" />
+                                                   </padding>
+                                                </Button>
+                                                <Button layoutX="115.0" layoutY="130.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0" styleClass="filterButton" stylesheets="@application.css">
+                                                   <padding>
+                                                      <Insets left="1.0" right="1.0" />
+                                                   </padding>
+                                                </Button>
+                                                <Button layoutX="115.0" layoutY="160.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0" styleClass="filterButton" stylesheets="@application.css">
+                                                   <padding>
+                                                      <Insets left="1.0" right="1.0" />
+                                                   </padding>
+                                                </Button>
                                              </children>
                                           </AnchorPane>
                                        </content>
@@ -226,12 +257,19 @@
                                           <HBox prefHeight="26.0" prefWidth="200.0" style="-fx-background-color: #333333;" BorderPane.alignment="CENTER">
                                              <children>
                                                 <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="140.0" styleClass="greenPanel" stylesheets="@application.css" text="Menu" />
+                                                <Separator opacity="0.8" orientation="VERTICAL" prefHeight="200.0" style="-fx-background-color: #ffffff;" styleClass="greenPanel" stylesheets="@application.css" />
                                                 <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" styleClass="greenPanel" stylesheets="@application.css" text="Title" />
+                                                <Separator opacity="0.8" orientation="VERTICAL" prefHeight="200.0" style="-fx-background-color: #ffffff;" styleClass="greenPanel" stylesheets="@application.css" />
                                                 <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" styleClass="greenPanel" stylesheets="@application.css" text="Author" />
+                                                <Separator opacity="0.8" orientation="VERTICAL" prefHeight="200.0" style="-fx-background-color: #ffffff;" styleClass="greenPanel" stylesheets="@application.css" />
                                                 <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" styleClass="greenPanel" stylesheets="@application.css" text="Year" />
+                                                <Separator opacity="0.8" orientation="VERTICAL" prefHeight="200.0" style="-fx-background-color: #ffffff;" styleClass="greenPanel" stylesheets="@application.css" />
                                                 <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" styleClass="greenPanel" stylesheets="@application.css" text="Genre" />
+                                                <Separator opacity="0.8" orientation="VERTICAL" prefHeight="200.0" style="-fx-background-color: #ffffff;" styleClass="greenPanel" stylesheets="@application.css" />
                                                 <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" styleClass="greenPanel" stylesheets="@application.css" text="Pages" />
+                                                <Separator opacity="0.8" orientation="VERTICAL" prefHeight="200.0" style="-fx-background-color: #ffffff;" styleClass="greenPanel" stylesheets="@application.css" />
                                                 <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" styleClass="greenPanel" stylesheets="@application.css" text="Outline" />
+                                                <Separator opacity="0.8" orientation="VERTICAL" prefHeight="200.0" style="-fx-background-color: #ffffff;" styleClass="greenPanel" stylesheets="@application.css" />
                                              </children>
                                           </HBox>
                                        </top>
@@ -443,6 +481,9 @@
                                              </children>
                                           </Pane>
                                        </bottom>
+                                       <center>
+                                          <Pane fx:id="bookPane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+                                       </center>
                                     </BorderPane>
                                  </children>
                               </AnchorPane>
@@ -481,9 +522,13 @@
                                           <HBox prefHeight="25.0" prefWidth="200.0" style="-fx-background-color: #333333;" BorderPane.alignment="CENTER">
                                              <children>
                                                 <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="140.0" styleClass="greenPanel" stylesheets="@application.css" text="Menu" />
+                                                <Separator opacity="0.8" orientation="VERTICAL" prefHeight="200.0" style="-fx-background-color: #ffffff;" styleClass="greenPanel" stylesheets="@application.css" />
                                                 <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" styleClass="greenPanel" stylesheets="@application.css" text="Name" />
+                                                <Separator opacity="0.8" orientation="VERTICAL" prefHeight="200.0" style="-fx-background-color: #ffffff;" styleClass="greenPanel" stylesheets="@application.css" />
                                                 <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" styleClass="greenPanel" stylesheets="@application.css" text="Gender" />
+                                                <Separator opacity="0.8" orientation="VERTICAL" prefHeight="200.0" style="-fx-background-color: #ffffff;" styleClass="greenPanel" stylesheets="@application.css" />
                                                 <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" styleClass="greenPanel" stylesheets="@application.css" text="Description" />
+                                                <Separator opacity="0.8" orientation="VERTICAL" prefHeight="200.0" style="-fx-background-color: #ffffff;" styleClass="greenPanel" stylesheets="@application.css" />
                                              </children>
                                           </HBox>
                                        </top>
@@ -499,7 +544,7 @@
                                                       <HBox minHeight="20.0" prefHeight="60.0" prefWidth="200.0" />
                                                       <HBox prefHeight="100.0" prefWidth="200.0">
                                                          <children>
-                                                            <Label prefWidth="100.0" text="Title">
+                                                            <Label prefWidth="100.0" text="Name">
                                                                <font>
                                                                   <Font size="16.0" />
                                                                </font>
@@ -525,7 +570,7 @@
                                                       </HBox>
                                                       <HBox prefHeight="100.0" prefWidth="200.0">
                                                          <children>
-                                                            <Label prefWidth="100.0" text="Author">
+                                                            <Label prefWidth="100.0" text="Gender">
                                                                <font>
                                                                   <Font size="16.0" />
                                                                </font>
@@ -661,7 +706,7 @@
                                                       <HBox minHeight="20.0" prefHeight="20.0" prefWidth="200.0" />
                                                       <HBox prefHeight="34.0" prefWidth="300.0">
                                                          <children>
-                                                            <Label prefWidth="100.0" text="Outline">
+                                                            <Label prefHeight="25.0" prefWidth="306.0" text="Description">
                                                                <font>
                                                                   <Font size="16.0" />
                                                                </font>
@@ -695,6 +740,9 @@
                                              </children>
                                           </Pane>
                                        </bottom>
+                                       <center>
+                                          <Pane fx:id="characterPane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+                                       </center>
                                     </BorderPane>
                                  </children>
                               </AnchorPane>
