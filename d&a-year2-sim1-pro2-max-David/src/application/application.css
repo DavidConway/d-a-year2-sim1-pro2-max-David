@@ -29,6 +29,10 @@
 	-fx-background-image: url('images/blue.jpg');
 }
 
+.title{
+	-fx-background-image:url('images/centre.jpg') 
+}
+
 .leftPanel{
 	-fx-background-image: url('images/centre.jpg');
 }
