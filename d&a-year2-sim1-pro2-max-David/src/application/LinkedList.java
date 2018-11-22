@@ -4,10 +4,8 @@ public class LinkedList<T> {
 
 	private LinkedListNode<T> head = null;
 	private LinkedListNode<T> temp = null;
-	int size;
-
-	int remove;
-
+	private int size;
+	
 	public void add(T contents) {
 		LinkedListNode<T> node = new LinkedListNode<>();
 		node.next = head;
