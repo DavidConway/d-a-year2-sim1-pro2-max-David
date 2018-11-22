@@ -481,7 +481,16 @@
                                           </Pane>
                                        </bottom>
                                        <center>
-                                          <Pane fx:id="bookPane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+                                          <AnchorPane BorderPane.alignment="CENTER">
+                                             <children>
+                                                <HBox prefHeight="511.5" prefWidth="840.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <children>
+                                                      <Pane fx:id="bookPane" minWidth="512.0" prefHeight="512.0" prefWidth="512.0" />
+                                                      <Pane fx:id="bookCharPane" maxWidth="330.0" prefHeight="512.0" prefWidth="328.0" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </AnchorPane>
                                        </center>
                                     </BorderPane>
                                  </children>
