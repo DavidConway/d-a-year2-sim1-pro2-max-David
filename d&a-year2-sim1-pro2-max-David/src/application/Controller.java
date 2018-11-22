@@ -137,12 +137,49 @@ public class Controller {
 
     @FXML
     void sortTitle(ActionEvent event) {
-
+    	String[] titles = new String[books.size()];
+    	for (int i = 0; i < books.size(); i ++)
+    	{
+    		titles[i] = books.get(i).getContents().getTitle();
+    	}
+    	sortString(titles);
     }
 
     @FXML
     void sortYear(ActionEvent event) {
 
     }
-
+    
+    int[] sortString(String[] args)
+    {
+    	int[] index = new int[args.length];
+    	
+    	//INITIALIZING INTEGER ARRAY
+    	
+    	for (int i = 0; i <args.length; i ++)
+    	{
+    		index[i] = i;
+    	}
+    	
+    	String[] temp = new String[args.length];
+    	for (int k = 0; k < args.length; k ++)
+    	{
+	    	for (int i = 0; i < args.length; i++)
+	    	{
+	    		for (int j = 0; j < args[i].length(); j ++)
+	    		{
+	    			if (args[i].charAt(j) <= args[i+1].charAt(j))
+	        		{
+	    				temp[i] = args[i+1];
+	    				temp [i+1] = args[i];
+	    				index[i] = i+1;
+	    				index[i+1] = i;
+	    				break;
+	        		}
+	    			
+	    		}
+	    	}
+    	}
+    	return index;
+    }
 }
