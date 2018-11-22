@@ -22,7 +22,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
   <children>
     <MenuBar style="-fx-background-color: #ffffff;" VBox.vgrow="NEVER">
       <menus>
@@ -258,17 +258,16 @@
                                              <children>
                                                 <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="140.0" styleClass="greenPanel" stylesheets="@application.css" text="Menu" />
                                                 <Separator opacity="0.8" orientation="VERTICAL" prefHeight="200.0" style="-fx-background-color: #ffffff;" styleClass="greenPanel" stylesheets="@application.css" />
-                                                <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" styleClass="greenPanel" stylesheets="@application.css" text="Title" />
+                                                <Button fx:id="titleButton" mnemonicParsing="false" onAction="#sortTitle" prefHeight="25.0" prefWidth="100.0" styleClass="greenPanel" stylesheets="@application.css" text="Title" />
                                                 <Separator opacity="0.8" orientation="VERTICAL" prefHeight="200.0" style="-fx-background-color: #ffffff;" styleClass="greenPanel" stylesheets="@application.css" />
-                                                <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" styleClass="greenPanel" stylesheets="@application.css" text="Author" />
+                                                <Button fx:id="authorButton" mnemonicParsing="false" onAction="#sortAuthor" prefHeight="25.0" prefWidth="100.0" styleClass="greenPanel" stylesheets="@application.css" text="Author" />
                                                 <Separator opacity="0.8" orientation="VERTICAL" prefHeight="200.0" style="-fx-background-color: #ffffff;" styleClass="greenPanel" stylesheets="@application.css" />
-                                                <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" styleClass="greenPanel" stylesheets="@application.css" text="Year" />
+                                                <Button fx:id="yearButton" mnemonicParsing="false" onAction="#sortYear" prefHeight="25.0" prefWidth="100.0" styleClass="greenPanel" stylesheets="@application.css" text="Year" />
                                                 <Separator opacity="0.8" orientation="VERTICAL" prefHeight="200.0" style="-fx-background-color: #ffffff;" styleClass="greenPanel" stylesheets="@application.css" />
-                                                <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" styleClass="greenPanel" stylesheets="@application.css" text="Genre" />
+                                                <Button fx:id="genreButton" mnemonicParsing="false" onAction="#sortGenre" prefHeight="25.0" prefWidth="100.0" styleClass="greenPanel" stylesheets="@application.css" text="Genre" />
                                                 <Separator opacity="0.8" orientation="VERTICAL" prefHeight="200.0" style="-fx-background-color: #ffffff;" styleClass="greenPanel" stylesheets="@application.css" />
-                                                <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" styleClass="greenPanel" stylesheets="@application.css" text="Pages" />
+                                                <Button fx:id="pagesButton" mnemonicParsing="false" onAction="#sortPages" prefHeight="25.0" prefWidth="100.0" styleClass="greenPanel" stylesheets="@application.css" text="Pages" />
                                                 <Separator opacity="0.8" orientation="VERTICAL" prefHeight="200.0" style="-fx-background-color: #ffffff;" styleClass="greenPanel" stylesheets="@application.css" />
-                                                <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" styleClass="greenPanel" stylesheets="@application.css" text="Outline" />
                                                 <Separator opacity="0.8" orientation="VERTICAL" prefHeight="200.0" style="-fx-background-color: #ffffff;" styleClass="greenPanel" stylesheets="@application.css" />
                                              </children>
                                           </HBox>
