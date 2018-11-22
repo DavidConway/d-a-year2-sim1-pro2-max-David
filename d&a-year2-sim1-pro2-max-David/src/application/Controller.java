@@ -173,7 +173,7 @@ public class Controller {
 	    	{
 	    		for (int j = 0; j < args[i].length(); j ++)			//LOOPS THROUGH LETTERS IN TITLES
 	    		{
-	    			if (args[i].charAt(j) <= args[i+1].charAt(j))	//COMPARES LETTERS/IF NEED TO SWITCH IT DOES
+	    			if (args[i].charAt(j) < args[i+1].charAt(j))	//COMPARES LETTERS/IF NEED TO SWITCH IT DOES
 	        		{
 	    				temp[i] = args[i+1];
 	    				temp [i+1] = args[i];
@@ -181,7 +181,6 @@ public class Controller {
 	    				index[i+1] = i;
 	    				break;
 	        		}
-	    			
 	    		}
 	    	}
     	}

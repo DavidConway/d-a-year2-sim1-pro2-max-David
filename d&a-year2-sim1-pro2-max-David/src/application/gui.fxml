@@ -69,51 +69,51 @@
                <left>
                   <StackPane prefHeight="758.0" prefWidth="160.0">
                      <children>
-                        <VBox maxWidth="177.0" prefHeight="770.0" prefWidth="177.0" style="-fx-background-color: #333333;" styleClass="leftPanel" stylesheets="@application.css">
+                        <VBox prefHeight="770.0" prefWidth="200.0" style="-fx-background-color: #333333;" styleClass="leftPanel" stylesheets="@application.css">
                            <children>
-                              <Accordion minWidth="-Infinity" prefWidth="160.0" style="-fx-background-color: #ffffff;">
+                              <Accordion minWidth="-Infinity" prefWidth="200.0" style="-fx-background-color: #ffffff;">
                                 <panes>
                                   <TitledPane animated="false" minWidth="-Infinity" prefWidth="160.0" text="Add Book">
                                     <content>
                                       <AnchorPane maxWidth="200.0" minWidth="-Infinity" prefHeight="210.0" prefWidth="160.0" styleClass="bluePanel" stylesheets="application/application.css">
                                              <children>
-                                                <TextField fx:id="textTitle" layoutX="20.0" layoutY="10.0" prefHeight="20.0" prefWidth="120.0" promptText="Title">
+                                                <TextField fx:id="textTitle" layoutX="20.0" layoutY="10.0" prefHeight="20.0" prefWidth="160.0" promptText="Title">
                                                    <padding>
                                                       <Insets left="5.0" />
                                                    </padding>
                                                 </TextField>
-                                                <TextField fx:id="textAuthor" layoutX="20.0" layoutY="40.0" prefHeight="20.0" prefWidth="120.0" promptText="Author">
+                                                <TextField fx:id="textAuthor" layoutX="20.0" layoutY="40.0" prefHeight="20.0" prefWidth="160.0" promptText="Author">
                                                    <padding>
                                                       <Insets left="5.0" />
                                                    </padding>
                                                 </TextField>
-                                                <TextField fx:id="textYear" layoutX="20.0" layoutY="100.0" prefHeight="20.0" prefWidth="120.0" promptText="Year">
+                                                <TextField fx:id="textYear" layoutX="20.0" layoutY="100.0" prefHeight="20.0" prefWidth="160.0" promptText="Year">
                                                    <padding>
                                                       <Insets left="5.0" />
                                                    </padding>
                                                 </TextField>
-                                                <TextField fx:id="textLength" layoutX="20.0" layoutY="160.0" prefHeight="20.0" prefWidth="120.0" promptText="Length">
+                                                <TextField fx:id="textLength" layoutX="20.0" layoutY="160.0" prefHeight="20.0" prefWidth="160.0" promptText="Length">
                                                    <padding>
                                                       <Insets left="5.0" />
                                                    </padding>
                                                 </TextField>
-                                                <TextField fx:id="textGenre" layoutX="20.0" layoutY="130.0" prefHeight="20.0" prefWidth="120.0" promptText="Genre">
+                                                <TextField fx:id="textGenre" layoutX="20.0" layoutY="130.0" prefHeight="20.0" prefWidth="160.0" promptText="Genre">
                                                    <padding>
                                                       <Insets left="5.0" />
                                                    </padding>
                                                 </TextField>
-                                                <TextArea fx:id="textPlot" layoutX="20.0" layoutY="190.0" prefHeight="60.0" prefWidth="120.0" promptText="Plot" />
-                                                <Button layoutX="20.0" layoutY="290.0" mnemonicParsing="false" onAction="#addBookOnClick" prefHeight="20.0" prefWidth="120.0" styleClass="greenPanel" text="Add">
+                                                <TextArea fx:id="textPlot" layoutX="20.0" layoutY="190.0" prefHeight="60.0" prefWidth="160.0" promptText="Plot" />
+                                                <Button layoutX="20.0" layoutY="290.0" mnemonicParsing="false" onAction="#addBookOnClick" prefHeight="20.0" prefWidth="160.0" styleClass="greenPanel" text="Add">
                                                    <padding>
                                                       <Insets bottom="1.0" />
                                                    </padding>
                                                 </Button>
-                                                <TextField fx:id="textURL" layoutX="20.0" layoutY="260.0" prefHeight="20.0" prefWidth="120.0" promptText="URL">
+                                                <TextField fx:id="textURL" layoutX="20.0" layoutY="260.0" prefHeight="20.0" prefWidth="160.0" promptText="URL">
                                                    <padding>
                                                       <Insets left="5.0" />
                                                    </padding>
                                                 </TextField>
-                                                <TextField fx:id="textPublisher" layoutX="20.0" layoutY="70.0" prefHeight="20.0" prefWidth="120.0" promptText="Publisher">
+                                                <TextField fx:id="textPublisher" layoutX="20.0" layoutY="70.0" prefHeight="20.0" prefWidth="160.0" promptText="Publisher">
                                                    <padding>
                                                       <Insets left="5.0" />
                                                    </padding>
@@ -124,20 +124,20 @@
                                   </TitledPane>
                                   <TitledPane animated="false" minWidth="-Infinity" prefWidth="160.0" text="Add Character">
                                        <content>
-                                          <AnchorPane maxWidth="160.0" minWidth="-Infinity" prefWidth="160.0" style="-fx-background-color: #cc0000;" styleClass="redPanel" stylesheets="@application.css">
+                                          <AnchorPane minWidth="-Infinity" style="-fx-background-color: #cc0000;" styleClass="redPanel" stylesheets="@application.css">
                                              <children>
-                                                <TextField fx:id="textName" layoutX="20.0" layoutY="10.0" prefHeight="20.0" prefWidth="120.0" promptText="Name">
+                                                <TextField fx:id="textName" layoutX="20.0" layoutY="10.0" prefHeight="20.0" prefWidth="160.0" promptText="Name">
                                                    <padding>
                                                       <Insets left="5.0" />
                                                    </padding>
                                                 </TextField>
-                                                <TextField fx:id="textGender" layoutX="20.0" layoutY="40.0" prefHeight="20.0" prefWidth="120.0" promptText="Gender">
+                                                <TextField fx:id="textGender" layoutX="20.0" layoutY="40.0" prefHeight="20.0" prefWidth="160.0" promptText="Gender">
                                                    <padding>
                                                       <Insets left="5.0" />
                                                    </padding>
                                                 </TextField>
-                                                <TextArea fx:id="textDescription" layoutX="20.0" layoutY="70.0" prefHeight="20.0" prefWidth="120.0" promptText="Description" />
-                                                <Button layoutX="20.0" layoutY="120.0" mnemonicParsing="false" onAction="#addCharOnClick" prefHeight="20.0" prefWidth="120.0" text="Add">
+                                                <TextArea fx:id="textDescription" layoutX="20.0" layoutY="70.0" prefHeight="20.0" prefWidth="160.0" promptText="Description" />
+                                                <Button layoutX="20.0" layoutY="120.0" mnemonicParsing="false" onAction="#addCharOnClick" prefHeight="20.0" prefWidth="160.0" text="Add">
                                                    <padding>
                                                       <Insets bottom="1.0" />
                                                    </padding>
@@ -150,67 +150,67 @@
                                        <content>
                                           <AnchorPane maxWidth="200.0" minWidth="-Infinity" prefHeight="212.0" prefWidth="160.0" styleClass="bluePanel" stylesheets="application/application.css">
                                              <children>
-                                                <TextField fx:id="filterTitle" layoutX="20.0" layoutY="10.0" prefHeight="20.0" prefWidth="120.0" promptText="Title">
+                                                <TextField fx:id="filterTitle" layoutX="20.0" layoutY="10.0" prefHeight="20.0" prefWidth="160.0" promptText="Title">
                                                    <padding>
                                                       <Insets left="5.0" />
                                                    </padding>
                                                 </TextField>
-                                                <TextField fx:id="filterAuthor" layoutX="20.0" layoutY="40.0" prefHeight="20.0" prefWidth="120.0" promptText="Author">
+                                                <TextField fx:id="filterAuthor" layoutX="20.0" layoutY="40.0" prefHeight="20.0" prefWidth="160.0" promptText="Author">
                                                    <padding>
                                                       <Insets left="5.0" />
                                                    </padding>
                                                 </TextField>
-                                                <TextField fx:id="filterYear" layoutX="20.0" layoutY="70.0" prefHeight="20.0" prefWidth="120.0" promptText="Year">
+                                                <TextField fx:id="filterYear" layoutX="20.0" layoutY="70.0" prefHeight="20.0" prefWidth="160.0" promptText="Year">
                                                    <padding>
                                                       <Insets left="5.0" />
                                                    </padding>
                                                 </TextField>
-                                                <TextField fx:id="filterLength" layoutX="20.0" layoutY="160.0" prefHeight="20.0" prefWidth="120.0" promptText="Length">
+                                                <TextField fx:id="filterLength" layoutX="20.0" layoutY="160.0" prefHeight="20.0" prefWidth="160.0" promptText="Length">
                                                    <padding>
                                                       <Insets left="5.0" />
                                                    </padding>
                                                 </TextField>
-                                                <TextField fx:id="filterGenre" layoutX="20.0" layoutY="130.0" prefHeight="20.0" prefWidth="120.0" promptText="Genre">
+                                                <TextField fx:id="filterGenre" layoutX="20.0" layoutY="130.0" prefHeight="20.0" prefWidth="160.0" promptText="Genre">
                                                    <padding>
                                                       <Insets left="5.0" />
                                                    </padding>
                                                 </TextField>
-                                                <Button layoutX="20.0" layoutY="190.0" mnemonicParsing="false" onAction="#addBookOnClick" prefHeight="20.0" prefWidth="120.0" styleClass="greenPanel" stylesheets="@application.css" text="Reset Search">
+                                                <Button layoutX="20.0" layoutY="190.0" mnemonicParsing="false" onAction="#addBookOnClick" prefHeight="20.0" prefWidth="150.0" styleClass="greenPanel" stylesheets="@application.css" text="Reset Search">
                                                    <padding>
                                                       <Insets bottom="1.0" />
                                                    </padding>
                                                 </Button> 
-                                                <TextField fx:id="filterPublisher" layoutX="20.0" layoutY="100.0" prefHeight="20.0" prefWidth="120.0" promptText="Publisher">
+                                                <TextField fx:id="filterPublisher" layoutX="20.0" layoutY="100.0" prefHeight="20.0" prefWidth="160.0" promptText="Publisher">
                                                    <padding>
                                                       <Insets left="5.0" />
                                                    </padding>
                                                 </TextField>
-                                                <Button layoutX="115.0" layoutY="10.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0" styleClass="filterButton" stylesheets="@application.css">
+                                                <Button layoutX="155.0" layoutY="10.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0" styleClass="filterButton" stylesheets="@application.css">
                                                    <padding>
                                                       <Insets left="1.0" right="1.0" />
                                                    </padding>
                                                 </Button>
-                                                <Button layoutX="115.0" layoutY="40.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0" styleClass="filterButton" stylesheets="@application.css">
+                                                <Button layoutX="155.0" layoutY="40.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0" styleClass="filterButton" stylesheets="@application.css">
                                                    <padding>
                                                       <Insets left="1.0" right="1.0" />
                                                    </padding>
                                                 </Button>
-                                                <Button layoutX="115.0" layoutY="70.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0" styleClass="filterButton" stylesheets="@application.css">
+                                                <Button layoutX="155.0" layoutY="70.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0" styleClass="filterButton" stylesheets="@application.css">
                                                    <padding>
                                                       <Insets left="1.0" right="1.0" />
                                                    </padding>
                                                 </Button>
-                                                <Button layoutX="115.0" layoutY="100.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0" styleClass="filterButton" stylesheets="@application.css">
+                                                <Button layoutX="155.0" layoutY="100.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0" styleClass="filterButton" stylesheets="@application.css">
                                                    <padding>
                                                       <Insets left="1.0" right="1.0" />
                                                    </padding>
                                                 </Button>
-                                                <Button layoutX="115.0" layoutY="130.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0" styleClass="filterButton" stylesheets="@application.css">
+                                                <Button layoutX="155.0" layoutY="130.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0" styleClass="filterButton" stylesheets="@application.css">
                                                    <padding>
                                                       <Insets left="1.0" right="1.0" />
                                                    </padding>
                                                 </Button>
-                                                <Button layoutX="115.0" layoutY="160.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0" styleClass="filterButton" stylesheets="@application.css">
+                                                <Button layoutX="155.0" layoutY="160.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0" styleClass="filterButton" stylesheets="@application.css">
                                                    <padding>
                                                       <Insets left="1.0" right="1.0" />
                                                    </padding>
