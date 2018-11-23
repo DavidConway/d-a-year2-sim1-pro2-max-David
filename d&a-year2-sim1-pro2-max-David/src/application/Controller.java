@@ -10,8 +10,7 @@ import javafx.scene.layout.Pane;
 
 public class Controller {
 	//LISTS TO USE
-	LinkedList<Book> books = new LinkedList<>();
-	LinkedList<Book> chars = new LinkedList<>();
+
 
 	//FIELDS FOR ADD BOOKS
     @FXML
@@ -75,8 +74,28 @@ public class Controller {
     private Button pagesButton;
    
     @FXML
-    void addBookOnClick(ActionEvent event) {
-
+    void addBookOnClick(ActionEvent event) {// not tested yet
+    	int pubYear;
+    	int pageCount;
+    	//trys to parse the textYear to a int and sets to 0 if it fales
+    	try {
+    		pubYear = Integer.parseInt(textYear.getText());
+    	}
+    	catch(Exception e) {
+    		pubYear = 0;
+    	}
+    	//
+    	//trys to parse the textYLenght to a int and sets to 0 if it fales
+    	try {
+    		pageCount = Integer.parseInt(textLength.getText());
+    	}
+    	catch(Exception e) {
+    		pageCount = 0;
+    	}
+    	//
+    	
+    	Book newBook = new Book(textTitle.getText(), textAuthor.getText(), pubYear, pageCount, textGenre.getText(), textPlot.getText(), textURL.getText());
+    	Main.books.add(newBook);
     }
 
     @FXML
@@ -109,15 +128,15 @@ public class Controller {
     
     void updateBookGrid()
     {
-    	for (int i = 0; i < books.size(); i++) {
-    		Book temp = books.get(i).getContents();
-    		addToGrid(bookPane, books.get(i).getIndex(), temp.getTitle(), temp.getAuthor(), Integer.toString(temp.getPubYear()), temp.getGenre(), Integer.toString(temp.getNumOfPages()));
+    	for (int i = 0; i < Main.sortedBooks.size(); i++) {
+    		Book temp = Main.sortedBooks.get(i).getContents();
+    		addToGrid(bookPane, Main.sortedBooks.get(i).getIndex(), temp.getTitle(), temp.getAuthor(), Integer.toString(temp.getPubYear()), temp.getGenre(), Integer.toString(temp.getNumOfPages()));
     	}
     }
     
     void updateCharGrid()
     {
-    	for (int i = 0; i < chars.size(); i++) {
+    	for (int i = 0; i < Main.sortedChars.size(); i++) {
     		
     	}
     }
@@ -140,10 +159,10 @@ public class Controller {
 
     @FXML
     void sortTitle(ActionEvent event) {
-    	String[] titles = new String[books.size()];
-    	for (int i = 0; i < books.size(); i ++)
+    	String[] titles = new String[Main.sortedBooks.size()];
+    	for (int i = 0; i < Main.sortedBooks.size(); i ++)
     	{
-    		titles[i] = books.get(i).getContents().getTitle();
+    		titles[i] = Main.sortedBooks.get(i).getContents().getTitle();
     	}
     	sortString(titles);
     }

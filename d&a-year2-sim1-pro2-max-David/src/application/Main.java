@@ -8,6 +8,11 @@ import javafx.scene.layout.Pane;
 
 
 public class Main extends Application {
+	static HashTable books = new HashTable();
+	static HashTable chars = new HashTable();
+	static LinkedList<Book> sortedBooks = new LinkedList<>();
+	static LinkedList<Book> sortedChars = new LinkedList<>();
+	
 	@Override
 	public void start(Stage primaryStage) {
 		try {
