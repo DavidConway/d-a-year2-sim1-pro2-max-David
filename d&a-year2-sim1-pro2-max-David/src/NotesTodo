@@ -1,1 +1,3 @@
 Altering lists should always update the grid when finished i.e adding/removing
+
+linked list needs to be update when rehashing acorse (hashes may have changed)

@@ -1,7 +1,7 @@
 package application;
 
-public class HashTable<T>{
-	Object[] hashArray = new Object[10];
+public class HashTable{
+	Hashable[] hashArray = new Hashable[10];
 	Hashable hold;
 
 	public HashTable() {
@@ -26,11 +26,36 @@ public class HashTable<T>{
 				Trycount++;
 				if(Trycount >= (hashArray.length/2)) {
 					hold = add;
-					//rehash//
+					this.rehash();
 				}
 			}
 		}
 		add.setHashNum(hashNum);
 	}
+	
+	
+	private void rehash() {
+		Hashable[] newHashArray = new Hashable[(int) (hashArray.length*1.5)];
+		
+		for(Hashable c: hashArray) {
+			int hashNum = (c.toString().length())%(newHashArray.length);
+			boolean placeFound = false;
+				
+			while (placeFound == false) {
+				if (hashArray[hashNum] == null) {
+					hashArray[hashNum] = c;
+					placeFound = true;
+				}
+				else {
+					hashNum++;
+					if(hashNum == newHashArray.length) {
+						hashNum = 0;
+					}
+				}
+			}
+		}
+		hashArray = newHashArray;
+	}
+	
 
 }
