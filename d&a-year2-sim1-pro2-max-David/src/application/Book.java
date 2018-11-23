@@ -2,11 +2,11 @@ package application;
 
 import java.util.Calendar;
 
-public class Book {
+public class Book implements Hashable {
 private LinkedList<Character> characters = new LinkedList<>();	//All  books will have their own list of associated characters/Or hash keys if change is needed.
 	
 private String title,author,genre,plot,imageUrl;
-private int pubYear, numOfPages, hashNum;
+private int pubYear, numOfPages,hashNum;
 
 	public Book(String title, String author, int pubYear, int numOfPages, String genre, String plot, String imageUrl) {
 		this.title = title;
@@ -41,9 +41,6 @@ private int pubYear, numOfPages, hashNum;
 	public int getNumOfPages() {
 		return numOfPages;
 	}
-	public int getHashNum() {
-		return hashNum;
-	}
 	//
 	//seters
 	public void setTitle(String title) {
@@ -74,14 +71,26 @@ private int pubYear, numOfPages, hashNum;
 	public void setNumOfPages(int numOfPages) {
 		this.numOfPages = numOfPages;
 	}
-	public void setHashNum(int hashNum) {
-		this.hashNum = hashNum;
-	}
+
 	//
 	
 	public String toString()
 	{
 		return title;
+	}
+
+
+	@Override
+	public void setHashNum(int hash) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public int getHashNum() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 }
 

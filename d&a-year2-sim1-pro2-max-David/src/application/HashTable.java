@@ -2,26 +2,26 @@ package application;
 
 public class HashTable<T>{
 	Object[] hashArray = new Object[10];
-	T hold;
+	Hashable hold;
 
 	public HashTable() {
 	}
-	
-	public void add(T add) {
+
+	public void add(Hashable add) {
 		
-		int HashNum = (add.toString().length())%(hashArray.length);
+		int hashNum = (add.toString().length())%(hashArray.length);
 		boolean placeFound = false;
 		int Trycount = 0;
 		
 		while (placeFound == false) {
-			if (hashArray[HashNum] == null) {
-				hashArray[HashNum] = add;
+			if (hashArray[hashNum] == null) {
+				hashArray[hashNum] = add;
 				placeFound = true;
 			}
 			else {
-				HashNum++;
-				if(HashNum == hashArray.length) {
-					HashNum = 0;
+				hashNum++;
+				if(hashNum == hashArray.length) {
+					hashNum = 0;
 				}
 				Trycount++;
 				if(Trycount >= (hashArray.length/2)) {
@@ -30,7 +30,7 @@ public class HashTable<T>{
 				}
 			}
 		}
-		
+		add.setHashNum(hashNum);
 	}
 
 }

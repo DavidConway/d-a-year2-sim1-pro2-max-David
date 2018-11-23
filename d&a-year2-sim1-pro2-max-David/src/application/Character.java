@@ -1,7 +1,6 @@
 package application;
 
-public class Character {
-private int hashNum;
+public class Character implements Hashable{
 private String name,gender,description;
 
 	public Character(String name, String gender, String description) {
@@ -19,10 +18,6 @@ private String name,gender,description;
 	public String getDescription() {
 		return description;
 	}
-	public int getHashNum() {
-		return hashNum;
-	}
-
 	
 	public void setDescription(String description) {
 		this.description = description;
@@ -42,12 +37,22 @@ private String name,gender,description;
 			this.gender = "N/A";
 		}
 	}
-	public void setHashNum(int hashNum) {
-		this.hashNum = hashNum;
-	}
 
 	public String toString()
 	{
 		return name;
+	}
+
+	
+	@Override
+	public void setHashNum(int hash) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public int getHashNum() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 }
