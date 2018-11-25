@@ -83,8 +83,8 @@
 	-fx-border-color: #333333;
 	-fx-background-color: #ffffff;
 	-fx-font-size: 16;
-	-fx-min-width: 150;
-	-fx-min-height: 30;
+	-fx-pref-height: 30;
+	
 	-fx-label-padding:0.0 10,10,10,10;
 }
 
