@@ -115,19 +115,24 @@ public class Controller {
     		label.getStyleClass().add("gridlabel");
     		grid.getChildren().add(label);
 
-			label.setMaxWidth(100);
-			label.setMinWidth(100);
+			label.setPrefWidth(100);
+			label.setTranslateX(i * 102.2);
+    		label.setTranslateY(index * 30);
 			
-    		if (i > 4)
+    		if (i > 3)
     		{
     			label.setMaxWidth(60);
     			label.setMinWidth(60);
     			label.setPrefWidth(60);
     			System.out.println("Setting width : " + 60);
+    			if (i > 4)
+    			{
+    			label.setTranslateX(i * 102.2 -40);
+        		label.setTranslateY(index * 30);
+    			}
     		}
     		
-    		label.setTranslateX(i * 102.2);
-    		label.setTranslateY(index * 30);
+    
     		/**
     		while (args[i].length()*5 > column.getWidth()) //Resizing columns if text is long
     		{
