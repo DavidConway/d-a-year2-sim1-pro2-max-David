@@ -78,14 +78,14 @@
 }
 
 .gridlabel{
-	-fx-background-radius: 10;
+	-fx-background-radius: 1;
 	-fx-border-radius: 1;
 	-fx-border-color: #333333;
 	-fx-background-color: #ffffff;
-	-fx-font-size: 16;
+	-fx-font-size: 14;
 	-fx-pref-height: 30;
-	
-	-fx-label-padding:0.0 10,10,10,10;
+	-fx-effect: innershadow(two-pass-box , rgba(0,0,0,0.6) , 4, 0.0 , 0 , 0);
+	-fx-label-padding:0.0 5,5,5,5;
 }
 
 .tab{
