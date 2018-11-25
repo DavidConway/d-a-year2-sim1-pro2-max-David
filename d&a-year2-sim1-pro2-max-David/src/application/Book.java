@@ -5,10 +5,10 @@ import java.util.Calendar;
 public class Book implements Hashable {
 private LinkedList<Character> characters = new LinkedList<>();	//All  books will have their own list of associated characters/Or hash keys if change is needed.
 	
-private String title,author,genre,plot,imageUrl;
+private String title,author,genre,plot,imageUrl, publisher;
 private int pubYear, numOfPages,hashNum;
 
-	public Book(String title, String author, int pubYear, int numOfPages, String genre, String plot, String imageUrl) {
+	public Book(String title, String author, String publisher, int pubYear, int numOfPages, String genre, String plot, String imageUrl) {
 		this.title = title;
 		this.author = author;
 		this.pubYear = pubYear;
@@ -16,10 +16,14 @@ private int pubYear, numOfPages,hashNum;
 		this.genre = genre;
 		this.plot = plot;
 		this.imageUrl = imageUrl;
+		this.publisher = publisher;
 	}
 	
 	
 	//getters
+	public String getPublisher() {
+		return publisher;
+	}
 	public String getTitle() {
 		return title;
 	}
@@ -43,6 +47,9 @@ private int pubYear, numOfPages,hashNum;
 	}
 	//
 	//seters
+	public void setPublisher(String publisher) {
+		this.publisher = publisher;
+	}
 	public void setTitle(String title) {
 		this.title = title;
 	}
