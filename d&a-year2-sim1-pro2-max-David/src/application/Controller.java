@@ -95,7 +95,8 @@ public class Controller {
     	//
     	
     	Book newBook = new Book(textTitle.getText(), textAuthor.getText(), pubYear, pageCount, textGenre.getText(), textPlot.getText(), textURL.getText());
-    	Main.books.add(newBook);
+    	Main.sortedBooks.add(newBook);
+    	updateBookGrid();
     }
 
     @FXML
@@ -109,12 +110,13 @@ public class Controller {
     }
     
     void addToGrid(Pane grid, int index, String... args){
+    	double temp = 0;
     	for (int i = 0; i < args.length; i++)
     	{
-    		double temp = 0;
     		Label label = new Label(args[i]);
+    		label.getStyleClass().add("gridlabel");
     		grid.getChildren().add(label);
-    		label.setTranslateX(temp);
+    		label.setTranslateX(i * 102.2);
     		label.setTranslateY(index * 30);
     		temp = temp+label.getWidth();
     		/**
@@ -128,6 +130,7 @@ public class Controller {
     
     void updateBookGrid()
     {
+    	bookPane.getChildren().clear();
     	for (int i = 0; i < Main.sortedBooks.size(); i++) {
     		Book temp = Main.sortedBooks.get(i).getContents();
     		addToGrid(bookPane, Main.sortedBooks.get(i).getIndex(), temp.getTitle(), temp.getAuthor(), Integer.toString(temp.getPubYear()), temp.getGenre(), Integer.toString(temp.getNumOfPages()));
@@ -164,7 +167,7 @@ public class Controller {
     	{
     		titles[i] = Main.sortedBooks.get(i).getContents().getTitle();
     	}
-    	sortString(titles);
+    	Main.sortString(titles);
     }
 
     @FXML
@@ -172,37 +175,5 @@ public class Controller {
 
     }
     
-    int[] sortString(String[] args)
-    {
-    	int[] index = new int[args.length];
-    	
-    	//INITIALIZING INTEGER ARRAY
-    	
-    	for (int i = 0; i <args.length; i ++)
-    	{
-    		index[i] = i;
-    	}
-    	
-    	String[] temp = new String[args.length];
-    	
-    											
-    	for (int k = 0; k < args.length; k ++)						//LOOPS THE MAXIMUM NUMBER OF TIME/LENGTH OF LIST
-    	{							
-	    	for (int i = 0; i < args.length; i++)   				//LOOPS THROUGH TITLES
-	    	{
-	    		for (int j = 0; j < args[i].length(); j ++)			//LOOPS THROUGH LETTERS IN TITLES
-	    		{
-	    			if (args[i].charAt(j) < args[i+1].charAt(j))	//COMPARES LETTERS/IF NEED TO SWITCH IT DOES
-	        		{
-	    				temp[i] = args[i+1];
-	    				temp [i+1] = args[i];
-	    				index[i] = i+1;
-	    				index[i+1] = i;
-	    				break;
-	        		}
-	    		}
-	    	}
-    	}
-    	return index;
-    }
+   
 }
