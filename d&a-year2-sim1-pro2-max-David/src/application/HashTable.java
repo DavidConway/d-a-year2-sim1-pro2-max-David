@@ -51,7 +51,7 @@ public class HashTable{
 			}
 			
 			while (temp != null) {
-				//updaes the freferens of eatch book
+				//updaes the freferens of eatch book.
 			}
 			
 			boolean placeFound = false;	
