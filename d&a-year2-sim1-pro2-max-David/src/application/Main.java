@@ -11,7 +11,7 @@ public class Main extends Application {
 	static HashTable books = new HashTable();
 	static HashTable chars = new HashTable();
 	static LinkedList<Book> sortedBooks = new LinkedList<>();
-	static LinkedList<Book> sortedChars = new LinkedList<>();
+	static LinkedList<Character> sortedChars = new LinkedList<>();
 	
 	@Override
 	public void start(Stage primaryStage) {

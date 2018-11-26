@@ -2,6 +2,12 @@ package application;
 
 public class Character implements Hashable{
 private String name,gender,description;
+private LinkedList<Integer> book = new LinkedList<>();
+
+	@Override
+	public LinkedList<Integer> getList() {
+		return book;
+	}
 
 	public Character(String name, String gender, String description) {
 		this.setDescription(description);
@@ -43,6 +49,17 @@ private String name,gender,description;
 		return name;
 	}
 
+	// adds the hash of the book to list
+		public void addChar(String name) {
+			for (Hashable i : Main.books.hashArray) {// gose trow all known books
+				if(i != null) {
+					if(((Book)i).getTitle().equals(name)) {//checks to see if the name matches
+						book.add(i.getHashNum());// get the books hash and adds it to the list
+					}
+				}
+			}
+		}
+		//
 	
 	@Override
 	public void setHashNum(int hash) {
