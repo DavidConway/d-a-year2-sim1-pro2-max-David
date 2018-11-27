@@ -109,6 +109,11 @@
 	-fx-color: #b2b2b2;
 	
 }
+.select {
+	-fx-background-color: #999999;
+	-fx-background-image: url('images/centre.jpg');
+	-fx-font: 10px Corbel;
+}
 	
 	
 

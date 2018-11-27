@@ -115,6 +115,18 @@ public class Controller {
     void addToGrid(AnchorPane grid, int index, String... args){
     	for (int i = 0; i < args.length; i++)
     	{
+    		if (i == 0)
+    		{
+    			Button button = new Button(args[0]);
+    			grid.getChildren().add(button);
+    			button.setPrefHeight(30);
+    			button.setPrefWidth(100);
+    			button.setTranslateX(i * 102.2);
+        		button.setTranslateY(index * 30);
+        		button.getStyleClass().add("select");
+    		}
+    		if (i > 0)
+    		{
     		Label label = new Label(args[i]);
     		label.getStyleClass().add("gridlabel");
     		grid.getChildren().add(label);
@@ -122,6 +134,7 @@ public class Controller {
 			label.setPrefWidth(100);
 			label.setTranslateX(i * 102.2);
     		label.setTranslateY(index * 30);
+    		
 			
     		if (i > 3)
     		{
@@ -143,7 +156,7 @@ public class Controller {
     			column.setPrefWidth(column.getWidth()+5);
     		}
     		**/
-    	}
+    	}}
     	
     }
     
