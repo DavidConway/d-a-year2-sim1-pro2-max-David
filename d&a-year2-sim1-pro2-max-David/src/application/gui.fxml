@@ -319,7 +319,7 @@
                                                    <children>
                                                       <Pane maxHeight="-Infinity" minWidth="512.0" prefWidth="597.0">
                                                          <children>
-                                                            <ScrollPane fx:id="bookScrollPane" pannable="true">
+                                                            <ScrollPane fx:id="bookScrollPane" pannable="true" prefHeight="255.0" prefWidth="535.0">
                                                                <content>
                                                                   <AnchorPane fx:id="bookPane" />
                                                                </content>
