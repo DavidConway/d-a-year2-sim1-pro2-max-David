@@ -3,7 +3,7 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Accordion?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
@@ -21,7 +21,6 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
 
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
   <children>
@@ -238,26 +237,62 @@
                                        <left>
                                           <VBox maxWidth="140.0" prefHeight="705.0" prefWidth="140.0" style="-fx-background-color: #008ae6;" styleClass="bluePanel" stylesheets="@application.css" BorderPane.alignment="CENTER">
                                              <children>
-                                                <Accordion>
-                                                  <panes>
-                                                    <TitledPane animated="false" text="Edit">
-                                                      <content>
-                                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-                                                      </content>
-                                                    </TitledPane>
-                                                    <TitledPane animated="false" text="Delete">
-                                                      <content>
-                                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-                                                      </content>
-                                                    </TitledPane>
-                                                  </panes>
-                                                </Accordion>
+                                                <AnchorPane maxWidth="200.0" minWidth="-Infinity" prefHeight="210.0" prefWidth="200.0" styleClass="bluePanel" stylesheets="application/application.css">
+                                                   <children>
+                                                      <TextField fx:id="textEditTitle" layoutX="20.0" layoutY="10.0" prefHeight="20.0" prefWidth="160.0" promptText="Title">
+                                                         <padding>
+                                                            <Insets left="5.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                      <TextField fx:id="textEditAuthor" layoutX="20.0" layoutY="40.0" prefHeight="20.0" prefWidth="160.0" promptText="Author">
+                                                         <padding>
+                                                            <Insets left="5.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                      <TextField fx:id="textEditYear" layoutX="20.0" layoutY="100.0" prefHeight="20.0" prefWidth="160.0" promptText="Year">
+                                                         <padding>
+                                                            <Insets left="5.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                      <TextField fx:id="textEditLength" layoutX="20.0" layoutY="160.0" prefHeight="20.0" prefWidth="160.0" promptText="Length">
+                                                         <padding>
+                                                            <Insets left="5.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                      <TextField fx:id="textEditGenre" layoutX="20.0" layoutY="130.0" prefHeight="20.0" prefWidth="160.0" promptText="Genre">
+                                                         <padding>
+                                                            <Insets left="5.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                      <TextArea fx:id="textEditPlot" layoutX="20.0" layoutY="190.0" prefHeight="60.0" prefWidth="160.0" promptText="Plot" />
+                                                      <Button layoutX="20.0" layoutY="290.0" mnemonicParsing="false" onAction="#editBookOnClick" prefHeight="20.0" prefWidth="160.0" styleClass="greenPanel" text="Edit">
+                                                         <padding>
+                                                            <Insets bottom="1.0" />
+                                                         </padding>
+                                                      </Button>
+                                                      <TextField fx:id="textEditURL" layoutX="20.0" layoutY="260.0" prefHeight="20.0" prefWidth="160.0" promptText="URL">
+                                                         <padding>
+                                                            <Insets left="5.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                      <TextField fx:id="textEditPublisher" layoutX="20.0" layoutY="70.0" prefHeight="20.0" prefWidth="160.0" promptText="Publisher">
+                                                         <padding>
+                                                            <Insets left="5.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                      <Button layoutX="20.0" layoutY="320.0" mnemonicParsing="false" onAction="#deleteBookOnClick" prefHeight="20.0" prefWidth="160.0" styleClass="greenPanel" text="Delete">
+                                                         <padding>
+                                                            <Insets bottom="1.0" />
+                                                         </padding>
+                                                      </Button>
+                                                   </children>
+                                                </AnchorPane>
                                              </children></VBox>
                                        </left>
                                        <top>
                                           <HBox prefHeight="26.0" prefWidth="200.0" style="-fx-background-color: #333333;" BorderPane.alignment="CENTER">
                                              <children>
-                                                <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="140.0" styleClass="greenPanel" stylesheets="@application.css" text="Menu" />
+                                                <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="200.0" styleClass="greenPanel" stylesheets="@application.css" text="Menu" />
                                                 <Separator opacity="0.8" orientation="VERTICAL" prefHeight="200.0" style="-fx-background-color: #ffffff;" styleClass="greenPanel" stylesheets="@application.css" />
                                                 <Button fx:id="titleButton" mnemonicParsing="false" onAction="#sortTitle" prefHeight="25.0" prefWidth="100.0" styleClass="greenPanel" stylesheets="@application.css" text="Title" />
                                                 <Separator opacity="0.8" orientation="VERTICAL" prefHeight="200.0" prefWidth="0.0" style="-fx-background-color: #ffffff;" styleClass="greenPanel" stylesheets="@application.css" />
@@ -277,211 +312,6 @@
                                        <right>
                                           <Pane prefHeight="200.0" prefWidth="140.0" styleClass="bluePanel" stylesheets="@application.css" BorderPane.alignment="CENTER" />
                                        </right>
-                                       <bottom>
-                                          <Pane prefHeight="200.0" prefWidth="200.0" styleClass="searchMenu" stylesheets="@application.css" BorderPane.alignment="CENTER">
-                                             <children>
-                                                <Pane layoutX="-12.0" opacity="0.46" prefHeight="200.0" prefWidth="200.0" styleClass="greenPanel" stylesheets="@application.css" />
-                                                <VBox layoutX="246.0" opacity="0.35" prefHeight="200.0" prefWidth="300.0" style="-fx-background-color: white;">
-                                                   <children>
-                                                      <HBox minHeight="20.0" prefHeight="60.0" prefWidth="200.0" />
-                                                      <HBox prefHeight="100.0" prefWidth="200.0">
-                                                         <children>
-                                                            <Label prefWidth="100.0" text="Title">
-                                                               <font>
-                                                                  <Font size="16.0" />
-                                                               </font>
-                                                               <HBox.margin>
-                                                                  <Insets />
-                                                               </HBox.margin>
-                                                               <padding>
-                                                                  <Insets left="10.0" right="10.0" />
-                                                               </padding>
-                                                            </Label>
-                                                            <Label prefWidth="200.0" text="Label">
-                                                               <font>
-                                                                  <Font size="16.0" />
-                                                               </font>
-                                                               <HBox.margin>
-                                                                  <Insets />
-                                                               </HBox.margin>
-                                                               <padding>
-                                                                  <Insets left="10.0" right="10.0" />
-                                                               </padding>
-                                                            </Label>
-                                                         </children>
-                                                      </HBox>
-                                                      <HBox prefHeight="100.0" prefWidth="200.0">
-                                                         <children>
-                                                            <Label prefWidth="100.0" text="Author">
-                                                               <font>
-                                                                  <Font size="16.0" />
-                                                               </font>
-                                                               <HBox.margin>
-                                                                  <Insets />
-                                                               </HBox.margin>
-                                                               <padding>
-                                                                  <Insets left="10.0" right="10.0" />
-                                                               </padding>
-                                                            </Label>
-                                                            <Label prefWidth="200.0" text="Label">
-                                                               <font>
-                                                                  <Font size="16.0" />
-                                                               </font>
-                                                               <HBox.margin>
-                                                                  <Insets />
-                                                               </HBox.margin>
-                                                               <padding>
-                                                                  <Insets left="10.0" right="10.0" />
-                                                               </padding>
-                                                            </Label>
-                                                         </children>
-                                                      </HBox>
-                                                      <HBox prefHeight="100.0" prefWidth="200.0">
-                                                         <children>
-                                                            <Label prefWidth="100.0" text="Publisher">
-                                                               <font>
-                                                                  <Font size="16.0" />
-                                                               </font>
-                                                               <HBox.margin>
-                                                                  <Insets />
-                                                               </HBox.margin>
-                                                               <padding>
-                                                                  <Insets left="10.0" right="10.0" />
-                                                               </padding>
-                                                            </Label>
-                                                            <Label prefWidth="200.0" text="Label">
-                                                               <font>
-                                                                  <Font size="16.0" />
-                                                               </font>
-                                                               <HBox.margin>
-                                                                  <Insets />
-                                                               </HBox.margin>
-                                                               <padding>
-                                                                  <Insets left="10.0" right="10.0" />
-                                                               </padding>
-                                                            </Label>
-                                                         </children>
-                                                      </HBox>
-                                                      <HBox prefHeight="100.0" prefWidth="200.0">
-                                                         <children>
-                                                            <Label prefWidth="100.0" text="Year">
-                                                               <font>
-                                                                  <Font size="16.0" />
-                                                               </font>
-                                                               <HBox.margin>
-                                                                  <Insets />
-                                                               </HBox.margin>
-                                                               <padding>
-                                                                  <Insets left="10.0" right="10.0" />
-                                                               </padding>
-                                                            </Label>
-                                                            <Label prefWidth="200.0" text="Label">
-                                                               <font>
-                                                                  <Font size="16.0" />
-                                                               </font>
-                                                               <HBox.margin>
-                                                                  <Insets />
-                                                               </HBox.margin>
-                                                               <padding>
-                                                                  <Insets left="10.0" right="10.0" />
-                                                               </padding>
-                                                            </Label>
-                                                         </children>
-                                                      </HBox>
-                                                      <HBox prefHeight="100.0" prefWidth="200.0">
-                                                         <children>
-                                                            <Label prefWidth="100.0" text="Genre">
-                                                               <font>
-                                                                  <Font size="16.0" />
-                                                               </font>
-                                                               <HBox.margin>
-                                                                  <Insets />
-                                                               </HBox.margin>
-                                                               <padding>
-                                                                  <Insets left="10.0" right="10.0" />
-                                                               </padding>
-                                                            </Label>
-                                                            <Label prefWidth="200.0" text="Label">
-                                                               <font>
-                                                                  <Font size="16.0" />
-                                                               </font>
-                                                               <HBox.margin>
-                                                                  <Insets />
-                                                               </HBox.margin>
-                                                               <padding>
-                                                                  <Insets left="10.0" right="10.0" />
-                                                               </padding>
-                                                            </Label>
-                                                         </children>
-                                                      </HBox>
-                                                      <HBox prefHeight="100.0" prefWidth="200.0">
-                                                         <children>
-                                                            <Label prefWidth="100.0" text="Length">
-                                                               <font>
-                                                                  <Font size="16.0" />
-                                                               </font>
-                                                               <HBox.margin>
-                                                                  <Insets />
-                                                               </HBox.margin>
-                                                               <padding>
-                                                                  <Insets left="10.0" right="10.0" />
-                                                               </padding>
-                                                            </Label>
-                                                            <Label prefWidth="200.0" text="Label">
-                                                               <font>
-                                                                  <Font size="16.0" />
-                                                               </font>
-                                                               <HBox.margin>
-                                                                  <Insets />
-                                                               </HBox.margin>
-                                                               <padding>
-                                                                  <Insets left="10.0" right="10.0" />
-                                                               </padding>
-                                                            </Label>
-                                                         </children>
-                                                      </HBox>
-                                                      <HBox prefHeight="100.0" prefWidth="200.0" />
-                                                   </children>
-                                                </VBox>
-                                                <VBox layoutX="600.0" opacity="0.35" prefHeight="200.0" prefWidth="300.0" style="-fx-background-color: white;">
-                                                   <children>
-                                                      <HBox minHeight="20.0" prefHeight="20.0" prefWidth="200.0" />
-                                                      <HBox prefHeight="34.0" prefWidth="300.0">
-                                                         <children>
-                                                            <Label prefWidth="100.0" text="Outline">
-                                                               <font>
-                                                                  <Font size="16.0" />
-                                                               </font>
-                                                               <HBox.margin>
-                                                                  <Insets />
-                                                               </HBox.margin>
-                                                               <padding>
-                                                                  <Insets left="10.0" right="10.0" />
-                                                               </padding>
-                                                            </Label>
-                                                         </children>
-                                                      </HBox>
-                                                      <HBox prefHeight="100.0" prefWidth="200.0">
-                                                         <children>
-                                                            <Label prefWidth="100.0" text="Empty">
-                                                               <font>
-                                                                  <Font size="16.0" />
-                                                               </font>
-                                                               <HBox.margin>
-                                                                  <Insets />
-                                                               </HBox.margin>
-                                                               <padding>
-                                                                  <Insets left="10.0" right="10.0" />
-                                                               </padding>
-                                                            </Label>
-                                                         </children>
-                                                      </HBox>
-                                                      <HBox prefHeight="100.0" prefWidth="200.0" />
-                                                   </children>
-                                                </VBox>
-                                             </children>
-                                          </Pane>
-                                       </bottom>
                                        <center>
                                           <AnchorPane BorderPane.alignment="CENTER">
                                              <children>
@@ -489,7 +319,7 @@
                                                    <children>
                                                       <Pane maxHeight="-Infinity" minWidth="512.0" prefWidth="597.0">
                                                          <children>
-                                                            <ScrollPane maxHeight="646.0" minHeight="500.0" pannable="true" prefHeight="514.0" prefWidth="540.0">
+                                                            <ScrollPane fx:id="bookScrollPane" pannable="true">
                                                                <content>
                                                                   <AnchorPane fx:id="bookPane" />
                                                                </content>
@@ -512,33 +342,45 @@
                                  <children>
                                     <BorderPane layoutX="31.0" layoutY="25.0" prefHeight="401.0" prefWidth="540.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                        <left>
-                                          <VBox prefHeight="200.0" prefWidth="140.0" style="-fx-background-color: #cc0000;" styleClass="redPanel" stylesheets="@application.css" BorderPane.alignment="CENTER">
+                                          <VBox prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #cc0000;" styleClass="redPanel" stylesheets="@application.css" BorderPane.alignment="CENTER">
                                              <children>
-                                                <Accordion>
-                                                  <panes>
-                                                    <TitledPane animated="false" text="Add to Book">
-                                                      <content>
-                                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-                                                      </content>
-                                                    </TitledPane>
-                                                    <TitledPane animated="false" text="Edit">
-                                                      <content>
-                                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-                                                      </content>
-                                                    </TitledPane>
-                                                    <TitledPane animated="false" text="Delete">
-                                                      <content>
-                                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-                                                      </content>
-                                                    </TitledPane>
-                                                  </panes>
-                                                </Accordion>
+                                                <AnchorPane minWidth="-Infinity" prefHeight="304.0" prefWidth="200.0" style="-fx-background-color: #cc0000;" styleClass="redPanel" stylesheets="@application.css">
+                                                   <children>
+                                                      <TextField fx:id="editTextName" layoutX="20.0" layoutY="10.0" prefHeight="20.0" prefWidth="160.0" promptText="Name">
+                                                         <padding>
+                                                            <Insets left="5.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                      <TextField fx:id="editTextGender" layoutX="20.0" layoutY="40.0" prefHeight="20.0" prefWidth="160.0" promptText="Gender">
+                                                         <padding>
+                                                            <Insets left="5.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                      <TextArea fx:id="editTextDescription" layoutX="20.0" layoutY="70.0" prefHeight="20.0" prefWidth="160.0" promptText="Description" />
+                                                      <Button layoutX="20.0" layoutY="120.0" mnemonicParsing="false" onAction="#editCharOnClick" prefHeight="20.0" prefWidth="160.0" text="Edit">
+                                                         <padding>
+                                                            <Insets bottom="1.0" />
+                                                         </padding>
+                                                      </Button>
+                                                      <Button layoutX="20.0" layoutY="150.0" mnemonicParsing="false" onAction="#deleteCharOnClick" prefHeight="20.0" prefWidth="160.0" text="Delete">
+                                                         <padding>
+                                                            <Insets bottom="1.0" />
+                                                         </padding>
+                                                      </Button>
+                                                      <Button layoutX="20.0" layoutY="180.0" mnemonicParsing="false" onAction="#addToBookOnClick" prefHeight="20.0" prefWidth="160.0" styleClass="greenPanel" text="Add To Book">
+                                                         <padding>
+                                                            <Insets bottom="1.0" />
+                                                         </padding>
+                                                      </Button>
+                                                      <ComboBox fx:id="choiceBook" layoutX="20.0" layoutY="210.0" prefWidth="160.0" />
+                                                   </children>
+                                                </AnchorPane>
                                              </children></VBox>
                                        </left>
                                        <top>
                                           <HBox prefHeight="25.0" prefWidth="200.0" style="-fx-background-color: #333333;" BorderPane.alignment="CENTER">
                                              <children>
-                                                <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="140.0" styleClass="greenPanel" stylesheets="@application.css" text="Menu" />
+                                                <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="200.0" styleClass="greenPanel" stylesheets="@application.css" text="Menu" />
                                                 <Separator opacity="0.8" orientation="VERTICAL" prefHeight="200.0" style="-fx-background-color: #ffffff;" styleClass="greenPanel" stylesheets="@application.css" />
                                                 <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" styleClass="greenPanel" stylesheets="@application.css" text="Name" />
                                                 <Separator opacity="0.8" orientation="VERTICAL" prefHeight="200.0" style="-fx-background-color: #ffffff;" styleClass="greenPanel" stylesheets="@application.css" />
@@ -552,211 +394,6 @@
                                        <right>
                                           <Pane prefHeight="200.0" prefWidth="140.0" styleClass="redPanel" stylesheets="@application.css" BorderPane.alignment="CENTER" />
                                        </right>
-                                       <bottom>
-                                          <Pane prefHeight="200.0" prefWidth="200.0" styleClass="redPanel" stylesheets="@application.css" BorderPane.alignment="CENTER">
-                                             <children>
-                                                <Pane layoutX="-12.0" opacity="0.46" prefHeight="200.0" prefWidth="200.0" styleClass="greenPanel" stylesheets="@application.css" />
-                                                <VBox layoutX="246.0" opacity="0.35" prefHeight="200.0" prefWidth="300.0" style="-fx-background-color: white;">
-                                                   <children>
-                                                      <HBox minHeight="20.0" prefHeight="60.0" prefWidth="200.0" />
-                                                      <HBox prefHeight="100.0" prefWidth="200.0">
-                                                         <children>
-                                                            <Label prefWidth="100.0" text="Name">
-                                                               <font>
-                                                                  <Font size="16.0" />
-                                                               </font>
-                                                               <HBox.margin>
-                                                                  <Insets />
-                                                               </HBox.margin>
-                                                               <padding>
-                                                                  <Insets left="10.0" right="10.0" />
-                                                               </padding>
-                                                            </Label>
-                                                            <Label prefWidth="200.0" text="Label">
-                                                               <font>
-                                                                  <Font size="16.0" />
-                                                               </font>
-                                                               <HBox.margin>
-                                                                  <Insets />
-                                                               </HBox.margin>
-                                                               <padding>
-                                                                  <Insets left="10.0" right="10.0" />
-                                                               </padding>
-                                                            </Label>
-                                                         </children>
-                                                      </HBox>
-                                                      <HBox prefHeight="100.0" prefWidth="200.0">
-                                                         <children>
-                                                            <Label prefWidth="100.0" text="Gender">
-                                                               <font>
-                                                                  <Font size="16.0" />
-                                                               </font>
-                                                               <HBox.margin>
-                                                                  <Insets />
-                                                               </HBox.margin>
-                                                               <padding>
-                                                                  <Insets left="10.0" right="10.0" />
-                                                               </padding>
-                                                            </Label>
-                                                            <Label prefWidth="200.0" text="Label">
-                                                               <font>
-                                                                  <Font size="16.0" />
-                                                               </font>
-                                                               <HBox.margin>
-                                                                  <Insets />
-                                                               </HBox.margin>
-                                                               <padding>
-                                                                  <Insets left="10.0" right="10.0" />
-                                                               </padding>
-                                                            </Label>
-                                                         </children>
-                                                      </HBox>
-                                                      <HBox prefHeight="100.0" prefWidth="200.0">
-                                                         <children>
-                                                            <Label prefWidth="100.0" text="Publisher">
-                                                               <font>
-                                                                  <Font size="16.0" />
-                                                               </font>
-                                                               <HBox.margin>
-                                                                  <Insets />
-                                                               </HBox.margin>
-                                                               <padding>
-                                                                  <Insets left="10.0" right="10.0" />
-                                                               </padding>
-                                                            </Label>
-                                                            <Label prefWidth="200.0" text="Label">
-                                                               <font>
-                                                                  <Font size="16.0" />
-                                                               </font>
-                                                               <HBox.margin>
-                                                                  <Insets />
-                                                               </HBox.margin>
-                                                               <padding>
-                                                                  <Insets left="10.0" right="10.0" />
-                                                               </padding>
-                                                            </Label>
-                                                         </children>
-                                                      </HBox>
-                                                      <HBox prefHeight="100.0" prefWidth="200.0">
-                                                         <children>
-                                                            <Label prefWidth="100.0" text="Year">
-                                                               <font>
-                                                                  <Font size="16.0" />
-                                                               </font>
-                                                               <HBox.margin>
-                                                                  <Insets />
-                                                               </HBox.margin>
-                                                               <padding>
-                                                                  <Insets left="10.0" right="10.0" />
-                                                               </padding>
-                                                            </Label>
-                                                            <Label prefWidth="200.0" text="Label">
-                                                               <font>
-                                                                  <Font size="16.0" />
-                                                               </font>
-                                                               <HBox.margin>
-                                                                  <Insets />
-                                                               </HBox.margin>
-                                                               <padding>
-                                                                  <Insets left="10.0" right="10.0" />
-                                                               </padding>
-                                                            </Label>
-                                                         </children>
-                                                      </HBox>
-                                                      <HBox prefHeight="100.0" prefWidth="200.0">
-                                                         <children>
-                                                            <Label prefWidth="100.0" text="Genre">
-                                                               <font>
-                                                                  <Font size="16.0" />
-                                                               </font>
-                                                               <HBox.margin>
-                                                                  <Insets />
-                                                               </HBox.margin>
-                                                               <padding>
-                                                                  <Insets left="10.0" right="10.0" />
-                                                               </padding>
-                                                            </Label>
-                                                            <Label prefWidth="200.0" text="Label">
-                                                               <font>
-                                                                  <Font size="16.0" />
-                                                               </font>
-                                                               <HBox.margin>
-                                                                  <Insets />
-                                                               </HBox.margin>
-                                                               <padding>
-                                                                  <Insets left="10.0" right="10.0" />
-                                                               </padding>
-                                                            </Label>
-                                                         </children>
-                                                      </HBox>
-                                                      <HBox prefHeight="100.0" prefWidth="200.0">
-                                                         <children>
-                                                            <Label prefWidth="100.0" text="Length">
-                                                               <font>
-                                                                  <Font size="16.0" />
-                                                               </font>
-                                                               <HBox.margin>
-                                                                  <Insets />
-                                                               </HBox.margin>
-                                                               <padding>
-                                                                  <Insets left="10.0" right="10.0" />
-                                                               </padding>
-                                                            </Label>
-                                                            <Label prefWidth="200.0" text="Label">
-                                                               <font>
-                                                                  <Font size="16.0" />
-                                                               </font>
-                                                               <HBox.margin>
-                                                                  <Insets />
-                                                               </HBox.margin>
-                                                               <padding>
-                                                                  <Insets left="10.0" right="10.0" />
-                                                               </padding>
-                                                            </Label>
-                                                         </children>
-                                                      </HBox>
-                                                      <HBox prefHeight="100.0" prefWidth="200.0" />
-                                                   </children>
-                                                </VBox>
-                                                <VBox layoutX="600.0" opacity="0.35" prefHeight="200.0" prefWidth="300.0" style="-fx-background-color: white;">
-                                                   <children>
-                                                      <HBox minHeight="20.0" prefHeight="20.0" prefWidth="200.0" />
-                                                      <HBox prefHeight="34.0" prefWidth="300.0">
-                                                         <children>
-                                                            <Label prefHeight="25.0" prefWidth="306.0" text="Description">
-                                                               <font>
-                                                                  <Font size="16.0" />
-                                                               </font>
-                                                               <HBox.margin>
-                                                                  <Insets />
-                                                               </HBox.margin>
-                                                               <padding>
-                                                                  <Insets left="10.0" right="10.0" />
-                                                               </padding>
-                                                            </Label>
-                                                         </children>
-                                                      </HBox>
-                                                      <HBox prefHeight="100.0" prefWidth="200.0">
-                                                         <children>
-                                                            <Label prefWidth="100.0" text="Empty">
-                                                               <font>
-                                                                  <Font size="16.0" />
-                                                               </font>
-                                                               <HBox.margin>
-                                                                  <Insets />
-                                                               </HBox.margin>
-                                                               <padding>
-                                                                  <Insets left="10.0" right="10.0" />
-                                                               </padding>
-                                                            </Label>
-                                                         </children>
-                                                      </HBox>
-                                                      <HBox prefHeight="100.0" prefWidth="200.0" />
-                                                   </children>
-                                                </VBox>
-                                             </children>
-                                          </Pane>
-                                       </bottom>
                                        <center>
                                           <Pane fx:id="characterPane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
                                        </center>
