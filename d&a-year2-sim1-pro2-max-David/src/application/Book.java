@@ -6,7 +6,10 @@ public class Book implements Hashable {
 private LinkedList<Character> characters = new LinkedList<>();	//All  books will have their own list of associated characters/Or hash keys if change is needed.
 	
 private String title,author,genre,plot,imageUrl, publisher;
-private int pubYear, numOfPages,hashNum;
+private int pubYear, numOfPages,hashNum, sort;
+
+
+
 
 	public Book(String title, String author, String publisher, int pubYear, int numOfPages, String genre, String plot, String imageUrl) {
 		this.title = title;
@@ -98,6 +101,24 @@ private int pubYear, numOfPages,hashNum;
 	public int getHashNum() {
 		// TODO Auto-generated method stub
 		return 0;
+	}
+	public LinkedList<Character> getCharacters() {
+	return characters;
+	}
+	
+	
+	public void setCharacters(LinkedList<Character> characters) {
+		this.characters = characters;
+	}
+	
+	
+	public int getSort() {
+		return sort;
+	}
+	
+	
+	public void setSort(int sort) {
+		this.sort = sort;
 	}
 }
 
