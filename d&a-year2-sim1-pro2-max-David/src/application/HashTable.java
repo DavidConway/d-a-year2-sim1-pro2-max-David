@@ -39,8 +39,22 @@ public class HashTable{
 		
 		for(Hashable c: hashArray) {
 			int hashNum = (c.toString().length())%(newHashArray.length);
-			boolean placeFound = false;
-				
+			LinkedListNode<Integer> temp ;
+			boolean changed = false;
+			
+			if(c.getList().head != null) {
+				temp = c.getList().head;
+			}
+			else
+			{
+				temp = null;
+			}
+			
+			while (temp != null) {
+				//updaes the freferens of eatch book.
+			}
+			
+			boolean placeFound = false;	
 			while (placeFound == false) {
 				if (hashArray[hashNum] == null) {
 					hashArray[hashNum] = c;

@@ -2,7 +2,7 @@ package application;
 
 public class LinkedList<T> {
 
-	private LinkedListNode<T> head = null;
+	public LinkedListNode<T> head = null;
 	private LinkedListNode<T> temp = null;
 	private int size;
 	

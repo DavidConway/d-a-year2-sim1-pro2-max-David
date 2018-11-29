@@ -3,7 +3,7 @@ package application;
 import java.util.Calendar;
 
 public class Book implements Hashable {
-private LinkedList<Character> characters = new LinkedList<>();	//All  books will have their own list of associated characters/Or hash keys if change is needed.
+private LinkedList<Integer> characters = new LinkedList<>();	//All  books will have their own list of associated characters/Or hash keys if change is needed.
 	
 private String title,author,genre,plot,imageUrl, publisher;
 private int pubYear, numOfPages,hashNum, sort;
@@ -81,9 +81,18 @@ private int pubYear, numOfPages,hashNum, sort;
 	public void setNumOfPages(int numOfPages) {
 		this.numOfPages = numOfPages;
 	}
-
 	//
-	
+	// adds the hash of the charicter to list
+	public void addChar(String name) {
+		for (Hashable i : Main.chars.hashArray) {// gose trow all known chatractors
+			if(i != null) {
+				if(((Character)i).getName().equals(name)) {//checks to see if the name matches
+					characters.add(i.getHashNum());// get the charactors hash and adds it to the list
+				}
+			}
+		}
+	}
+	//
 	public String toString()
 	{
 		return title;
@@ -102,12 +111,13 @@ private int pubYear, numOfPages,hashNum, sort;
 		// TODO Auto-generated method stub
 		return 0;
 	}
-	public LinkedList<Character> getCharacters() {
+
+	public LinkedList<Integer> getCharacters() {
 	return characters;
 	}
 	
 	
-	public void setCharacters(LinkedList<Character> characters) {
+	public void setCharacters(LinkedList<Integer> characters) {
 		this.characters = characters;
 	}
 	
@@ -119,6 +129,13 @@ private int pubYear, numOfPages,hashNum, sort;
 	
 	public void setSort(int sort) {
 		this.sort = sort;
+	}
+
+
+	@Override
+	public LinkedList<Integer> getList() {
+		// TODO Auto-generated method stub
+		return characters;
 	}
 }
 

@@ -107,7 +107,7 @@ public class Controller {
     private Button pagesButton;
    
     @FXML
-    void addBookOnClick(ActionEvent event) {// not tested yet
+    void addBookOnClick(ActionEvent event) {// 
     	int pubYear;
     	int pageCount;
     	//trys to parse the textYear to a int and sets to 0 if it fales
@@ -129,13 +129,17 @@ public class Controller {
     	
     	Book newBook = new Book(textTitle.getText(), textAuthor.getText(), textPublisher.getText(), pubYear, pageCount, textGenre.getText(), textPlot.getText(), textURL.getText());
     	Main.sortedBooks.add(newBook);
+    	Main.books.add(newBook);
     	updateBookGrid();
     	
     }
 
     @FXML
     void addCharOnClick(ActionEvent event) {
-
+    	Character newChar = new Character(textName.getText(), textGender.getText(), textDescription.getText());
+    	Main.sortedChars.add(newChar);
+    	Main.chars.add(newChar);
+    	updateCharGrid();
     }
     @FXML
     void addToBookOnClick(ActionEvent event) {
@@ -212,9 +216,9 @@ public class Controller {
     			column.setPrefWidth(column.getWidth()+5);
     		}
     		**/
-    	}
+    	}}
     	
-    }
+    
     
     void updateBookGrid()
     {
