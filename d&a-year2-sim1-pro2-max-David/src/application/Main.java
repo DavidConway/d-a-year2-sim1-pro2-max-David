@@ -30,9 +30,12 @@ public class Main extends Application {
 	public static void main(String[] args) {
 		launch(args);
 	}
-	static int[] sortString(String[] args)
+	static Integer[] sortString(String[] args)
 	    {
-	    	int[] index = new int[args.length];
+		System.out.println(args);
+	    	Integer[] index = new Integer[args.length];
+	    	
+	    	System.out.println("Length of array: "+args.length);
 	    	
 	    	//INITIALIZING INTEGER ARRAY
 	    	
@@ -41,14 +44,15 @@ public class Main extends Application {
 	    		index[i] = i;
 	    	}
 	    	
-	    	String[] temp = new String[args.length];
+	    	String[] temp = args;
+	    	System.out.println(temp);
 	    	
 	    											
-	    	for (int k = 0; k < args.length; k ++)						//LOOPS THE MAXIMUM NUMBER OF TIME/LENGTH OF LIST
+	    	for (int k = 0; k < args.length-1; k ++)						//LOOPS THE MAXIMUM NUMBER OF TIME/LENGTH OF LIST
 	    	{							
-		    	for (int i = 0; i < args.length; i++)   				//LOOPS THROUGH TITLES
+		    	for (int i = 0; i < args.length-1; i++)   				//LOOPS THROUGH TITLES
 		    	{
-		    		for (int j = 0; j < args[i].length(); j ++)			//LOOPS THROUGH LETTERS IN TITLES
+		    		for (int j = 0; j < args[i].length()-1; j ++)			//LOOPS THROUGH LETTERS IN TITLES
 		    		{
 		    			if (args[i].charAt(j) < args[i+1].charAt(j))	//COMPARES LETTERS/IF NEED TO SWITCH IT DOES
 		        		{

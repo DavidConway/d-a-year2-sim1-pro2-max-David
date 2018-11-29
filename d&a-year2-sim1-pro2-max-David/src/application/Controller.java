@@ -207,22 +207,15 @@ public class Controller {
     			label.setMaxWidth(60);
     			label.setMinWidth(60);
     			label.setPrefWidth(60);
-    			System.out.println("Setting width : " + 60);
     			if (i > 4)
     			{
     			label.setTranslateX(i * 102.2 -40);
         		label.setTranslateY(index * 30);
     			}
-    		}}
-    		
-    
-    		/**
-    		while (args[i].length()*5 > column.getWidth()) //Resizing columns if text is long
-    		{
-    			column.setPrefWidth(column.getWidth()+5);
     		}
-    		**/
-    	}}
+    	}
+    	}
+    }
     	
     
     
@@ -264,12 +257,44 @@ public class Controller {
 
     @FXML
     void sortTitle(ActionEvent event) {
-    	String[] titles = new String[Main.sortedBooks.size()];
-    	for (int i = 0; i < Main.sortedBooks.size(); i ++)
+    	String[] titles = new String[Main.books.hashArray.length];
+    	int size = 0;
+    	for (int i = 0; i < Main.books.hashArray.length; i ++)
     	{
-    		titles[i] = Main.sortedBooks.get(i).getContents().getTitle();
+    		System.out.println("Loop number: "+ i + "    Length of array: " + Main.books.hashArray.length);
+    		if (((Book) Main.books.hashArray[i]) != null)
+    		{
+    			titles[i] = ((Book) Main.books.hashArray[i]).getTitle();
+    			System.out.println("Found title: "+ titles[i]);
+    			size ++;
+    		}
     	}
-    	Main.sortString(titles);
+    	String[] finalTitles = new String[size];
+    	int temp = 0;
+    	for (int i = 0; i < Main.books.hashArray.length; i ++)
+    	{
+    		System.out.println("Loop number: "+ i + "    Length of array: " + Main.books.hashArray.length);
+    		if (((Book) Main.books.hashArray[i]) != null)
+    		{
+    			finalTitles[temp] = titles[i];
+    			temp++;
+    		}
+    	}
+    	
+    	System.out.println(""+Main.sortString(finalTitles));
+    	Integer[] sort = Main.sortString(finalTitles);
+    	int j = 0;
+    	System.out.println(sort);
+    	for (int i = 0; i < Main.books.hashArray.length; i++)
+    	{
+    		if (Main.books.hashArray[i] != null)
+    		{
+    			((Book) Main.books.hashArray[i]).setSort(sort[j]);
+    			System.out.println("Setting book index: "+ i +"    name: " +((Book) Main.books.hashArray[i]).getTitle() + "    to location: "+ sort[i-1]);
+    			j++;
+    		}
+    	}
+    	updateBookGrid();
     }
 
     @FXML
