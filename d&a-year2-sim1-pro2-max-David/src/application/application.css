@@ -110,9 +110,18 @@
 	
 }
 .select {
+<<<<<<< HEAD
 	-fx-background-color: #999999;
 	-fx-background-image: url('images/centre.jpg');
 	-fx-font: 10px Corbel;
+=======
+	-fx-background-color: #ffffff;
+	-fx-background-radius: 1;
+	-fx-border-radius: 1;
+	-fx-border-color: #333333;
+	-fx-font-size: 14;
+	-fx-pref-height: 30;
+>>>>>>> branch 'master' of https://github.com/DavidConway/d-a-year2-sim1-pro2-max-David.git
 }
 	
 	

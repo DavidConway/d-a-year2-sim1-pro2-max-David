@@ -3,7 +3,9 @@
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
@@ -58,7 +60,39 @@ public class Controller {
     private Pane bookCharPane;
     @FXML
     private Pane characterPane;
+    @FXML
+    private ScrollPane bookScrollPane;
     
+    //FIELDS TO EDIT BOOKS
+    @FXML
+    private TextField textEditTitle;
+    @FXML
+    private TextField textEditAuthor;
+    @FXML
+    private TextField textEditYear;
+    @FXML
+    private TextField textEditLength;
+    @FXML
+    private TextField textEditGenre;
+    @FXML
+    private TextArea textEditPlot;
+    @FXML
+    private TextField textEditURL;
+    @FXML
+    private TextField textEditPublisher;
+    
+    //FIELDS TO EDIT CHARACTERS
+    @FXML
+    private TextField editTextName;
+    @FXML
+    private TextField editTextGender;
+    @FXML
+    private TextArea editTextDescription;
+    
+    //FIELDS TO ADD CHAR TO BOOK
+    @FXML
+    private ComboBox<Book> choiceBook;
+
     
     //SORTING BUTTONS
     @FXML
@@ -106,6 +140,30 @@ public class Controller {
     	Main.chars.add(newChar);
     	updateCharGrid();
     }
+    @FXML
+    void addToBookOnClick(ActionEvent event) {
+
+    }
+
+    @FXML
+    void deleteBookOnClick(ActionEvent event) {
+
+    }
+
+    @FXML
+    void deleteCharOnClick(ActionEvent event) {
+
+    }
+
+    @FXML
+    void editBookOnClick(ActionEvent event) {
+
+    }
+
+    @FXML
+    void editCharOnClick(ActionEvent event) {
+
+    }
 
     @FXML
     void resetBookSearch(ActionEvent event) {
@@ -117,15 +175,16 @@ public class Controller {
     	{
     		if (i == 0)
     		{
-    			Button button = new Button(args[0]);
-    			grid.getChildren().add(button);
-    			button.setPrefHeight(30);
+    			Button button = new Button(args[i]);
+        		button.getStyleClass().add("select");
+        		grid.getChildren().add(button);
+
     			button.setPrefWidth(100);
     			button.setTranslateX(i * 102.2);
         		button.setTranslateY(index * 30);
-        		button.getStyleClass().add("select");
     		}
-    		if (i > 0)
+
+    		else
     		{
     		Label label = new Label(args[i]);
     		label.getStyleClass().add("gridlabel");
@@ -147,7 +206,7 @@ public class Controller {
     			label.setTranslateX(i * 102.2 -40);
         		label.setTranslateY(index * 30);
     			}
-    		}
+    		}}
     		
     
     		/**
