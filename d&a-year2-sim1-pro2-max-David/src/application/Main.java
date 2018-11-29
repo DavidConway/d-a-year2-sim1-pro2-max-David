@@ -33,6 +33,7 @@ public class Main extends Application {
 	static Integer[] sortString(String[] args)
 	    {
 	    	Integer[] index = new Integer[args.length];
+	    	boolean swapped = true;
 	    	
 	    	System.out.println("Length of array: "+args.length);
 	    	
@@ -43,29 +44,30 @@ public class Main extends Application {
 	    		index[i] = i;
 	    	}
 	    	
-	    	String[] temp = args;
-	    	for (int j = 0 ; j <args.length; j++)
+	    	while(swapped == true)
 	    	{
-	    	for (int k = 0; k < args.length; k ++)						//LOOPS THE MAXIMUM NUMBER OF TIME/LENGTH OF LIST
-	    	{	
+	    	swapped = false;
 		    	for (int i = 0; i < args.length-1; i++)   				//LOOPS THROUGH TITLES
 		    	{
 		    		System.out.println("Checking title "+i+" now...");
 		    		if (args[i].charAt(0) > args[i+1].charAt(0))	//COMPARES LETTERS/IF NEED TO SWITCH IT DOES
 		        		{
 		    			System.out.println("Determined there should be a swap between " +args[i]+ "   and: " + args[i+1]);
-		    				temp[i] = args[i];
-		    				args[i+1] = args[i];
-		    				args [i] = args[i+1];
-		    				index[i + 1] = i;
-		    				index[i] = i + 1;
-		    				System.out.println("SWAPPING: Setting book index: "+ i +"    name: " +((Book)books.hashArray[i+1]).getTitle() + "    to location: "+ (i+1));
+		    				String temp = args[i];
+		    				int tempInt = index[i];
+		    				args[i] = args[i+1];
+		    				args [i+1] = temp;
+		    				index[i] = i+1;
+		    				index[i+1] = tempInt;
+		    				swapped = true;
 		        		}
 		    		}
 		    	}
+	    	
+	    	for (int i = 0; i <index.length; i++)
+	    	{
+	    		System.out.println(index[i] + i); 
 	    	}
-	    	System.out.println("Index 0: "+index[0]);
-	    	System.out.println("Index 1: "+index[1]);
 	    	
 	    	return index;
 	    }
