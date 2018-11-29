@@ -11,7 +11,7 @@ private int pubYear, numOfPages,hashNum, sort;
 
 
 
-	public Book(String title, String author, String publisher, int pubYear, int numOfPages, String genre, String plot, String imageUrl) {
+	public Book(String title, String author, String publisher, int pubYear, int numOfPages, String genre, String plot, String imageUrl, int sort) {
 		this.title = title;
 		this.author = author;
 		this.pubYear = pubYear;
@@ -20,6 +20,7 @@ private int pubYear, numOfPages,hashNum, sort;
 		this.plot = plot;
 		this.imageUrl = imageUrl;
 		this.publisher = publisher;
+		this.sort = sort;
 	}
 	
 	
@@ -100,15 +101,12 @@ private int pubYear, numOfPages,hashNum, sort;
 
 
 	@Override
-	public void setHashNum(int hash) {
-		// TODO Auto-generated method stub
-		
+	public void setHashNum(int hash) {	
 	}
 
 
 	@Override
 	public int getHashNum() {
-		// TODO Auto-generated method stub
 		return 0;
 	}
 
@@ -134,7 +132,6 @@ private int pubYear, numOfPages,hashNum, sort;
 
 	@Override
 	public LinkedList<Integer> getList() {
-		// TODO Auto-generated method stub
 		return characters;
 	}
 }

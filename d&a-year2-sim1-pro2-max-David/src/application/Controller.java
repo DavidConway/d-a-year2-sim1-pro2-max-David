@@ -110,6 +110,7 @@ public class Controller {
     void addBookOnClick(ActionEvent event) {// 
     	int pubYear;
     	int pageCount;
+    	int sort = 0;
     	//trys to parse the textYear to a int and sets to 0 if it fales
     	try {
     		pubYear = Integer.parseInt(textYear.getText());
@@ -126,9 +127,14 @@ public class Controller {
     		pageCount = 0;
     	}
     	//
-    	
-    	Book newBook = new Book(textTitle.getText(), textAuthor.getText(), textPublisher.getText(), pubYear, pageCount, textGenre.getText(), textPlot.getText(), textURL.getText());
-    	Main.sortedBooks.add(newBook);
+    	for (int i = 0; i < Main.books.hashArray.length; i++)
+    	{
+    		if (Main.books.hashArray[i] != null)
+    		{
+    			sort++;
+    		}
+    	}
+    	Book newBook = new Book(textTitle.getText(), textAuthor.getText(), textPublisher.getText(), pubYear, pageCount, textGenre.getText(), textPlot.getText(), textURL.getText(), sort);
     	Main.books.add(newBook);
     	updateBookGrid();
     	
@@ -223,11 +229,14 @@ public class Controller {
     void updateBookGrid()
     {
     	bookPane.getChildren().clear();
-    	for (int i = 0; i < Main.sortedBooks.size(); i++) {
-    		Book temp = Main.sortedBooks.get(i).getContents();
-    		addToGrid(bookPane, Main.sortedBooks.get(i).getIndex(), temp.getTitle(), temp.getAuthor(), temp.getPublisher(),temp.getGenre(), Integer.toString(temp.getPubYear()), Integer.toString(temp.getNumOfPages()));
+    	for (int i = 0; i < Main.books.hashArray.length; i++) {
+    		if (Main.books.hashArray[i] != null)
+ 			{	
+    		Book temp = ((Book) Main.books.hashArray[i]);
+    		addToGrid(bookPane, (temp.getSort()), temp.getTitle(), temp.getAuthor(), temp.getPublisher(),temp.getGenre(), Integer.toString(temp.getPubYear()), Integer.toString(temp.getNumOfPages()));
+ 			}	
     	}
-    	bookPane.setMinHeight(Main.sortedBooks.size()*30);
+    	bookPane.setMinHeight(Main.books.hashArray.length*30);
     }
     
     void updateCharGrid()
