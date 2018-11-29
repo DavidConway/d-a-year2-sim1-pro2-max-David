@@ -280,17 +280,13 @@ public class Controller {
     			temp++;
     		}
     	}
-    	
-    	System.out.println(""+Main.sortString(finalTitles));
     	Integer[] sort = Main.sortString(finalTitles);
     	int j = 0;
-    	System.out.println(sort);
     	for (int i = 0; i < Main.books.hashArray.length; i++)
     	{
     		if (Main.books.hashArray[i] != null)
     		{
     			((Book) Main.books.hashArray[i]).setSort(sort[j]);
-    			System.out.println("Setting book index: "+ i +"    name: " +((Book) Main.books.hashArray[i]).getTitle() + "    to location: "+ sort[i-1]);
     			j++;
     		}
     	}
