@@ -109,6 +109,14 @@
 	-fx-color: #b2b2b2;
 	
 }
+.select {
+	-fx-background-color: #ffffff;
+	-fx-background-radius: 1;
+	-fx-border-radius: 1;
+	-fx-border-color: #333333;
+	-fx-font-size: 14;
+	-fx-pref-height: 30;
+}
 	
 	
 
