@@ -296,5 +296,9 @@ public class Controller {
 
     }
     
-   
+   void initialize()
+   {
+	   bookScrollPane.getStyleableParent().getStyleClass().add("scrollback");
+   }
+		   
 }
