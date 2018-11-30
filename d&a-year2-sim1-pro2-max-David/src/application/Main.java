@@ -57,4 +57,30 @@ public class Main extends Application {
 		}
 		return index;
 	}
+	static Integer[] sortInt(int[] args) {
+		Integer[] index = new Integer[args.length];
+		boolean swapped = true;
+
+		for (int i = 0; i < args.length; i++) {	
+			index[i] = i;		// INITIALIZING INTEGER ARRAY
+		}
+		while (swapped == true) {
+			swapped = false;
+			for (int i = 0; i < args.length - 1; i++) // LOOPS THROUGH TITLES
+			{
+				if (args[i] > args[i + 1]) // COMPARES LETTERS/IF NEED TO SWITCH IT DOES
+				{
+					int temp = args[i];
+					args[i] = args[i + 1];
+					args[i + 1] = temp;
+					int tempInt = index[i];
+					index[i] = index[i + 1];
+					index[i + 1] = tempInt;
+					swapped = true;
+					break;
+				}
+			}
+		}
+		return index;
+	}
 }
