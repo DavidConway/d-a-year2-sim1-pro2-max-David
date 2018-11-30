@@ -226,6 +226,7 @@ public class Controller {
     		if (Main.books.hashArray[i] != null)
  			{	
     		Book temp = ((Book) Main.books.hashArray[i]);
+    		System.out.println("Current sort: " +temp.getSort());
     		addToGrid(bookPane, (temp.getSort()), temp.getTitle(), temp.getAuthor(), temp.getPublisher(),temp.getGenre(), Integer.toString(temp.getPubYear()), Integer.toString(temp.getNumOfPages()));
  			}	
     	}
@@ -261,24 +262,20 @@ public class Controller {
     	int size = 0;
     	for (int i = 0; i < Main.books.hashArray.length; i ++)
     	{
-    		System.out.println("Loop number: "+ i + "    Length of array: " + Main.books.hashArray.length);
     		if (((Book) Main.books.hashArray[i]) != null)
     		{
-    			titles[i] = ((Book) Main.books.hashArray[i]).getTitle();
-    			System.out.println("Found title: "+ titles[i]);
+    			titles[size] = ((Book) Main.books.hashArray[i]).getTitle();
+    			System.out.println("Added to titles at size: "+size);
     			size ++;
     		}
     	}
     	String[] finalTitles = new String[size];
-    	int temp = 0;
-    	for (int i = 0; i < Main.books.hashArray.length; i ++)
+    	int newSize = 0;
+    	for (int i = 0; i < size; i ++)
     	{
-    		System.out.println("Loop number: "+ i + "    Length of array: " + Main.books.hashArray.length);
-    		if (((Book) Main.books.hashArray[i]) != null)
-    		{
-    			finalTitles[temp] = titles[i];
-    			temp++;
-    		}
+    			finalTitles[i] = titles[i];
+    			newSize++;
+    			System.out.println("Added to finaltitles at size: "+newSize);
     	}
     	Integer[] sort = Main.sortString(finalTitles);
     	int j = 0;
@@ -286,6 +283,7 @@ public class Controller {
     	{
     		if (Main.books.hashArray[i] != null)
     		{
+    			System.out.println("Setting book: " +((Book) Main.books.hashArray[i]).getTitle()  + "   to position: " + sort[j]);
     			((Book) Main.books.hashArray[i]).setSort(sort[j]);
     			j++;
     		}
