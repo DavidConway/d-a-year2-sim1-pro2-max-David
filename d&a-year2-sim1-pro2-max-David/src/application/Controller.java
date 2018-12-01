@@ -106,8 +106,6 @@ public class Controller {
     @FXML
     private Button pagesButton;
    
-    
-    
     //METHODS FOR ADD/REMOVING/EDITING
     
     @FXML
@@ -328,6 +326,10 @@ public class Controller {
 
     @FXML
     void filterTitle(ActionEvent event) {
+
+    }
+    @FXML
+    void filterYear(ActionEvent event) {
 
     }
 		   
