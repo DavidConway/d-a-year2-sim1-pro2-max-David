@@ -106,6 +106,10 @@ public class Controller {
     @FXML
     private Button pagesButton;
    
+    
+    
+    //METHODS FOR ADD/REMOVING/EDITING
+    
     @FXML
     void addBookOnClick(ActionEvent event) {// 
     	int pubYear;
@@ -177,6 +181,9 @@ public class Controller {
 
     }
     
+    
+    //METHODS FOR GRIDDING
+    
     void addToGrid(AnchorPane grid, int index, String... args){
     	for (int i = 0; i < args.length; i++)
     	{
@@ -241,6 +248,8 @@ public class Controller {
     }
     
 
+    //METHODS FOR SORTING
+    
     @FXML
     void sortAuthor(ActionEvent event) {
 
@@ -295,6 +304,8 @@ public class Controller {
     void sortYear(ActionEvent event) {
 
     }
+    
+    //METHODS FOR FILTERING
     
    void initialize()
    {
