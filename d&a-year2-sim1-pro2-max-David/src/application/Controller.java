@@ -306,10 +306,29 @@ public class Controller {
     }
     
     //METHODS FOR FILTERING
-    
-   void initialize()
-   {
-	   bookScrollPane.getStyleableParent().getStyleClass().add("scrollback");
-   }
+    @FXML
+    void filterAuthor(ActionEvent event) {
+
+    }
+
+    @FXML
+    void filterGenre(ActionEvent event) {
+
+    }
+
+    @FXML
+    void filterLength(ActionEvent event) {
+
+    }
+
+    @FXML
+    void filterPublisher(ActionEvent event) {
+
+    }
+
+    @FXML
+    void filterTitle(ActionEvent event) {
+
+    }
 		   
 }

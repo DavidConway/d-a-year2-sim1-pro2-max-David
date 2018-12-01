@@ -185,32 +185,32 @@
                                                       <Insets left="5.0" />
                                                    </padding>
                                                 </TextField>
-                                                <Button fx:id="filterTitle" layoutX="155.0" layoutY="10.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0" styleClass="filterButton" stylesheets="@application.css">
+                                                <Button layoutX="155.0" layoutY="10.0" mnemonicParsing="false" onAction="#filterTitle" prefHeight="20.0" prefWidth="20.0" styleClass="filterButton" stylesheets="@application.css">
                                                    <padding>
                                                       <Insets left="1.0" right="1.0" />
                                                    </padding>
                                                 </Button>
-                                                <Button layoutX="155.0" layoutY="40.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0" styleClass="filterButton" stylesheets="@application.css">
+                                                <Button layoutX="155.0" layoutY="40.0" mnemonicParsing="false" onAction="#filterAuthor" prefHeight="20.0" prefWidth="20.0" styleClass="filterButton" stylesheets="@application.css">
                                                    <padding>
                                                       <Insets left="1.0" right="1.0" />
                                                    </padding>
                                                 </Button>
-                                                <Button layoutX="155.0" layoutY="70.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0" styleClass="filterButton" stylesheets="@application.css">
+                                                <Button layoutX="155.0" layoutY="70.0" mnemonicParsing="false" onAction="#filterYear" prefHeight="20.0" prefWidth="20.0" styleClass="filterButton" stylesheets="@application.css">
                                                    <padding>
                                                       <Insets left="1.0" right="1.0" />
                                                    </padding>
                                                 </Button>
-                                                <Button layoutX="155.0" layoutY="100.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0" styleClass="filterButton" stylesheets="@application.css">
+                                                <Button layoutX="155.0" layoutY="100.0" mnemonicParsing="false" onAction="#filterPublisher" prefHeight="20.0" prefWidth="20.0" styleClass="filterButton" stylesheets="@application.css">
                                                    <padding>
                                                       <Insets left="1.0" right="1.0" />
                                                    </padding>
                                                 </Button>
-                                                <Button layoutX="155.0" layoutY="130.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0" styleClass="filterButton" stylesheets="@application.css">
+                                                <Button layoutX="155.0" layoutY="130.0" mnemonicParsing="false" onAction="#filterGenre" prefHeight="20.0" prefWidth="20.0" styleClass="filterButton" stylesheets="@application.css">
                                                    <padding>
                                                       <Insets left="1.0" right="1.0" />
                                                    </padding>
                                                 </Button>
-                                                <Button layoutX="155.0" layoutY="160.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0" styleClass="filterButton" stylesheets="@application.css">
+                                                <Button layoutX="155.0" layoutY="160.0" mnemonicParsing="false" onAction="#filterLength" prefHeight="20.0" prefWidth="20.0" styleClass="filterButton" stylesheets="@application.css">
                                                    <padding>
                                                       <Insets left="1.0" right="1.0" />
                                                    </padding>
