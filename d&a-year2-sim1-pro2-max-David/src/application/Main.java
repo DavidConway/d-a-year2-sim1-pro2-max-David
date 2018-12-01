@@ -57,18 +57,19 @@ public class Main extends Application {
 		}
 		return index;
 	}
+
 	static Integer[] sortInt(int[] args) {
 		Integer[] index = new Integer[args.length];
 		boolean swapped = true;
 
-		for (int i = 0; i < args.length; i++) {	
-			index[i] = i;		// INITIALIZING INTEGER ARRAY
+		for (int i = 0; i < args.length; i++) {
+			index[i] = i; // INITIALIZING INTEGER ARRAY
 		}
 		while (swapped == true) {
 			swapped = false;
-			for (int i = 0; i < args.length - 1; i++) // LOOPS THROUGH TITLES
+			for (int i = 0; i < (args.length-1); i++) // LOOPS THROUGH TITLES
 			{
-				if (args[i] > args[i + 1]) // COMPARES LETTERS/IF NEED TO SWITCH IT DOES
+				if (args[i] > args[i + 1]) 
 				{
 					int temp = args[i];
 					args[i] = args[i + 1];
@@ -81,6 +82,7 @@ public class Main extends Application {
 				}
 			}
 		}
+
 		return index;
 	}
 }

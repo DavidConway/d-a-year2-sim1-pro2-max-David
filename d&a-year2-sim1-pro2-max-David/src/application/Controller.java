@@ -199,7 +199,7 @@ public class Controller {
         		grid.getChildren().add(button);
 
     			button.setPrefWidth(100);
-    			button.setTranslateX(i * 102.2);
+    			button.setTranslateX(i * 102.3);
         		button.setTranslateY(index * 30);
     		}
 
@@ -210,7 +210,7 @@ public class Controller {
     		grid.getChildren().add(label);
 
 			label.setPrefWidth(100);
-			label.setTranslateX(i * 102.2);
+			label.setTranslateX(i * 102.3);
     		label.setTranslateY(index * 30);
     		
 			
@@ -221,7 +221,7 @@ public class Controller {
     			label.setPrefWidth(60);
     			if (i > 4)
     			{
-    			label.setTranslateX(i * 102.2 -40);
+    			label.setTranslateX(i * 102.3 -40);
         		label.setTranslateY(index * 30);
     			}
     		}
