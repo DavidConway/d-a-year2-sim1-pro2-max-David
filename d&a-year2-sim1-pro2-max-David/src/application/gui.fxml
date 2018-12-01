@@ -319,13 +319,13 @@
                                                    <children>
                                                       <Pane maxHeight="-Infinity" minWidth="512.0" prefWidth="597.0">
                                                          <children>
-                                                            <ScrollPane fx:id="bookScrollPane" pannable="true" prefHeight="413.0" prefWidth="535.0">
+                                                            <ScrollPane fx:id="bookScrollPane" pannable="true" prefHeight="413.0" prefWidth="536.0">
                                                                <content>
                                                                   <AnchorPane fx:id="bookPane" />
                                                                </content>
                                                             </ScrollPane>
                                                          </children></Pane>
-                                                      <Pane fx:id="bookCharPane" maxWidth="330.0" prefHeight="512.0" prefWidth="328.0" />
+                                                      <Pane fx:id="bookCharPane" maxWidth="330.0" prefHeight="720.0" prefWidth="266.0" styleClass="redPanel" stylesheets="@application.css" />
                                                    </children>
                                                 </HBox>
                                              </children>

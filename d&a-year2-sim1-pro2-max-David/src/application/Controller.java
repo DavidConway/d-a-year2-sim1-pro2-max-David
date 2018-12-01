@@ -10,6 +10,7 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
+import javafx.stage.Screen;
 
 public class Controller {
 
@@ -106,6 +107,12 @@ public class Controller {
     @FXML
     private Button pagesButton;
    
+    @FXML
+    void initialize()
+    {
+    	bookScrollPane.setMinViewportHeight(Screen.getPrimary().getBounds().getHeight());
+    	bookScrollPane.setFitToHeight(true);
+    }
     //METHODS FOR ADD/REMOVING/EDITING
     
     @FXML
