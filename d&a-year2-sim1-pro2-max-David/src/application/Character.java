@@ -2,7 +2,7 @@ package application;
 
 public class Character implements Hashable{
 private String name,gender,description;
-private int sort;
+private int sort,hashNum;
 
 private LinkedList<Integer> book = new LinkedList<>();
 
@@ -74,13 +74,12 @@ private LinkedList<Integer> book = new LinkedList<>();
 	
 	@Override
 	public void setHashNum(int hash) {
-		// TODO Auto-generated method stub
+		this.hashNum = hash;
 		
 	}
 
 	@Override
 	public int getHashNum() {
-		// TODO Auto-generated method stub
-		return 0;
+		return this.hashNum;
 	}
 }

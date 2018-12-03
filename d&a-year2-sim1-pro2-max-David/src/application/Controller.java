@@ -165,6 +165,19 @@ public class Controller {
 
     @FXML
     void deleteBookOnClick(ActionEvent event) {
+    	boolean removed = false;
+    	for(Hashable c: Main.books.hashArray) {
+    		
+    		if(c == activeBook) {
+    			Main.books.hashArray[c.getHashNum()] = null;
+    			updateBookGrid();
+    			removed = true;
+    		}
+    		else if (removed == true && c != null) {
+    			c.setSort((c.getSort())-1);
+    			updateBookGrid();
+    		}
+    	}
 
     }
 

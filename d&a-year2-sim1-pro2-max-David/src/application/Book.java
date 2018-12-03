@@ -94,20 +94,16 @@ private int pubYear, numOfPages,hashNum, sort;
 		}
 	}
 	//
-	public String toString()
-	{
-		return title;
-	}
-
 
 	@Override
 	public void setHashNum(int hash) {	
+		this.hashNum =hash;
 	}
 
 
 	@Override
 	public int getHashNum() {
-		return 0;
+		return this.hashNum;
 	}
 
 	public LinkedList<Integer> getCharacters() {
