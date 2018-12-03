@@ -138,14 +138,7 @@ public class Controller {
     		pageCount = 0;
     	}
     	//
-    	for (int i = 0; i < Main.books.hashArray.length; i++)
-    	{
-    		if (Main.books.hashArray[i] != null)
-    		{
-    			sort++;
-    		}
-    	}
-    	Book newBook = new Book(textTitle.getText(), textAuthor.getText(), textPublisher.getText(), pubYear, pageCount, textGenre.getText(), textPlot.getText(), textURL.getText(), sort);
+    	Book newBook = new Book(textTitle.getText(), textAuthor.getText(), textPublisher.getText(), pubYear, pageCount, textGenre.getText(), textPlot.getText(), textURL.getText(), Main.books.size());
     	Main.books.add(newBook);
     	updateBookGrid();
     	
@@ -257,15 +250,13 @@ public class Controller {
     void updateBookGrid()
     {
     	bookPane.getChildren().clear();
-    	for (int i = 0; i < Main.books.hashArray.length; i++) {
-    		if (Main.books.hashArray[i] != null)
- 			{	
-    		Book temp = (Book) (Main.books.get(i));
-    		System.out.println("Current sort: " +temp.getSort());
-    		addToGrid(bookPane, (temp.getSort()), i, temp.getTitle(), temp.getAuthor(), temp.getPublisher(),temp.getGenre(), Integer.toString(temp.getPubYear()), Integer.toString(temp.getNumOfPages()));
- 			}	
+    	for (int i = 0; i < Main.books.size(); i++) {
+    		System.out.println("Size:  "+Main.books.size());
+    		Book temp = (Book)Main.books.get(i);
+    		System.out.println(temp.getTitle());
+    		addToGrid(bookPane, (temp.getSort()), i, temp.getTitle(), temp.getAuthor(), temp.getPublisher(),temp.getGenre(), Integer.toString(temp.getPubYear()), Integer.toString(temp.getNumOfPages()));	
     	}
-    	bookPane.setMinHeight(Main.books.hashArray.length*30);
+    	bookPane.setMinHeight(Main.books.size()*30);
     }
     
     void updateCharGrid()
@@ -280,6 +271,17 @@ public class Controller {
     
     @FXML
     void sortAuthor(ActionEvent event) {
+    	String[] authors = new String[Main.books.size()];
+    	for (int i = 0; i < Main.books.size(); i ++)
+    	{
+    			authors[i] = ((Book) Main.books.get(i)).getTitle();
+    	}
+    	Integer[] sort = Main.sortString(authors);
+    	for (int i = 0; i < Main.books.size(); i++)
+    	{
+    		((Book) Main.books.get(i)).setSort(sort[i]);
+    	}
+    	updateBookGrid();
 
     }
 
@@ -295,35 +297,17 @@ public class Controller {
 
     @FXML
     void sortTitle(ActionEvent event) {
-    	String[] titles = new String[Main.books.hashArray.length];
-    	int size = 0;
-    	for (int i = 0; i < Main.books.hashArray.length; i ++)
+    	String[] titles = new String[Main.books.size()];
+    	for (int i = 0; i < Main.books.size(); i ++)
     	{
-    		if (((Book) Main.books.hashArray[i]) != null)
-    		{
-    			titles[size] = ((Book) Main.books.hashArray[i]).getTitle();
-    			System.out.println("Added to titles at size: "+size);
-    			size ++;
-    		}
+    			titles[i] = ((Book) Main.books.get(i)).getTitle();
     	}
-    	String[] finalTitles = new String[size];
-    	int newSize = 0;
-    	for (int i = 0; i < size; i ++)
+    	
+    	Integer[] sort = Main.sortString(titles);
+    	for (int i = 0; i < Main.books.size(); i++)
     	{
-    			finalTitles[i] = titles[i];
-    			newSize++;
-    			System.out.println("Added to finaltitles at size: "+newSize);
-    	}
-    	Integer[] sort = Main.sortString(finalTitles);
-    	int j = 0;
-    	for (int i = 0; i < Main.books.hashArray.length; i++)
-    	{
-    		if (Main.books.hashArray[i] != null)
-    		{
-    			System.out.println("Setting book: " +((Book) Main.books.hashArray[i]).getTitle()  + "   to position: " + sort[j]);
-    			((Book) Main.books.hashArray[i]).setSort(sort[j]);
-    			j++;
-    		}
+    		System.out.println(sort[i]+ "");
+    		((Book) Main.books.get(sort[i])).setSort(i);
     	}
     	updateBookGrid();
     }

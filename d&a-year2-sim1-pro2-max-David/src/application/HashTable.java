@@ -69,19 +69,30 @@ public class HashTable{
 		hashArray = newHashArray;
 	}
 	
-	public int size() {
+	public int length() {
 		return hashArray.length;
 	}
 	
-	public Hashable get(int i) {
-		return hashArray[i];
-		
+	public Hashable get(int item) {
+		int count = -1;
+		for (int i = 0; i < hashArray.length; i ++)
+		{
+			if (hashArray[i] != null)
+			{
+				count++;
+			}
+			if (item == count)
+			{
+				return hashArray[i];
+			}
+		}
+		return null;
 	}
 	
-	public int count()
+	public int size()
 	{
 		int count = 0;
-		for (int i = 0; i < size(); i ++)
+		for (int i = 0; i < hashArray.length; i ++)
 		{
 			if (hashArray[i] != null)
 			{
