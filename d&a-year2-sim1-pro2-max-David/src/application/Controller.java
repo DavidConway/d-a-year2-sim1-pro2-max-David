@@ -10,6 +10,7 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
+import javafx.stage.Screen;
 
 public class Controller {
 
@@ -107,9 +108,18 @@ public class Controller {
     private Button pagesButton;
    
     @FXML
+    void initialize()
+    {
+    	bookScrollPane.setMinViewportHeight(Screen.getPrimary().getBounds().getHeight());
+    	bookScrollPane.setFitToHeight(true);
+    }
+    //METHODS FOR ADD/REMOVING/EDITING
+    
+    @FXML
     void addBookOnClick(ActionEvent event) {// 
     	int pubYear;
     	int pageCount;
+    	int sort = 0;
     	//trys to parse the textYear to a int and sets to 0 if it fales
     	try {
     		pubYear = Integer.parseInt(textYear.getText());
@@ -126,9 +136,14 @@ public class Controller {
     		pageCount = 0;
     	}
     	//
-    	
-    	Book newBook = new Book(textTitle.getText(), textAuthor.getText(), textPublisher.getText(), pubYear, pageCount, textGenre.getText(), textPlot.getText(), textURL.getText());
-    	Main.sortedBooks.add(newBook);
+    	for (int i = 0; i < Main.books.hashArray.length; i++)
+    	{
+    		if (Main.books.hashArray[i] != null)
+    		{
+    			sort++;
+    		}
+    	}
+    	Book newBook = new Book(textTitle.getText(), textAuthor.getText(), textPublisher.getText(), pubYear, pageCount, textGenre.getText(), textPlot.getText(), textURL.getText(), sort);
     	Main.books.add(newBook);
     	updateBookGrid();
     	
@@ -171,6 +186,9 @@ public class Controller {
 
     }
     
+    
+    //METHODS FOR GRIDDING
+    
     void addToGrid(AnchorPane grid, int index, String... args){
     	for (int i = 0; i < args.length; i++)
     	{
@@ -181,7 +199,7 @@ public class Controller {
         		grid.getChildren().add(button);
 
     			button.setPrefWidth(100);
-    			button.setTranslateX(i * 102.2);
+    			button.setTranslateX(i * 102.3);
         		button.setTranslateY(index * 30);
     		}
 
@@ -192,7 +210,7 @@ public class Controller {
     		grid.getChildren().add(label);
 
 			label.setPrefWidth(100);
-			label.setTranslateX(i * 102.2);
+			label.setTranslateX(i * 102.3);
     		label.setTranslateY(index * 30);
     		
 			
@@ -201,33 +219,36 @@ public class Controller {
     			label.setMaxWidth(60);
     			label.setMinWidth(60);
     			label.setPrefWidth(60);
-    			System.out.println("Setting width : " + 60);
     			if (i > 4)
     			{
-    			label.setTranslateX(i * 102.2 -40);
+    			label.setTranslateX(i * 102.3 -40);
         		label.setTranslateY(index * 30);
     			}
-    		}}
-    		
-    
-    		/**
-    		while (args[i].length()*5 > column.getWidth()) //Resizing columns if text is long
-    		{
-    			column.setPrefWidth(column.getWidth()+5);
     		}
-    		**/
+    		}
     	}
     }
     	
     
+    
     void updateBookGrid()
     {
     	bookPane.getChildren().clear();
+<<<<<<< HEAD
     	for (int i = 0; i < Main.sortedBooks.size(); i++) {
     		Book temp = Main.sortedBooks.get(i).getContents();
     		addToGrid(bookPane, Main.sortedBooks.get(i).getIndex(), temp.getTitle(), temp.getAuthor(), temp.getPublisher(),temp.getGenre(), Integer.toString(temp.getPubYear()), Integer.toString(temp.getNumOfPages()));
+=======
+    	for (int i = 0; i < Main.books.hashArray.length; i++) {
+    		if (Main.books.hashArray[i] != null)
+ 			{	
+    		Book temp = ((Book) Main.books.hashArray[i]);
+    		System.out.println("Current sort: " +temp.getSort());
+    		addToGrid(bookPane, (temp.getSort()), temp.getTitle(), temp.getAuthor(), temp.getPublisher(),temp.getGenre(), Integer.toString(temp.getPubYear()), Integer.toString(temp.getNumOfPages()));
+ 			}	
+>>>>>>> branch 'master' of https://github.com/DavidConway/d-a-year2-sim1-pro2-max-David.git
     	}
-    	bookPane.setMinHeight(Main.sortedBooks.size()*30);
+    	bookPane.setMinHeight(Main.books.hashArray.length*30);
     }
     
     void updateCharGrid()
@@ -238,6 +259,8 @@ public class Controller {
     }
     
 
+    //METHODS FOR SORTING
+    
     @FXML
     void sortAuthor(ActionEvent event) {
 
@@ -255,12 +278,37 @@ public class Controller {
 
     @FXML
     void sortTitle(ActionEvent event) {
-    	String[] titles = new String[Main.sortedBooks.size()];
-    	for (int i = 0; i < Main.sortedBooks.size(); i ++)
+    	String[] titles = new String[Main.books.hashArray.length];
+    	int size = 0;
+    	for (int i = 0; i < Main.books.hashArray.length; i ++)
     	{
-    		titles[i] = Main.sortedBooks.get(i).getContents().getTitle();
+    		if (((Book) Main.books.hashArray[i]) != null)
+    		{
+    			titles[size] = ((Book) Main.books.hashArray[i]).getTitle();
+    			System.out.println("Added to titles at size: "+size);
+    			size ++;
+    		}
     	}
-    	Main.sortString(titles);
+    	String[] finalTitles = new String[size];
+    	int newSize = 0;
+    	for (int i = 0; i < size; i ++)
+    	{
+    			finalTitles[i] = titles[i];
+    			newSize++;
+    			System.out.println("Added to finaltitles at size: "+newSize);
+    	}
+    	Integer[] sort = Main.sortString(finalTitles);
+    	int j = 0;
+    	for (int i = 0; i < Main.books.hashArray.length; i++)
+    	{
+    		if (Main.books.hashArray[i] != null)
+    		{
+    			System.out.println("Setting book: " +((Book) Main.books.hashArray[i]).getTitle()  + "   to position: " + sort[j]);
+    			((Book) Main.books.hashArray[i]).setSort(sort[j]);
+    			j++;
+    		}
+    	}
+    	updateBookGrid();
     }
 
     @FXML
@@ -268,5 +316,34 @@ public class Controller {
 
     }
     
-   
+    //METHODS FOR FILTERING
+    @FXML
+    void filterAuthor(ActionEvent event) {
+
+    }
+
+    @FXML
+    void filterGenre(ActionEvent event) {
+
+    }
+
+    @FXML
+    void filterLength(ActionEvent event) {
+
+    }
+
+    @FXML
+    void filterPublisher(ActionEvent event) {
+
+    }
+
+    @FXML
+    void filterTitle(ActionEvent event) {
+
+    }
+    @FXML
+    void filterYear(ActionEvent event) {
+
+    }
+		   
 }

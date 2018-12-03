@@ -185,32 +185,32 @@
                                                       <Insets left="5.0" />
                                                    </padding>
                                                 </TextField>
-                                                <Button layoutX="155.0" layoutY="10.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0" styleClass="filterButton" stylesheets="@application.css">
+                                                <Button layoutX="155.0" layoutY="10.0" mnemonicParsing="false" onAction="#filterTitle" prefHeight="20.0" prefWidth="20.0" styleClass="filterButton" stylesheets="@application.css">
                                                    <padding>
                                                       <Insets left="1.0" right="1.0" />
                                                    </padding>
                                                 </Button>
-                                                <Button layoutX="155.0" layoutY="40.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0" styleClass="filterButton" stylesheets="@application.css">
+                                                <Button layoutX="155.0" layoutY="40.0" mnemonicParsing="false" onAction="#filterAuthor" prefHeight="20.0" prefWidth="20.0" styleClass="filterButton" stylesheets="@application.css">
                                                    <padding>
                                                       <Insets left="1.0" right="1.0" />
                                                    </padding>
                                                 </Button>
-                                                <Button layoutX="155.0" layoutY="70.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0" styleClass="filterButton" stylesheets="@application.css">
+                                                <Button layoutX="155.0" layoutY="70.0" mnemonicParsing="false" onAction="#filterYear" prefHeight="20.0" prefWidth="20.0" styleClass="filterButton" stylesheets="@application.css">
                                                    <padding>
                                                       <Insets left="1.0" right="1.0" />
                                                    </padding>
                                                 </Button>
-                                                <Button layoutX="155.0" layoutY="100.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0" styleClass="filterButton" stylesheets="@application.css">
+                                                <Button layoutX="155.0" layoutY="100.0" mnemonicParsing="false" onAction="#filterPublisher" prefHeight="20.0" prefWidth="20.0" styleClass="filterButton" stylesheets="@application.css">
                                                    <padding>
                                                       <Insets left="1.0" right="1.0" />
                                                    </padding>
                                                 </Button>
-                                                <Button layoutX="155.0" layoutY="130.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0" styleClass="filterButton" stylesheets="@application.css">
+                                                <Button layoutX="155.0" layoutY="130.0" mnemonicParsing="false" onAction="#filterGenre" prefHeight="20.0" prefWidth="20.0" styleClass="filterButton" stylesheets="@application.css">
                                                    <padding>
                                                       <Insets left="1.0" right="1.0" />
                                                    </padding>
                                                 </Button>
-                                                <Button layoutX="155.0" layoutY="160.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0" styleClass="filterButton" stylesheets="@application.css">
+                                                <Button layoutX="155.0" layoutY="160.0" mnemonicParsing="false" onAction="#filterLength" prefHeight="20.0" prefWidth="20.0" styleClass="filterButton" stylesheets="@application.css">
                                                    <padding>
                                                       <Insets left="1.0" right="1.0" />
                                                    </padding>
@@ -310,7 +310,7 @@
                                           </HBox>
                                        </top>
                                        <right>
-                                          <Pane prefHeight="200.0" prefWidth="140.0" styleClass="bluePanel" stylesheets="@application.css" BorderPane.alignment="CENTER" />
+                                          <Pane prefHeight="200.0" prefWidth="145.0" styleClass="bluePanel" stylesheets="@application.css" BorderPane.alignment="CENTER" />
                                        </right>
                                        <center>
                                           <AnchorPane BorderPane.alignment="CENTER">
@@ -319,13 +319,13 @@
                                                    <children>
                                                       <Pane maxHeight="-Infinity" minWidth="512.0" prefWidth="597.0">
                                                          <children>
-                                                            <ScrollPane fx:id="bookScrollPane" pannable="true" prefHeight="413.0" prefWidth="535.0">
+                                                            <ScrollPane fx:id="bookScrollPane" pannable="true" prefHeight="413.0" prefWidth="536.0">
                                                                <content>
                                                                   <AnchorPane fx:id="bookPane" />
                                                                </content>
                                                             </ScrollPane>
                                                          </children></Pane>
-                                                      <Pane fx:id="bookCharPane" maxWidth="330.0" prefHeight="512.0" prefWidth="328.0" />
+                                                      <Pane fx:id="bookCharPane" minWidth="200.0" prefHeight="720.0" prefWidth="200.0" styleClass="redPanel" stylesheets="@application.css" />
                                                    </children>
                                                 </HBox>
                                              </children>

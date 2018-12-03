@@ -2,12 +2,15 @@ package application;
 
 public class Character implements Hashable{
 private String name,gender,description;
+private int sort;
+
 private LinkedList<Integer> book = new LinkedList<>();
 
 	@Override
 	public LinkedList<Integer> getList() {
 		return book;
 	}
+
 
 	public Character(String name, String gender, String description) {
 		this.setDescription(description);
@@ -42,6 +45,14 @@ private LinkedList<Integer> book = new LinkedList<>();
 		else {
 			this.gender = "N/A";
 		}
+	}
+
+	public int getSort() {
+		return sort;
+	}
+
+	public void setSort(int sort) {
+		this.sort = sort;
 	}
 
 	public String toString()
