@@ -197,7 +197,7 @@ public class Controller {
     			Button button = new Button(args[i]);
         		button.getStyleClass().add("select");
         		grid.getChildren().add(button);
-
+        		button.setOnAction(e -> );
     			button.setPrefWidth(100);
     			button.setTranslateX(i * 102.3);
         		button.setTranslateY(index * 30);
@@ -237,7 +237,7 @@ public class Controller {
     	for (int i = 0; i < Main.books.hashArray.length; i++) {
     		if (Main.books.hashArray[i] != null)
  			{	
-    		Book temp = ((Book) Main.books.hashArray[i]);
+    		Book temp = (Book) (Main.books.get(i));
     		System.out.println("Current sort: " +temp.getSort());
     		addToGrid(bookPane, (temp.getSort()), temp.getTitle(), temp.getAuthor(), temp.getPublisher(),temp.getGenre(), Integer.toString(temp.getPubYear()), Integer.toString(temp.getNumOfPages()));
  			}	
