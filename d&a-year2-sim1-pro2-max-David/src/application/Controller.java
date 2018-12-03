@@ -13,6 +13,8 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Screen;
 
 public class Controller {
+	public Book activeBook;
+	public Character activeChar;
 
 	//FIELDS FOR ADD BOOKS
     @FXML
@@ -189,7 +191,7 @@ public class Controller {
     
     //METHODS FOR GRIDDING
     
-    void addToGrid(AnchorPane grid, int index, String... args){
+    void addToGrid(AnchorPane grid, int index, int hash, String... args){
     	for (int i = 0; i < args.length; i++)
     	{
     		if (i == 0)
@@ -197,7 +199,15 @@ public class Controller {
     			Button button = new Button(args[i]);
         		button.getStyleClass().add("select");
         		grid.getChildren().add(button);
-        		button.setOnAction(e -> );
+        		button.setOnAction(e -> {
+	        		if(grid == bookPane){
+	        			activeBook=(Book)Main.books.get(hash);
+	        		}
+	        		else {
+	        			activeChar = (Character)Main.chars.get(hash);
+	        		}
+        		}
+        		);
     			button.setPrefWidth(100);
     			button.setTranslateX(i * 102.3);
         		button.setTranslateY(index * 30);
@@ -239,7 +249,7 @@ public class Controller {
  			{	
     		Book temp = (Book) (Main.books.get(i));
     		System.out.println("Current sort: " +temp.getSort());
-    		addToGrid(bookPane, (temp.getSort()), temp.getTitle(), temp.getAuthor(), temp.getPublisher(),temp.getGenre(), Integer.toString(temp.getPubYear()), Integer.toString(temp.getNumOfPages()));
+    		addToGrid(bookPane, (temp.getSort()), i, temp.getTitle(), temp.getAuthor(), temp.getPublisher(),temp.getGenre(), Integer.toString(temp.getPubYear()), Integer.toString(temp.getNumOfPages()));
  			}	
     	}
     	bookPane.setMinHeight(Main.books.hashArray.length*30);
