@@ -25,7 +25,6 @@ public class HashTable{
 				}
 				Trycount++;
 				if(Trycount >= (hashArray.length/2)) {
-					hold = add;
 					this.rehash();
 				}
 			}
@@ -68,7 +67,6 @@ public class HashTable{
 			}
 		}
 		hashArray = newHashArray;
-		this.add(hold);
 	}
 	
 	public int size() {
