@@ -216,20 +216,16 @@ public class Controller {
     			column.setPrefWidth(column.getWidth()+5);
     		}
     		**/
-    	}}
-    	
+    	}
     }
+    	
     
     void updateBookGrid()
     {
     	bookPane.getChildren().clear();
     	for (int i = 0; i < Main.sortedBooks.size(); i++) {
     		Book temp = Main.sortedBooks.get(i).getContents();
-<<<<<<< HEAD
-    		addToGrid(bookPane, Main.sortedBooks.get(i).getIndex(), temp.getTitle(), temp.getAuthor(), temp.getPublisher(),  temp.getGenre(),Integer.toString(temp.getPubYear()), Integer.toString(temp.getNumOfPages()));
-=======
     		addToGrid(bookPane, Main.sortedBooks.get(i).getIndex(), temp.getTitle(), temp.getAuthor(), temp.getPublisher(),temp.getGenre(), Integer.toString(temp.getPubYear()), Integer.toString(temp.getNumOfPages()));
->>>>>>> branch 'master' of https://github.com/DavidConway/d-a-year2-sim1-pro2-max-David.git
     	}
     	bookPane.setMinHeight(Main.sortedBooks.size()*30);
     }
