@@ -38,34 +38,37 @@ public class HashTable{
 		Hashable[] newHashArray = new Hashable[(int) (hashArray.length*1.5)];
 		
 		for(Hashable c: hashArray) {
-			int hashNum = (c.toString().length())%(newHashArray.length);
-			boolean placeFound = false;
-			while (placeFound == false) {
-				if (hashArray[hashNum] == null) {
-					hashArray[hashNum] = c;
-					placeFound = true;
-				}
-				else {
-					hashNum++;
-					if(hashNum == hashArray.length) {
-						hashNum = 0;
+			if(c != null) {
+				int hashNum =((c.toString().length())%(newHashArray.length));
+				boolean placeFound = false;
+				while (placeFound == false) {
+ 					if (newHashArray[hashNum] == null) {
+						newHashArray[hashNum] = c;
+						placeFound = true;
 					}
-					
+					else {
+						hashNum++;
+						if(hashNum == newHashArray.length) {
+							hashNum = 0;
+						}
+						
+					}
 				}
-			}
-			
-			LinkedListNode<Integer> temp = c.getList().head;
-			boolean changed = false;
-			while(temp != null && changed == false) {
-				if(temp.equals(c.getHashNum())) {
-					temp.setContents(hashNum);
-					changed = true;
+				
+				LinkedListNode<Integer> temp = c.getList().head;
+				boolean changed = false;
+				while(temp != null && changed == false) {
+					if(temp.equals(c.getHashNum())) {
+						temp.setContents(hashNum);
+						changed = true;
+					}
+				temp = temp.next;
 				}
-			temp = temp.next;
+				c.setHashNum(hashNum);
 			}
-			c.setHashNum(hashNum);
 		}
 		hashArray = newHashArray;
+		this.add(hold);
 	}
 	
 	public int size() {
