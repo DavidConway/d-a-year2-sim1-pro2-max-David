@@ -39,22 +39,7 @@ public class HashTable{
 		
 		for(Hashable c: hashArray) {
 			int hashNum = (c.toString().length())%(newHashArray.length);
-			LinkedListNode<Integer> temp ;
-			boolean changed = false;
-			
-			if(c.getList().head != null) {
-				temp = c.getList().head;
-			}
-			else
-			{
-				temp = null;
-			}
-			
-			while (temp != null) {
-				//updaes the freferens of eatch book.
-			}
-			
-			boolean placeFound = false;	
+			boolean placeFound = false;
 			while (placeFound == false) {
 				if (hashArray[hashNum] == null) {
 					hashArray[hashNum] = c;
@@ -62,11 +47,23 @@ public class HashTable{
 				}
 				else {
 					hashNum++;
-					if(hashNum == newHashArray.length) {
+					if(hashNum == hashArray.length) {
 						hashNum = 0;
 					}
+					
 				}
 			}
+			
+			LinkedListNode<Integer> temp = c.getList().head;
+			boolean changed = false;
+			while(temp != null && changed == false) {
+				if(temp.equals(c.getHashNum())) {
+					temp.setContents(hashNum);
+					changed = true;
+				}
+			temp = temp.next;
+			}
+			c.setHashNum(hashNum);
 		}
 		hashArray = newHashArray;
 	}
