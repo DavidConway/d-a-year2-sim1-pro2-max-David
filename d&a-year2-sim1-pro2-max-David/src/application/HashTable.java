@@ -71,5 +71,13 @@ public class HashTable{
 		hashArray = newHashArray;
 	}
 	
+	public int size() {
+		return hashArray.length;
+	}
+	
+	public Hashable get(int i) {
+		return hashArray[i];
+		
+	}
 
 }
