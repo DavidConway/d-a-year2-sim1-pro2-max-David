@@ -121,7 +121,6 @@ public class Controller {
     void addBookOnClick(ActionEvent event) {// 
     	int pubYear;
     	int pageCount;
-    	int sort = 0;
     	//trys to parse the textYear to a int and sets to 0 if it fales
     	try {
     		pubYear = Integer.parseInt(textYear.getText());
@@ -198,6 +197,7 @@ public class Controller {
     //METHODS FOR GRIDDING
     
     void addToGrid(AnchorPane grid, int index, int hash, String... args){
+    	
     	for (int i = 0; i < args.length; i++)
     	{
     		if (i == 0)
@@ -215,7 +215,7 @@ public class Controller {
         		}
         		);
     			button.setPrefWidth(100);
-    			button.setTranslateX(i * 102.3);
+    			button.setTranslateX(2);
         		button.setTranslateY(index * 30);
     		}
 
@@ -225,8 +225,8 @@ public class Controller {
     		label.getStyleClass().add("gridlabel");
     		grid.getChildren().add(label);
 
-			label.setPrefWidth(100);
-			label.setTranslateX(i * 102.3);
+			label.setMinWidth(100);
+			label.setTranslateX(i *100);
     		label.setTranslateY(index * 30);
     		
 			
@@ -237,11 +237,17 @@ public class Controller {
     			label.setPrefWidth(60);
     			if (i > 4)
     			{
-    			label.setTranslateX(i * 102.3 -40);
+    			label.setTranslateX(i * 100 -40 + 4);
         		label.setTranslateY(index * 30);
     			}
     		}
     		}
+    		Label rightSpace = new Label();
+    		grid.getChildren().add(rightSpace);
+
+    		rightSpace.setPrefWidth(2);
+    		rightSpace.setTranslateX(i * 100 + 4);
+    		rightSpace.setTranslateY(index * 30);
     	}
     }
     	

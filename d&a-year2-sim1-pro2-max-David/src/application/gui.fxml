@@ -293,19 +293,19 @@
                                           <HBox prefHeight="26.0" prefWidth="200.0" style="-fx-background-color: #333333;" BorderPane.alignment="CENTER">
                                              <children>
                                                 <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="200.0" styleClass="greenPanel" stylesheets="@application.css" text="Menu" />
-                                                <Separator opacity="0.8" orientation="VERTICAL" prefHeight="200.0" style="-fx-background-color: #ffffff;" styleClass="greenPanel" stylesheets="@application.css" />
+                                                <Separator opacity="0.8" orientation="VERTICAL" prefHeight="200.0" prefWidth="2.0" style="-fx-background-color: #ffffff;" styleClass="greenPanel" stylesheets="@application.css" />
                                                 <Button fx:id="titleButton" mnemonicParsing="false" onAction="#sortTitle" prefHeight="25.0" prefWidth="100.0" styleClass="greenPanel" stylesheets="@application.css" text="Title" />
-                                                <Separator opacity="0.8" orientation="VERTICAL" prefHeight="200.0" prefWidth="0.0" style="-fx-background-color: #ffffff;" styleClass="greenPanel" stylesheets="@application.css" />
-                                                <Button fx:id="authorButton" mnemonicParsing="false" onAction="#sortAuthor" prefHeight="25.0" prefWidth="100.0" styleClass="greenPanel" stylesheets="@application.css" text="Author" />
-                                                <Separator opacity="0.8" orientation="VERTICAL" prefHeight="200.0" style="-fx-background-color: #ffffff;" styleClass="greenPanel" stylesheets="@application.css" />
+                                                <Separator opacity="0.8" orientation="VERTICAL" prefHeight="200.0" prefWidth="2.0" style="-fx-background-color: #ffffff;" styleClass="greenPanel" stylesheets="@application.css" />
+                                                <Button fx:id="authorButton" minWidth="1.0" mnemonicParsing="false" onAction="#sortAuthor" prefHeight="25.0" prefWidth="100.0" styleClass="greenPanel" stylesheets="@application.css" text="Author" />
+                                                <Separator opacity="0.8" orientation="VERTICAL" prefHeight="200.0" prefWidth="2.0" style="-fx-background-color: #ffffff;" styleClass="greenPanel" stylesheets="@application.css" />
                                                 <Button fx:id="publisherButton" mnemonicParsing="false" onAction="#sortPublisher" prefHeight="25.0" prefWidth="100.0" styleClass="greenPanel" stylesheets="@application.css" text="Publisher" />
-                                                <Separator opacity="0.8" orientation="VERTICAL" prefHeight="200.0" style="-fx-background-color: #ffffff;" styleClass="greenPanel" stylesheets="@application.css" />
+                                                <Separator opacity="0.8" orientation="VERTICAL" prefHeight="200.0" prefWidth="2.0" style="-fx-background-color: #ffffff;" styleClass="greenPanel" stylesheets="@application.css" />
                                                 <Button fx:id="genreButton" mnemonicParsing="false" onAction="#sortGenre" prefHeight="25.0" prefWidth="100.0" styleClass="greenPanel" stylesheets="@application.css" text="Genre" />
-                                                <Separator opacity="0.8" orientation="VERTICAL" prefHeight="200.0" style="-fx-background-color: #ffffff;" styleClass="greenPanel" stylesheets="@application.css" />
+                                                <Separator opacity="0.8" orientation="VERTICAL" prefHeight="200.0" prefWidth="2.0" style="-fx-background-color: #ffffff;" styleClass="greenPanel" stylesheets="@application.css" />
                                                 <Button fx:id="yearButton" mnemonicParsing="false" onAction="#sortYear" prefHeight="25.0" prefWidth="60.0" styleClass="greenPanel" stylesheets="@application.css" text="Year" />
-                                                <Separator opacity="0.8" orientation="VERTICAL" prefHeight="200.0" style="-fx-background-color: #ffffff;" styleClass="greenPanel" stylesheets="@application.css" />
+                                                <Separator opacity="0.8" orientation="VERTICAL" prefHeight="200.0" prefWidth="2.0" style="-fx-background-color: #ffffff;" styleClass="greenPanel" stylesheets="@application.css" />
                                                 <Button fx:id="pagesButton" mnemonicParsing="false" onAction="#sortPages" prefHeight="25.0" prefWidth="60.0" styleClass="greenPanel" stylesheets="@application.css" text="Pages" />
-                                                <Separator opacity="0.8" orientation="VERTICAL" prefHeight="200.0" style="-fx-background-color: #ffffff;" styleClass="greenPanel" stylesheets="@application.css" />
+                                                <Separator opacity="0.8" orientation="VERTICAL" prefHeight="200.0" prefWidth="2.0" style="-fx-background-color: #ffffff;" styleClass="greenPanel" stylesheets="@application.css" />
                                              </children>
                                           </HBox>
                                        </top>
@@ -381,13 +381,13 @@
                                           <HBox prefHeight="25.0" prefWidth="200.0" style="-fx-background-color: #333333;" BorderPane.alignment="CENTER">
                                              <children>
                                                 <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="200.0" styleClass="greenPanel" stylesheets="@application.css" text="Menu" />
-                                                <Separator opacity="0.8" orientation="VERTICAL" prefHeight="200.0" style="-fx-background-color: #ffffff;" styleClass="greenPanel" stylesheets="@application.css" />
+                                                <Separator opacity="0.8" orientation="VERTICAL" prefHeight="200.0" prefWidth="2.0" style="-fx-background-color: #ffffff;" styleClass="greenPanel" stylesheets="@application.css" />
                                                 <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" styleClass="greenPanel" stylesheets="@application.css" text="Name" />
-                                                <Separator opacity="0.8" orientation="VERTICAL" prefHeight="200.0" style="-fx-background-color: #ffffff;" styleClass="greenPanel" stylesheets="@application.css" />
+                                                <Separator opacity="0.8" orientation="VERTICAL" prefHeight="200.0" prefWidth="2.0" style="-fx-background-color: #ffffff;" styleClass="greenPanel" stylesheets="@application.css" />
                                                 <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" styleClass="greenPanel" stylesheets="@application.css" text="Gender" />
-                                                <Separator opacity="0.8" orientation="VERTICAL" prefHeight="200.0" style="-fx-background-color: #ffffff;" styleClass="greenPanel" stylesheets="@application.css" />
+                                                <Separator opacity="0.8" orientation="VERTICAL" prefHeight="200.0" prefWidth="2.0" style="-fx-background-color: #ffffff;" styleClass="greenPanel" stylesheets="@application.css" />
                                                 <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" styleClass="greenPanel" stylesheets="@application.css" text="Description" />
-                                                <Separator opacity="0.8" orientation="VERTICAL" prefHeight="200.0" style="-fx-background-color: #ffffff;" styleClass="greenPanel" stylesheets="@application.css" />
+                                                <Separator opacity="0.8" orientation="VERTICAL" prefHeight="200.0" prefWidth="2.0" style="-fx-background-color: #ffffff;" styleClass="greenPanel" stylesheets="@application.css" />
                                              </children>
                                           </HBox>
                                        </top>
