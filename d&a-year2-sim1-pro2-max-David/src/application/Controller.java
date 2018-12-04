@@ -272,24 +272,32 @@ public class Controller {
     @FXML
     void sortAuthor(ActionEvent event) {
     	String[] authors = new String[Main.books.size()];
-    	for (int i = 0; i < Main.books.size(); i ++)
-    	{
-    			authors[i] = ((Book) Main.books.get(i)).getTitle();
+    	for (int i = 0; i < Main.books.size(); i ++){
+    			authors[i] = ((Book) Main.books.get(i)).getAuthor();
     	}
-    	Integer[] sort = Main.sortString(authors);
-    	for (int i = 0; i < Main.books.size(); i++)
-    	{
-    		((Book) Main.books.get(i)).setSort(sort[i]);
-    	}
+    	sortBooks(authors);
     	updateBookGrid();
 
     }
 
     @FXML
     void sortGenre(ActionEvent event) {
-
+    	String[] genre = new String[Main.books.size()];
+    	for (int i = 0; i < Main.books.size(); i ++){
+    			genre[i] = ((Book) Main.books.get(i)).getGenre();
+    	}
+    	sortBooks(genre);
+    	updateBookGrid();
     }
 
+    void sortBooks(String [] strings)
+    {
+    	Integer[] sort = Main.sortString(strings);
+    	for (int i = 0; i < Main.books.size(); i++){
+    		((Book) Main.books.get(sort[i])).setSort(i);
+    	}
+    }
+    
     @FXML
     void sortPages(ActionEvent event) {
 
@@ -298,17 +306,10 @@ public class Controller {
     @FXML
     void sortTitle(ActionEvent event) {
     	String[] titles = new String[Main.books.size()];
-    	for (int i = 0; i < Main.books.size(); i ++)
-    	{
+    	for (int i = 0; i < Main.books.size(); i ++){
     			titles[i] = ((Book) Main.books.get(i)).getTitle();
     	}
-    	
-    	Integer[] sort = Main.sortString(titles);
-    	for (int i = 0; i < Main.books.size(); i++)
-    	{
-    		System.out.println(sort[i]+ "");
-    		((Book) Main.books.get(sort[i])).setSort(i);
-    	}
+    	sortBooks(titles);
     	updateBookGrid();
     }
 
