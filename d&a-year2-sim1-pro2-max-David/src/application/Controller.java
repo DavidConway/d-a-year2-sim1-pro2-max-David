@@ -279,6 +279,15 @@ public class Controller {
     	updateBookGrid();
 
     }
+    @FXML
+    void sortPublisher(ActionEvent event) {
+    	String[] publishers = new String[Main.books.size()];
+    	for (int i = 0; i < Main.books.size(); i ++){
+    			publishers[i] = ((Book) Main.books.get(i)).getPublisher();
+    	}
+    	sortBooks(publishers);
+    	updateBookGrid();
+    }
 
     @FXML
     void sortGenre(ActionEvent event) {
