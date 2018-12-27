@@ -138,6 +138,7 @@ public class Controller {
     	}
     	//
     	Book newBook = new Book(textTitle.getText(), textAuthor.getText(), textPublisher.getText(), pubYear, pageCount, textGenre.getText(), textPlot.getText(), textURL.getText(), Main.books.size());
+    	choiceBook.getItems().add(newBook);
     	Main.books.add(newBook);
     	updateBookGrid();
     	
@@ -163,8 +164,10 @@ public class Controller {
     	for(Hashable c: Main.books.hashArray) {
     		
     		if(c == activeBook) {
+    			choiceBook.getItems().remove(activeBook);
     			Main.books.hashArray[c.getHashNum()] = null;
     			updateBookGrid();
+    			
     			removed = true;
     		}
     		else if (removed == true && c != null) {
@@ -177,24 +180,79 @@ public class Controller {
 
     @FXML
     void deleteCharOnClick(ActionEvent event) {
-
+    	boolean removed = false;
+    	for(Hashable c: Main.chars.hashArray) {
+    		
+    		if(c == activeChar) {
+    			Main.chars.hashArray[c.getHashNum()] = null;
+    			updateCharGrid();
+    			removed = true;
+    		}
+    		else if (removed == true && c != null) {
+    			c.setSort((c.getSort())-1);
+    			updateCharGrid();
+    		}
+    	}
     }
 
     @FXML
     void editBookOnClick(ActionEvent event) {
-
+    	if(textEditTitle.getText() != null) {
+    		activeBook.setTitle(textEditTitle.getText());
+    	}
+    	if(textEditAuthor.getText() != null) {
+    		activeBook.setAuthor(textEditAuthor.getText());
+    	}
+    	if(textEditYear.getText() != null) {
+    		try {
+    			activeBook.setPubYear(Integer.parseInt(textEditYear.getText()));
+        	}
+        	catch(Exception e) {
+        	}
+    	}
+    	if(textEditLength.getText() != null) {
+    		try {
+    			activeBook.setNumOfPages(Integer.parseInt(textEditLength.getText()));
+        	}
+        	catch(Exception e) {
+        	}
+    	}
+    	if(textEditGenre.getText() != null){
+    		activeBook.setGenre(textEditGenre.getText());
+    	}
+    	if(textEditPlot.getText() != null){
+    		activeBook.setPlot(textEditPlot.getText());
+    	}
+    	if(textEditURL.getText() != null){
+    		activeBook.setImageUrl(textEditURL.getText());
+    	}
+    	if(textEditPublisher.getText() != null) {
+    		activeBook.setPublisher(textEditPublisher.getText());
+    	}
     }
 
     @FXML
     void editCharOnClick(ActionEvent event) {
-
+    	if(editTextName.getText() != null) {
+    		activeChar.setName(editTextName.getText());
+    	}
+    	if(editTextGender.getText() != null) {
+    		activeChar.setGender(editTextGender.getText());
+    	}
+    	if(editTextDescription.getText() != null) {
+    		activeBook.setTitle(editTextDescription.getText());
+    	}
     }
 
     @FXML
     void resetBookSearch(ActionEvent event) {
-
+    	filterTitle.setText(null);
+    	filterAuthor.setText(null);
+    	filterYear.setText(null);
+    	filterPublisher.setText(null);
+    	filterGenre.setText(null);
+    	filterLength.setText(null);
     }
-    
     
     //METHODS FOR GRIDDING
     
@@ -285,6 +343,7 @@ public class Controller {
     	updateBookGrid();
 
     }
+    
     @FXML
     void sortPublisher(ActionEvent event) {
     	String[] publishers = new String[Main.books.size()];
@@ -358,6 +417,7 @@ public class Controller {
     void filterTitle(ActionEvent event) {
 
     }
+    
     @FXML
     void filterYear(ActionEvent event) {
 
