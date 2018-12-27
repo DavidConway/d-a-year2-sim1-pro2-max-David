@@ -2,6 +2,5 @@ Fitting central scrollpanes to monitor size
 
 linked list needs to be update when rehashing acorse (hashes may have changed)
 
-change linked lists in controler to hash tables
 
-year and gunra are reversed
+

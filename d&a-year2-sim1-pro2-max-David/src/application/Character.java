@@ -61,14 +61,8 @@ private LinkedList<Integer> book = new LinkedList<>();
 	}
 
 	// adds the hash of the book to list
-		public void addChar(String name) {
-			for (Hashable i : Main.books.hashArray) {// gose trow all known books
-				if(i != null) {
-					if(((Book)i).getTitle().equals(name)) {//checks to see if the name matches
-						book.add(i.getHashNum());// get the books hash and adds it to the list
-					}
-				}
-			}
+		public void addToBook(Book toAdd) {
+			book.add(toAdd.getHashNum());
 		}
 		//
 	

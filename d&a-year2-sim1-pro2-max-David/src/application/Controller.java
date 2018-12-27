@@ -150,9 +150,11 @@ public class Controller {
     	Main.chars.add(newChar);
     	updateCharGrid();
     }
+    
     @FXML
     void addToBookOnClick(ActionEvent event) {
-
+    	activeChar.addToBook(choiceBook.getValue());
+    	choiceBook.getValue().addChar(activeChar);
     }
 
     @FXML
@@ -251,8 +253,6 @@ public class Controller {
     	}
     }
     	
-    
-    
     void updateBookGrid()
     {
     	bookPane.getChildren().clear();

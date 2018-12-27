@@ -84,14 +84,8 @@ private int pubYear, numOfPages,hashNum, sort;
 	}
 	//
 	// adds the hash of the charicter to list
-	public void addChar(String name) {
-		for (Hashable i : Main.chars.hashArray) {// gose trow all known chatractors
-			if(i != null) {
-				if(((Character)i).getName().equals(name)) {//checks to see if the name matches
-					characters.add(i.getHashNum());// get the charactors hash and adds it to the list
-				}
-			}
-		}
+	public void addChar(Character toAdd) {
+		characters.add(toAdd.getHashNum());
 	}
 	//
 
