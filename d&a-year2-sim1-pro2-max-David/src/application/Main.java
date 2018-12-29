@@ -7,20 +7,24 @@ import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 
 
+
 public class Main extends Application {
-	static HashTable books = new HashTable();
-	static HashTable chars = new HashTable();
+	public static HashTable books = new HashTable();
+	public static HashTable chars = new HashTable();
 	static LinkedList<Book> sortedBooks = new LinkedList<>();
 	static LinkedList<Character> sortedChars = new LinkedList<>();
 	
 	@Override
 	public void start(Stage primaryStage) {
 		try {
+			
 			Pane root = (Pane) FXMLLoader.load(Main.class.getResource("gui.fxml"));
 			Scene scene = new Scene(root,1280,800);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setScene(scene);
 			primaryStage.show();
+			saveLoad.load();
+			
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
@@ -28,7 +32,9 @@ public class Main extends Application {
 	
 	
 	public static void main(String[] args) {
+		
 		launch(args);
+		
 	}
 	
 	static Integer[] sortString(String[] args) {

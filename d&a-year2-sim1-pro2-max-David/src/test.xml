@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.8.0_181" class="java.beans.XMLDecoder">
+ <object class="application.Book">
+  <void property="author">
+   <string>TEST</string>
+  </void>
+  <void property="genre">
+   <string>test</string>
+  </void>
+  <void property="imageUrl">
+   <string>test</string>
+  </void>
+  <void property="numOfPages">
+   <int>1999</int>
+  </void>
+  <void property="plot">
+   <string>test</string>
+  </void>
+  <void property="pubYear">
+   <int>1999</int>
+  </void>
+  <void property="publisher">
+   <string>TEST</string>
+  </void>
+  <void property="sort">
+   <int>1</int>
+  </void>
+  <void property="title">
+   <string>test</string>
+  </void>
+ </object>
+</java>

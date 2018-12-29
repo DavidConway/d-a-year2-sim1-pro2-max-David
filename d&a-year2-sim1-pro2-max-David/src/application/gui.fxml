@@ -230,6 +230,11 @@
                                     <Insets bottom="1.0" />
                                  </padding>
                               </Button>
+                              <Button mnemonicParsing="false" onAction="#load" prefHeight="20.0" prefWidth="160.0" styleClass="greenPanel" text="Load">
+                                 <padding>
+                                    <Insets bottom="1.0" />
+                                 </padding>
+                              </Button>
                               <Button mnemonicParsing="false" onAction="#clear" prefHeight="20.0" prefWidth="160.0" styleClass="greenPanel" text="Clear">
                                  <padding>
                                     <Insets bottom="1.0" />

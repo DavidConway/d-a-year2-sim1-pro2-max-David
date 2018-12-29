@@ -1,5 +1,13 @@
  package application;
 
+
+import java.beans.XMLDecoder;
+import java.beans.XMLEncoder;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -114,6 +122,8 @@ public class Controller {
     {
     	bookScrollPane.setMinViewportHeight(Screen.getPrimary().getBounds().getHeight());
     	bookScrollPane.setFitToHeight(true);
+    	updateBookGrid();
+    	updateCharGrid();
     }
     //METHODS FOR ADD/REMOVING/EDITING
     
@@ -423,15 +433,56 @@ public class Controller {
 
     }
     
-    //save and clear
+    //save and clear and load
     @FXML
     void save(ActionEvent event) {
-    	
+    	try {
+			FileOutputStream outBook = new FileOutputStream(new File("./d&a-year2-sim1-pro2-max-David/src/Books.xml"));
+			XMLEncoder encoB = new XMLEncoder(outBook);
+			encoB.writeObject(Main.books.hashArray);
+			encoB.close();
+			outBook.close();
+			
+			FileOutputStream outChar = new FileOutputStream(new File("./d&a-year2-sim1-pro2-max-David/src/Characters.xml"));
+			XMLEncoder encoC = new XMLEncoder(outChar);
+			encoC.writeObject(Main.chars.hashArray);
+			encoC.close();
+			outChar.close();
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
     }
     
     @FXML
     void clear(ActionEvent event) {
-    	
+    	Main.books.hashArray = new Hashable[10];
+    	Main.chars.hashArray = new Hashable[10];
+    	updateBookGrid();
+    	updateCharGrid();
+    }
+    
+    @FXML
+    void load(ActionEvent event) {
+    	try {
+			FileInputStream inBook = new FileInputStream(new File("./d&a-year2-sim1-pro2-max-David/src/Books.xml"));
+			XMLDecoder decoB = new XMLDecoder(inBook);
+			Main.books.hashArray =  (Hashable[])decoB.readObject();
+			decoB.close();
+			inBook.close();
+			
+			FileInputStream inChar = new FileInputStream(new File("./d&a-year2-sim1-pro2-max-David/src/Characters.xml"));
+			XMLDecoder decoC = new XMLDecoder(inChar);
+			Main.chars.hashArray =  (Hashable[])decoC.readObject();
+			decoC.close();
+			inChar.close();
+			updateBookGrid();
+			updateCharGrid();
+
+		} catch (IOException e) {
+			System.out.println("erroer");
+		}
     }
 		   
 }

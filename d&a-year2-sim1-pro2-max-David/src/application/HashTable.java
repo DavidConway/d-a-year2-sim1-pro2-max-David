@@ -2,7 +2,6 @@ package application;
 
 public class HashTable{
 	Hashable[] hashArray = new Hashable[10];
-	Hashable hold;
 
 	public HashTable() {
 	}
