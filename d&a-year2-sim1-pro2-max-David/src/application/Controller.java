@@ -422,5 +422,16 @@ public class Controller {
     void filterYear(ActionEvent event) {
 
     }
+    
+    //save and clear
+    @FXML
+    void save(ActionEvent event) {
+    	
+    }
+    
+    @FXML
+    void clear(ActionEvent event) {
+    	
+    }
 		   
 }
