@@ -225,6 +225,16 @@
                                     </TitledPane>
                                 </panes>
                               </Accordion>
+                              <Button mnemonicParsing="false" onAction="#save" prefHeight="20.0" prefWidth="160.0" styleClass="greenPanel" text="Save">
+                                 <padding>
+                                    <Insets bottom="1.0" />
+                                 </padding>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#clear" prefHeight="20.0" prefWidth="160.0" styleClass="greenPanel" text="Clear">
+                                 <padding>
+                                    <Insets bottom="1.0" />
+                                 </padding>
+                              </Button>
                            </children>
                         </VBox>
                      </children>
