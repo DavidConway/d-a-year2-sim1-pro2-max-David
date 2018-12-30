@@ -9,11 +9,9 @@ private String title,author,genre,plot,imageUrl, publisher;
 private int pubYear, numOfPages,hashNum, sort;
 
 
+//book constructors
 
-	public Book() {
-		
-	}
-	public Book(String title, String author, String publisher, int pubYear, int numOfPages, String genre, String plot, String imageUrl, int sort) {
+		public Book(String title, String author, String publisher, int pubYear, int numOfPages, String genre, String plot, String imageUrl, int sort) {
 		this.title = title;
 		this.author = author;
 		this.pubYear = pubYear;
@@ -24,9 +22,10 @@ private int pubYear, numOfPages,hashNum, sort;
 		this.publisher = publisher;
 		this.sort = sort;
 	}
+//
 	
 	
-	//getters
+//getters
 	public String getPublisher() {
 		return publisher;
 	}
@@ -51,8 +50,9 @@ private int pubYear, numOfPages,hashNum, sort;
 	public int getNumOfPages() {
 		return numOfPages;
 	}
-	//
-	//seters
+//
+	
+//Setters
 	public void setPublisher(String publisher) {
 		this.publisher = publisher;
 	}
@@ -84,19 +84,19 @@ private int pubYear, numOfPages,hashNum, sort;
 	public void setNumOfPages(int numOfPages) {
 		this.numOfPages = numOfPages;
 	}
-	//
-	// adds the hash of the charicter to list
+//
+	
+// adds the hash of the charicter to list
 	public void addChar(Character toAdd) {
 		characters.add(toAdd.getHashNum());
 	}
-	//
-
+//
+	
 	@Override
 	public void setHashNum(int hash) {	
 		this.hashNum =hash;
 	}
-
-
+	
 	@Override
 	public int getHashNum() {
 		return this.hashNum;
@@ -105,7 +105,6 @@ private int pubYear, numOfPages,hashNum, sort;
 	public LinkedList<Integer> getCharacters() {
 	return characters;
 	}
-	
 	
 	public void setCharacters(LinkedList<Integer> characters) {
 		this.characters = characters;

@@ -148,7 +148,7 @@ public class Controller {
     	}
     	//
     	Book newBook = new Book(textTitle.getText(), textAuthor.getText(), textPublisher.getText(), pubYear, pageCount, textGenre.getText(), textPlot.getText(), textURL.getText(), Main.books.size());
-    	choiceBook.getItems().add(newBook);
+    	choiceBook.getItems().add(newBook);//adds the new book to the choice book
     	Main.books.add(newBook);
     	updateBookGrid();
     	
@@ -164,13 +164,15 @@ public class Controller {
     
     @FXML
     void addToBookOnClick(ActionEvent event) {
-    	activeChar.addToBook(choiceBook.getValue());
+    	activeChar.addToBook(choiceBook.getValue());//adds the charicter to a book and a book to a character
     	choiceBook.getValue().addChar(activeChar);
     }
 
     @FXML
     void deleteBookOnClick(ActionEvent event) {
     	boolean removed = false;
+    	//gose trow all boobs to see if it is the selected book then removes it
+    	
     	for(Hashable c: Main.books.hashArray) {
     		
     		if(c == activeBook) {
@@ -181,7 +183,7 @@ public class Controller {
     			removed = true;
     		}
     		else if (removed == true && c != null) {
-    			c.setSort((c.getSort())-1);
+    			c.setSort((c.getSort())-1);//adgusts the positions of sucseeding books
     			updateBookGrid();
     		}
     	}
@@ -450,7 +452,6 @@ public class Controller {
 			outChar.close();
 			
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
     }

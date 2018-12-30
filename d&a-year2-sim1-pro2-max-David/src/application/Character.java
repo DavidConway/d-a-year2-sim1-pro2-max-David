@@ -5,18 +5,13 @@ private String name,gender,description;
 private int sort,hashNum;
 
 private LinkedList<Integer> book = new LinkedList<>();
-
-	@Override
-	public LinkedList<Integer> getList() {
-		return book;
-	}
-
-
+//constructor
 	public Character(String name, String gender, String description) {
 		this.setDescription(description);
 		this.setGender(gender);
 		this.setName(name);
 	}
+//
 	
 	public String getName() {
 		return name;
@@ -64,7 +59,7 @@ private LinkedList<Integer> book = new LinkedList<>();
 		public void addToBook(Book toAdd) {
 			book.add(toAdd.getHashNum());
 		}
-		//
+	//
 	
 	@Override
 	public void setHashNum(int hash) {
@@ -75,5 +70,10 @@ private LinkedList<Integer> book = new LinkedList<>();
 	@Override
 	public int getHashNum() {
 		return this.hashNum;
+	}
+	
+	@Override
+	public LinkedList<Integer> getList() {
+		return book;
 	}
 }
