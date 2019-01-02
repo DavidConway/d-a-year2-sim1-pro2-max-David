@@ -184,7 +184,7 @@ public class Controller {
 
     @FXML
     void addCharOnClick(ActionEvent event) {
-    	Character newChar = new Character(textName.getText(), textGender.getText(), textDescription.getText());
+    	Character newChar = new Character(textName.getText(), textGender.getText(), textDescription.getText(), Main.chars.size());
     	Main.sortedChars.add(newChar);
     	Main.chars.add(newChar);
     	updateCharGrid();

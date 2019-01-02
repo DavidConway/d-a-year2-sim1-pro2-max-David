@@ -6,10 +6,11 @@ private int sort,hashNum;
 
 private LinkedList<Integer> book = new LinkedList<>();
 //constructor
-	public Character(String name, String gender, String description) {
+	public Character(String name, String gender, String description, int sort) {
 		this.setDescription(description);
 		this.setGender(gender);
 		this.setName(name);
+		this.setSort(sort);
 	}
 //
 	
