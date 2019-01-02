@@ -294,7 +294,7 @@ public class Controller {
     
     //METHODS FOR GRIDDING
     
-    void addToGrid(AnchorPane grid, int index, int hash, String... args){
+    void addToGrid(Pane grid, int index, int hash, String... args){
     	
     	for (int i = 0; i < args.length; i++)
     	{
@@ -313,7 +313,7 @@ public class Controller {
         		}
         		);
     			button.setPrefWidth(100);
-    			button.setTranslateX(2);
+    			button.setTranslateX(0);
         		button.setTranslateY(index * 30);
     		}
 
@@ -335,17 +335,11 @@ public class Controller {
     			label.setPrefWidth(60);
     			if (i > 4)
     			{
-    			label.setTranslateX(i * 100 -40 + 4);
+    			label.setTranslateX(i * 100 -40);
         		label.setTranslateY(index * 30);
     			}
     		}
     		}
-    		Label rightSpace = new Label();
-    		grid.getChildren().add(rightSpace);
-
-    		rightSpace.setPrefWidth(2);
-    		rightSpace.setTranslateX(i * 100 + 4);
-    		rightSpace.setTranslateY(index * 30);
     	}
     }
     	
@@ -353,9 +347,7 @@ public class Controller {
     {
     	bookPane.getChildren().clear();
     	for (int i = 0; i < Main.books.size(); i++) {
-    		System.out.println("Size:  "+Main.books.size());
     		Book temp = (Book)Main.books.get(i);
-    		System.out.println(temp.getTitle());
     		addToGrid(bookPane, (temp.getSort()), i, temp.getTitle(), temp.getAuthor(), temp.getPublisher(),temp.getGenre(), Integer.toString(temp.getPubYear()), Integer.toString(temp.getNumOfPages()));	
     	}
     	bookPane.setMinHeight(Main.books.size()*30);
@@ -364,7 +356,8 @@ public class Controller {
     void updateCharGrid()
     {
     	for (int i = 0; i < Main.sortedChars.size(); i++) {
-    		
+    		Character temp = (Character)Main.chars.get(i);
+    		addToGrid(characterPane, (temp.getSort()), i, temp.getName(), temp.getGender(), temp.getDescription());	
     	}
     }
     
