@@ -72,6 +72,11 @@ public class HashTable{
 		return hashArray.length;
 	}
 	
+	public Hashable getHash(int i)
+	{
+		return hashArray[i];
+	}
+	
 	public Hashable get(int item) {
 		int count = -1;
 		for (int i = 0; i < hashArray.length; i ++)
