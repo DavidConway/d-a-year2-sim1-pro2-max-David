@@ -266,6 +266,7 @@ public class Controller {
     	if(textEditPublisher.getText() != null) {
     		activeBook.setPublisher(textEditPublisher.getText());
     	}
+    	updateBookGrid();
     }
 
     @FXML
@@ -351,6 +352,16 @@ public class Controller {
     		addToGrid(bookPane, (temp.getSort()), i, temp.getTitle(), temp.getAuthor(), temp.getPublisher(),temp.getGenre(), Integer.toString(temp.getPubYear()), Integer.toString(temp.getNumOfPages()));	
     	}
     	bookPane.setMinHeight(Main.books.size()*30);
+    	bookCharPane.getChildren().clear();
+    	if (activeBook != null)
+    	{
+    	for (int i = 0; i < activeBook.getList().size(); i++) {
+    		int num = activeBook.getCharacters(i);
+    		Character temp = (Character) Main.chars.getHash(num);
+    		addToGrid(bookCharPane, i , num, temp.getName());
+    	}
+    	}
+    	
     }
     
     void updateCharGrid()

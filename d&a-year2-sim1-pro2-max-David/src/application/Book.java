@@ -3,7 +3,7 @@ package application;
 import java.util.Calendar;
 
 public class Book implements Hashable {
-private LinkedList<Integer> characters = new LinkedList<>();	//All  books will have their own list of associated characters/Or hash keys if change is needed.
+private LinkedList<Integer> characters = new LinkedList<Integer>();	//All  books will have their own list of associated characters/Or hash keys if change is needed.
 	
 private String title,author,genre,plot, publisher;
 private int pubYear, numOfPages,hashNum, sort;
@@ -95,8 +95,8 @@ private int pubYear, numOfPages,hashNum, sort;
 		return this.hashNum;
 	}
 
-	public LinkedList<Integer> getCharacters() {
-	return characters;
+	public int getCharacters(int i) {
+	return characters.get(i).getContents();
 	}
 	
 	public void setCharacters(LinkedList<Integer> characters) {
