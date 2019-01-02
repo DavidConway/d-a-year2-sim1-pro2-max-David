@@ -39,7 +39,7 @@ private LinkedList<Integer> book = new LinkedList<>();
 			this.gender = gender;
 		}
 		else {
-			this.gender = "N/A";
+			this.gender = "Other";
 		}
 	}
 
