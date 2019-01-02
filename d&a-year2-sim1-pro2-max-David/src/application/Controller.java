@@ -46,8 +46,6 @@ public class Controller {
     private TextArea textPlot;
     @FXML
     private TextField textGenre;
-    @FXML
-    private TextField textURL;
     
     //FIELDS FOR ADDING CHARACTERS
     @FXML
@@ -103,8 +101,6 @@ public class Controller {
     private TextField textEditGenre;
     @FXML
     private TextArea textEditPlot;
-    @FXML
-    private TextField textEditURL;
     @FXML
     private TextField textEditPublisher;
     
@@ -452,6 +448,14 @@ public class Controller {
 	}
 	sortBooks(years);
 	updateBookGrid();
+    }
+    @FXML
+    void sortGender(ActionEvent event) {
+
+    }
+    @FXML
+    void sortName(ActionEvent event) {
+
     }
     
     //METHODS FOR FILTERING

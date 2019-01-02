@@ -102,16 +102,11 @@
                                                    </padding>
                                                 </TextField>
                                                 <TextArea fx:id="textPlot" layoutX="20.0" layoutY="190.0" prefHeight="60.0" prefWidth="160.0" promptText="Plot" />
-                                                <Button layoutX="20.0" layoutY="290.0" mnemonicParsing="false" onAction="#addBookOnClick" prefHeight="20.0" prefWidth="160.0" styleClass="greenPanel" text="Add">
+                                                <Button layoutX="20.0" layoutY="260.0" mnemonicParsing="false" onAction="#addBookOnClick" prefHeight="20.0" prefWidth="160.0" styleClass="greenPanel" text="Add">
                                                    <padding>
                                                       <Insets bottom="1.0" />
                                                    </padding>
                                                 </Button>
-                                                <TextField fx:id="textURL" layoutX="20.0" layoutY="260.0" prefHeight="20.0" prefWidth="160.0" promptText="URL">
-                                                   <padding>
-                                                      <Insets left="5.0" />
-                                                   </padding>
-                                                </TextField>
                                                 <TextField fx:id="textPublisher" layoutX="20.0" layoutY="70.0" prefHeight="20.0" prefWidth="160.0" promptText="Publisher">
                                                    <padding>
                                                       <Insets left="5.0" />
@@ -297,22 +292,17 @@
                                                          </padding>
                                                       </TextField>
                                                       <TextArea fx:id="textEditPlot" layoutX="20.0" layoutY="190.0" prefHeight="60.0" prefWidth="160.0" promptText="Plot" />
-                                                      <Button layoutX="20.0" layoutY="290.0" mnemonicParsing="false" onAction="#editBookOnClick" prefHeight="20.0" prefWidth="160.0" styleClass="greenPanel" text="Edit">
+                                                      <Button layoutX="20.0" layoutY="260.0" mnemonicParsing="false" onAction="#editBookOnClick" prefHeight="20.0" prefWidth="160.0" styleClass="greenPanel" text="Edit">
                                                          <padding>
                                                             <Insets bottom="1.0" />
                                                          </padding>
                                                       </Button>
-                                                      <TextField fx:id="textEditURL" layoutX="20.0" layoutY="260.0" prefHeight="20.0" prefWidth="160.0" promptText="URL">
-                                                         <padding>
-                                                            <Insets left="5.0" />
-                                                         </padding>
-                                                      </TextField>
                                                       <TextField fx:id="textEditPublisher" layoutX="20.0" layoutY="70.0" prefHeight="20.0" prefWidth="160.0" promptText="Publisher">
                                                          <padding>
                                                             <Insets left="5.0" />
                                                          </padding>
                                                       </TextField>
-                                                      <Button layoutX="20.0" layoutY="320.0" mnemonicParsing="false" onAction="#deleteBookOnClick" prefHeight="20.0" prefWidth="160.0" styleClass="greenPanel" text="Delete">
+                                                      <Button layoutX="20.0" layoutY="290.0" mnemonicParsing="false" onAction="#deleteBookOnClick" prefHeight="20.0" prefWidth="160.0" styleClass="greenPanel" text="Delete">
                                                          <padding>
                                                             <Insets bottom="1.0" />
                                                          </padding>
@@ -406,8 +396,8 @@
                                           <HBox prefHeight="25.0" prefWidth="200.0" style="-fx-background-color: #333333;" BorderPane.alignment="CENTER">
                                              <children>
                                                 <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="200.0" styleClass="greenPanel" stylesheets="@application.css" text="Menu" />
-                                                <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" styleClass="greenPanel" stylesheets="@application.css" text="Name" />
-                                                <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" styleClass="greenPanel" stylesheets="@application.css" text="Gender" />
+                                                <Button mnemonicParsing="false" onAction="#sortName" prefHeight="25.0" prefWidth="100.0" styleClass="greenPanel" stylesheets="@application.css" text="Name" />
+                                                <Button mnemonicParsing="false" onAction="#sortGender" prefHeight="25.0" prefWidth="100.0" styleClass="greenPanel" stylesheets="@application.css" text="Gender" />
                                                 <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" styleClass="greenPanel" stylesheets="@application.css" text="Description" />
                                              </children>
                                           </HBox>
@@ -418,8 +408,8 @@
                                        <center>
                                           <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                                              <children>
-                                                <Pane fx:id="characterPane" layoutX="23.0" layoutY="56.0" prefHeight="721.0" prefWidth="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="440.0" AnchorPane.topAnchor="0.0" />
-                                                <Pane fx:id="charBookPane" layoutX="300.0" prefHeight="325.0" prefWidth="440.0" />
+                                                <Pane fx:id="characterPane" layoutX="23.0" layoutY="56.0" prefHeight="721.0" prefWidth="560.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="186.0" AnchorPane.topAnchor="0.0" />
+                                                <Pane fx:id="charBookPane" layoutX="560.0" prefHeight="325.0" prefWidth="180.0" />
                                              </children>
                                           </AnchorPane>
                                        </center>
