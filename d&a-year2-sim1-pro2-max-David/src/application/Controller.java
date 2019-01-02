@@ -12,6 +12,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
+import javafx.scene.control.Menu;
+import javafx.scene.control.MenuItem;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
@@ -23,6 +25,12 @@ public class Controller {
 	public Book activeBook;
 	public Character activeChar;
 
+	@FXML
+	private Menu file;
+	@FXML
+	private Menu edit;
+	@FXML
+	private Menu help;
 	//FIELDS FOR ADD BOOKS
     @FXML
     private TextField textTitle;
@@ -132,6 +140,22 @@ public class Controller {
     	bookScrollPane.setFitToHeight(true);
     	updateBookGrid();
     	updateCharGrid();
+    	
+    	file.getItems().clear();
+    	MenuItem save = new MenuItem("Save");
+		file.getItems().add(save);
+		save.setOnAction(e -> save(e));
+		MenuItem load = new MenuItem("Load");
+		file.getItems().add(load);
+		save.setOnAction(e ->load(e));
+    	
+    	edit.getItems().clear();
+    	MenuItem reset = new MenuItem("Reset System");
+		edit.getItems().add(reset);
+		save.setOnAction(e -> clear(e));
+		
+    	
+    	
     }
     //METHODS FOR ADD/REMOVING/EDITING
     

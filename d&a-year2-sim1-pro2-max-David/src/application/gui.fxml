@@ -25,7 +25,7 @@
   <children>
     <MenuBar style="-fx-background-color: #ffffff;" VBox.vgrow="NEVER">
       <menus>
-        <Menu mnemonicParsing="false" text="File">
+        <Menu fx:id="file" mnemonicParsing="false" text="File">
           <items>
             <MenuItem mnemonicParsing="false" text="New" />
             <MenuItem mnemonicParsing="false" text="Open…" />
@@ -41,7 +41,7 @@
             <MenuItem mnemonicParsing="false" text="Quit" />
           </items>
         </Menu>
-        <Menu mnemonicParsing="false" text="Edit">
+        <Menu fx:id="edit" mnemonicParsing="false" text="Edit">
           <items>
             <MenuItem mnemonicParsing="false" text="Undo" />
             <MenuItem mnemonicParsing="false" text="Redo" />
@@ -55,7 +55,7 @@
             <MenuItem mnemonicParsing="false" text="Unselect All" />
           </items>
         </Menu>
-        <Menu mnemonicParsing="false" text="Help">
+        <Menu fx:id="help" mnemonicParsing="false" text="Help">
           <items>
             <MenuItem mnemonicParsing="false" text="About MyHelloApp" />
           </items>
@@ -253,21 +253,6 @@
                                     </TitledPane>
                                 </panes>
                               </Accordion>
-                              <Button mnemonicParsing="false" onAction="#save" prefHeight="20.0" prefWidth="160.0" styleClass="greenPanel" text="Save">
-                                 <padding>
-                                    <Insets bottom="1.0" />
-                                 </padding>
-                              </Button>
-                              <Button mnemonicParsing="false" onAction="#load" prefHeight="20.0" prefWidth="160.0" styleClass="greenPanel" text="Load">
-                                 <padding>
-                                    <Insets bottom="1.0" />
-                                 </padding>
-                              </Button>
-                              <Button mnemonicParsing="false" onAction="#clear" prefHeight="20.0" prefWidth="160.0" styleClass="greenPanel" text="Clear">
-                                 <padding>
-                                    <Insets bottom="1.0" />
-                                 </padding>
-                              </Button>
                            </children>
                         </VBox>
                      </children>
