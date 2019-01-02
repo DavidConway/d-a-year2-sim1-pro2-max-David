@@ -567,7 +567,7 @@ public class Controller {
     @FXML
     void filterGender(ActionEvent event) {
     	characterPane.getChildren().clear();
-    	String gender = filterName.getText();
+    	String gender = filterGender.getText();
     	int j = 0;
     	for (int i = 0; i < Main.chars.size()-1; i ++)
     	{
