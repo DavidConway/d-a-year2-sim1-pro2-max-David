@@ -175,7 +175,7 @@ public class Controller {
     		pageCount = 0;
     	}
     	//
-    	Book newBook = new Book(textTitle.getText(), textAuthor.getText(), textPublisher.getText(), pubYear, pageCount, textGenre.getText(), textPlot.getText(), textURL.getText(), Main.books.size());
+    	Book newBook = new Book(textTitle.getText(), textAuthor.getText(), textPublisher.getText(), pubYear, pageCount, textGenre.getText(), textPlot.getText(), Main.books.size());
     	choiceBook.getItems().add(newBook);//adds the new book to the choice book
     	Main.books.add(newBook);
     	updateBookGrid();
@@ -262,9 +262,6 @@ public class Controller {
     	}
     	if(textEditPlot.getText() != null){
     		activeBook.setPlot(textEditPlot.getText());
-    	}
-    	if(textEditURL.getText() != null){
-    		activeBook.setImageUrl(textEditURL.getText());
     	}
     	if(textEditPublisher.getText() != null) {
     		activeBook.setPublisher(textEditPublisher.getText());
