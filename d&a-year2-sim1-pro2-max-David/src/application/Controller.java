@@ -441,11 +441,30 @@ public class Controller {
     }
     @FXML
     void sortGender(ActionEvent event) {
+    	String[] genders = new String[Main.chars.size()];
+    	for (int i = 0; i < Main.chars.size(); i ++){
+    			genders[i] = ((Character) Main.chars.get(i)).getGender();
+    	}
+    	sortCharacters(genders);
+    	updateCharGrid();
 
     }
-    @FXML
-    void sortName(ActionEvent event) {
+    private void sortCharacters(String[] strings) {
+    	Integer[] sort = Main.sortString(strings);
+    	for (int i = 0; i < Main.chars.size(); i++){
+    		((Character) Main.chars.get(sort[i])).setSort(i);
+    	}
+		
+	}
 
+	@FXML
+    void sortName(ActionEvent event) {
+		String[] names = new String[Main.chars.size()];
+    	for (int i = 0; i < Main.chars.size(); i ++){
+    			names[i] = ((Character) Main.chars.get(i)).getName();
+    	}
+    	sortCharacters(names);
+    	updateCharGrid();
     }
     
     //METHODS FOR FILTERING
