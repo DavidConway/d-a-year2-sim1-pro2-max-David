@@ -63,6 +63,12 @@ public class Controller {
     @FXML
     private TextField filterGenre;
     
+    @FXML
+    private TextField filterName;
+
+    @FXML
+    private TextField filterGender;
+    
     //GRIDS TO ADD TO
     @FXML
     private AnchorPane bookPane;
@@ -70,6 +76,9 @@ public class Controller {
     private Pane bookCharPane;
     @FXML
     private Pane characterPane;
+
+    @FXML
+    private Pane charBookPane;
     @FXML
     private ScrollPane bookScrollPane;
     
@@ -505,7 +514,14 @@ public class Controller {
     		}
     	}
     }
-    
+    @FXML
+    void filterName(ActionEvent event) {
+
+    }
+    @FXML
+    void filterGender(ActionEvent event) {
+
+    }
     //save and clear and load
     @FXML
     void save(ActionEvent event) {
