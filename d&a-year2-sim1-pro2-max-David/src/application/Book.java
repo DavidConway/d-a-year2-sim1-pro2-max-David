@@ -125,5 +125,10 @@ private int pubYear, numOfPages,hashNum, sort;
 	public LinkedList<Integer> getList() {
 		return characters;
 	}
+	
+	public String toString()
+	{
+		return title;
+	}
 }
 
