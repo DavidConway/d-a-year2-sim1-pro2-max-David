@@ -140,15 +140,15 @@ public class Controller {
     	file.getItems().clear();
     	MenuItem save = new MenuItem("Save");
 		file.getItems().add(save);
-		save.setOnAction(e -> save(e));
+		save.setOnAction(e -> save());
 		MenuItem load = new MenuItem("Load");
 		file.getItems().add(load);
-		save.setOnAction(e ->load(e));
+		load.setOnAction(e ->load());
     	
     	edit.getItems().clear();
     	MenuItem reset = new MenuItem("Reset System");
 		edit.getItems().add(reset);
-		save.setOnAction(e -> clear(e));
+		reset.setOnAction(e -> clear());
 		
     	
     	
@@ -579,7 +579,7 @@ public class Controller {
     }
     //save and clear and load
     @FXML
-    void save(ActionEvent event) {
+    void save() {
     	try {
 			FileOutputStream outBook = new FileOutputStream(new File("./d&a-year2-sim1-pro2-max-David/src/Books.xml"));
 			XMLEncoder encoB = new XMLEncoder(outBook);
@@ -599,7 +599,7 @@ public class Controller {
     }
     
     @FXML
-    void clear(ActionEvent event) {
+    void clear() {
     	Main.books.hashArray = new Hashable[10];
     	Main.chars.hashArray = new Hashable[10];
     	updateBookGrid();
@@ -607,7 +607,7 @@ public class Controller {
     }
     
     @FXML
-    void load(ActionEvent event) {
+    void load() {
     	try {
 			FileInputStream inBook = new FileInputStream(new File("./d&a-year2-sim1-pro2-max-David/src/Books.xml"));
 			XMLDecoder decoB = new XMLDecoder(inBook);
