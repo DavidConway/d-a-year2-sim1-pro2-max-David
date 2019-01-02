@@ -266,6 +266,7 @@ public class Controller {
     	filterPublisher.setText(null);
     	filterGenre.setText(null);
     	filterLength.setText(null);
+    	updateBookGrid();
     }
     
     //METHODS FOR GRIDDING
