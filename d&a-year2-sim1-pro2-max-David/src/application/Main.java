@@ -48,34 +48,24 @@ public class Main extends Application {
 			{
 				if (args[i].charAt(0) > args[i + 1].charAt(0) ) // COMPARES LETTERS/IF NEED TO SWITCH IT DOES
 				{
-					System.out.println("Swapping. Candidates are: "+args[i].charAt(0) +" at position "+ i+ ",  and " + args[(i + 1)].charAt(0) + " at position "+(i+1));
 					String temp = args[i];
 					int tempInt = index[i];
-					System.out.println("Stored in temp: "+args[i]);
-					System.out.println("Swapping: "+args[i]+" with: "+(args[(i+1)]));
 					index[i] = (index[(i + 1)]);
 					args[i] = (args[(i + 1)]);
-					System.out.println("Letting: "+args[i+1]+" equal: "+temp);
 					index[(i + 1)] = tempInt;
 					args[(i + 1)] = temp;	
 					swapped = true;
 					break;
 				}
-
-			}
-			
-		}
-		for (int i = 0; i < index.length; i++)
-		{
-			System.out.println("Index "+index[i] +": "+args[i] +" at pos. "+ i);
+			}	
 		}
 		return index;
 	}
 
-	static Integer[] sortInt(int[] args) {
+	static Integer[] sortInt(Integer[] args) {
 		Integer[] index = new Integer[args.length];
 		boolean swapped = true;
-
+		
 		for (int i = 0; i < args.length; i++) {
 			index[i] = i; // INITIALIZING INTEGER ARRAY
 		}
@@ -85,19 +75,14 @@ public class Main extends Application {
 			{
 				if (args[i] > args[i + 1]) 
 				{
-					System.out.println("Swapping. Candidates are: ");
 					int temp = args[i];
 					args[i] = args[i + 1];
 					args[i + 1] = temp;
-					int tempInt = index[i];
-					index[i] = index[i + 1];
-					index[i + 1] = tempInt;
 					swapped = true;
 					break;
 				}
 			}
 		}
-
-		return index;
+		return args;
 	}
 }

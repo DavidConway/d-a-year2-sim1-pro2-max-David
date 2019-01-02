@@ -8,6 +8,8 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
+import com.sun.xml.internal.messaging.saaj.soap.StringDataContentHandler;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -383,10 +385,22 @@ public class Controller {
     		((Book) Main.books.get(sort[i])).setSort(i);
     	}
     }
+    void sortBooks(Integer [] numbers)
+    {
+    	Integer[] sort = Main.sortInt(numbers);
+    	for (int i = 0; i < Main.books.size(); i++){
+    		((Book) Main.books.get(sort[i])).setSort(i);
+    	}
+    }
     
     @FXML
     void sortPages(ActionEvent event) {
-
+    	Integer[] pages = new Integer[Main.books.size()];
+    	for (int i = 0; i < Main.books.size(); i ++){
+			pages[i] = ((Book) Main.books.get(i)).getNumOfPages();
+	}
+	sortBooks(pages);
+	updateBookGrid();
     }
 
     @FXML
@@ -401,38 +415,97 @@ public class Controller {
 
     @FXML
     void sortYear(ActionEvent event) {
-
+    	Integer[] years = new Integer[Main.books.size()];
+    	for (int i = 0; i < Main.books.size(); i ++){
+			years[i] = ((Book) Main.books.get(i)).getPubYear();
+	}
+	sortBooks(years);
+	updateBookGrid();
     }
     
     //METHODS FOR FILTERING
     @FXML
     void filterAuthor(ActionEvent event) {
-
+    	bookPane.getChildren().clear();
+    	String author = filterAuthor.getText();
+    	int j = 0;
+    	for (int i = 0; i < Main.books.size()-1; i ++)
+    	{
+    		if (((Book)Main.books.get(i)).getAuthor().equals(author))
+    		{
+    			addToGrid(bookPane, j, 0, ((Book)Main.books.get(i)).getTitle(), ((Book)Main.books.get(i)).getAuthor(), ((Book)Main.books.get(i)).getPublisher(), ((Book)Main.books.get(i)).getGenre(), Integer.toString(((Book)Main.books.get(i)).getPubYear()), Integer.toString(((Book)Main.books.get(i)).getNumOfPages()) );
+    		}
+    	}
     }
 
     @FXML
     void filterGenre(ActionEvent event) {
-
+    	bookPane.getChildren().clear();
+    	String genre = filterGenre.getText();
+    	int j = 0;
+    	for (int i = 0; i < Main.books.size()-1; i ++)
+    	{
+    		if (((Book)Main.books.get(i)).getGenre().equals(genre))
+    		{
+    			addToGrid(bookPane, j, 0, ((Book)Main.books.get(i)).getTitle(), ((Book)Main.books.get(i)).getAuthor(), ((Book)Main.books.get(i)).getPublisher(), ((Book)Main.books.get(i)).getGenre(), Integer.toString(((Book)Main.books.get(i)).getPubYear()), Integer.toString(((Book)Main.books.get(i)).getNumOfPages()) );
+    		}
+    	}
     }
 
     @FXML
     void filterLength(ActionEvent event) {
-
+    	bookPane.getChildren().clear();
+    	int NumOfPages = Integer.parseInt(filterLength.getText());
+    	int j = 0;
+    	for (int i = 0; i < Main.books.size()-1; i ++)
+    	{
+    		if (((Book)Main.books.get(i)).getNumOfPages() == NumOfPages)
+    		{
+    			addToGrid(bookPane, j, 0, ((Book)Main.books.get(i)).getTitle(), ((Book)Main.books.get(i)).getAuthor(), ((Book)Main.books.get(i)).getPublisher(), ((Book)Main.books.get(i)).getGenre(), Integer.toString(((Book)Main.books.get(i)).getPubYear()), Integer.toString(((Book)Main.books.get(i)).getNumOfPages()) );
+    		}
+    	}
     }
 
     @FXML
     void filterPublisher(ActionEvent event) {
-
+    	bookPane.getChildren().clear();
+    	String publisher = filterPublisher.getText();
+    	int j = 0;
+    	for (int i = 0; i < Main.books.size()-1; i ++)
+    	{
+    		if (((Book)Main.books.get(i)).getPublisher().equals(publisher))
+    		{
+    			addToGrid(bookPane, j, 0, ((Book)Main.books.get(i)).getTitle(), ((Book)Main.books.get(i)).getAuthor(), ((Book)Main.books.get(i)).getPublisher(), ((Book)Main.books.get(i)).getGenre(), Integer.toString(((Book)Main.books.get(i)).getPubYear()), Integer.toString(((Book)Main.books.get(i)).getNumOfPages()) );
+    		}
+    	}
     }
 
     @FXML
     void filterTitle(ActionEvent event) {
-
+    	bookPane.getChildren().clear();
+    	String title = filterTitle.getText();
+    	int j = 0;
+    	for (int i = 0; i < Main.books.size()-1; i ++)
+    	{
+    		if (((Book)Main.books.get(i)).getTitle().equals(title))
+    		{
+    			addToGrid(bookPane, j, 0, ((Book)Main.books.get(i)).getTitle(), ((Book)Main.books.get(i)).getAuthor(), ((Book)Main.books.get(i)).getPublisher(), ((Book)Main.books.get(i)).getGenre(), Integer.toString(((Book)Main.books.get(i)).getPubYear()), Integer.toString(((Book)Main.books.get(i)).getNumOfPages()) );
+    		}
+    	}
     }
     
     @FXML
     void filterYear(ActionEvent event) {
-
+    	bookPane.getChildren().clear();
+    	int year = Integer.parseInt(filterYear.getText());
+    	int j = 0;
+    	for (int i = 0; i < Main.books.size()-1; i ++)
+    	{
+    		if (((Book)Main.books.get(i)).getPubYear() == year)
+    		{
+    			addToGrid(bookPane, j, 0, ((Book)Main.books.get(i)).getTitle(), ((Book)Main.books.get(i)).getAuthor(), ((Book)Main.books.get(i)).getPublisher(), ((Book)Main.books.get(i)).getGenre(), Integer.toString(((Book)Main.books.get(i)).getPubYear()), Integer.toString(((Book)Main.books.get(i)).getNumOfPages()) );
+    		}
+    	}
     }
     
     //save and clear and load
