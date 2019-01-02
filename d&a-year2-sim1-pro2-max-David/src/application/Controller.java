@@ -553,11 +553,29 @@ public class Controller {
     }
     @FXML
     void filterName(ActionEvent event) {
-
+    	characterPane.getChildren().clear();
+    	String name = filterName.getText();
+    	int j = 0;
+    	for (int i = 0; i < Main.chars.size()-1; i ++)
+    	{
+    		if (((Character)Main.chars.get(i)).getName().equals(name))
+    		{
+    			addToGrid(characterPane, j, 0, ((Character)Main.chars.get(i)).getName(), ((Character)Main.chars.get(i)).getGender(), ((Character)Main.chars.get(i)).getDescription());
+    		}
+    	}
     }
     @FXML
     void filterGender(ActionEvent event) {
-
+    	characterPane.getChildren().clear();
+    	String gender = filterName.getText();
+    	int j = 0;
+    	for (int i = 0; i < Main.chars.size()-1; i ++)
+    	{
+    		if (((Character)Main.chars.get(i)).getGender().equals(gender))
+    		{
+    			addToGrid(characterPane, j, 0, ((Character)Main.chars.get(i)).getName(), ((Character)Main.chars.get(i)).getGender(), ((Character)Main.chars.get(i)).getDescription());
+    		}
+    	}
     }
     //save and clear and load
     @FXML
