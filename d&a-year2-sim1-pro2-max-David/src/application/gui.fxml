@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Accordion?>
 <?import javafx.scene.control.Button?>
@@ -12,7 +8,6 @@
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.SeparatorMenuItem?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
@@ -26,7 +21,7 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
   <children>
     <MenuBar style="-fx-background-color: #ffffff;" VBox.vgrow="NEVER">
       <menus>
@@ -223,6 +218,39 @@
                                           </AnchorPane>
                                        </content>
                                     </TitledPane>
+                                    <TitledPane animated="false" minWidth="-Infinity" prefWidth="160.0" text="Filter Characters">
+                                       <content>
+                                          <AnchorPane maxWidth="200.0" minWidth="-Infinity" prefHeight="73.0" prefWidth="198.0" styleClass="bluePanel" stylesheets="application/application.css">
+                                             <children>
+                                                <TextField fx:id="filterName" layoutX="20.0" layoutY="10.0" prefHeight="20.0" prefWidth="160.0" promptText="Name">
+                                                   <padding>
+                                                      <Insets left="5.0" />
+                                                   </padding>
+                                                </TextField>
+                                                <TextField fx:id="filterGender" layoutX="20.0" layoutY="40.0" prefHeight="20.0" prefWidth="160.0" promptText="Gender">
+                                                   <padding>
+                                                      <Insets left="5.0" />
+                                                   </padding>
+                                                </TextField>
+                                                <Button layoutX="19.0" layoutY="70.0" mnemonicParsing="false" onAction="#resetBookSearch" prefHeight="20.0" prefWidth="160.0" styleClass="greenPanel" stylesheets="@application.css" text="Reset Search">
+                                                   <padding>
+                                                      <Insets bottom="1.0" />
+                                                   </padding>
+                                                </Button>
+                                                <Button layoutX="155.0" layoutY="10.0" mnemonicParsing="false" onAction="#filterName" prefHeight="20.0" prefWidth="20.0" styleClass="filterButton" stylesheets="@application.css">
+                                                   <padding>
+                                                      <Insets left="1.0" right="1.0" />
+                                                   </padding>
+                                                </Button>
+                                                <Button layoutX="155.0" layoutY="40.0" mnemonicParsing="false" onAction="#filterGender" prefHeight="20.0" prefWidth="20.0" styleClass="filterButton" stylesheets="@application.css">
+                                                   <padding>
+                                                      <Insets left="1.0" right="1.0" />
+                                                   </padding>
+                                                </Button>
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                    </TitledPane>
                                 </panes>
                               </Accordion>
                               <Button mnemonicParsing="false" onAction="#save" prefHeight="20.0" prefWidth="160.0" styleClass="greenPanel" text="Save">
@@ -312,24 +340,17 @@
                                           <HBox prefHeight="26.0" prefWidth="200.0" style="-fx-background-color: #333333;" BorderPane.alignment="CENTER">
                                              <children>
                                                 <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="200.0" styleClass="greenPanel" stylesheets="@application.css" text="Menu" />
-                                                <Separator opacity="0.8" orientation="VERTICAL" prefHeight="200.0" prefWidth="2.0" style="-fx-background-color: #ffffff;" styleClass="greenPanel" stylesheets="@application.css" />
                                                 <Button fx:id="titleButton" mnemonicParsing="false" onAction="#sortTitle" prefHeight="25.0" prefWidth="100.0" styleClass="greenPanel" stylesheets="@application.css" text="Title" />
-                                                <Separator opacity="0.8" orientation="VERTICAL" prefHeight="200.0" prefWidth="2.0" style="-fx-background-color: #ffffff;" styleClass="greenPanel" stylesheets="@application.css" />
                                                 <Button fx:id="authorButton" minWidth="1.0" mnemonicParsing="false" onAction="#sortAuthor" prefHeight="25.0" prefWidth="100.0" styleClass="greenPanel" stylesheets="@application.css" text="Author" />
-                                                <Separator opacity="0.8" orientation="VERTICAL" prefHeight="200.0" prefWidth="2.0" style="-fx-background-color: #ffffff;" styleClass="greenPanel" stylesheets="@application.css" />
                                                 <Button fx:id="publisherButton" mnemonicParsing="false" onAction="#sortPublisher" prefHeight="25.0" prefWidth="100.0" styleClass="greenPanel" stylesheets="@application.css" text="Publisher" />
-                                                <Separator opacity="0.8" orientation="VERTICAL" prefHeight="200.0" prefWidth="2.0" style="-fx-background-color: #ffffff;" styleClass="greenPanel" stylesheets="@application.css" />
                                                 <Button fx:id="genreButton" mnemonicParsing="false" onAction="#sortGenre" prefHeight="25.0" prefWidth="100.0" styleClass="greenPanel" stylesheets="@application.css" text="Genre" />
-                                                <Separator opacity="0.8" orientation="VERTICAL" prefHeight="200.0" prefWidth="2.0" style="-fx-background-color: #ffffff;" styleClass="greenPanel" stylesheets="@application.css" />
                                                 <Button fx:id="yearButton" mnemonicParsing="false" onAction="#sortYear" prefHeight="25.0" prefWidth="60.0" styleClass="greenPanel" stylesheets="@application.css" text="Year" />
-                                                <Separator opacity="0.8" orientation="VERTICAL" prefHeight="200.0" prefWidth="2.0" style="-fx-background-color: #ffffff;" styleClass="greenPanel" stylesheets="@application.css" />
                                                 <Button fx:id="pagesButton" mnemonicParsing="false" onAction="#sortPages" prefHeight="25.0" prefWidth="60.0" styleClass="greenPanel" stylesheets="@application.css" text="Pages" />
-                                                <Separator opacity="0.8" orientation="VERTICAL" prefHeight="200.0" prefWidth="2.0" style="-fx-background-color: #ffffff;" styleClass="greenPanel" stylesheets="@application.css" />
                                              </children>
                                           </HBox>
                                        </top>
                                        <right>
-                                          <Pane prefHeight="200.0" prefWidth="145.0" styleClass="bluePanel" stylesheets="@application.css" BorderPane.alignment="CENTER" />
+                                          <Pane prefHeight="200.0" prefWidth="160.0" styleClass="bluePanel" stylesheets="@application.css" BorderPane.alignment="CENTER" />
                                        </right>
                                        <center>
                                           <AnchorPane BorderPane.alignment="CENTER">
@@ -400,13 +421,9 @@
                                           <HBox prefHeight="25.0" prefWidth="200.0" style="-fx-background-color: #333333;" BorderPane.alignment="CENTER">
                                              <children>
                                                 <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="200.0" styleClass="greenPanel" stylesheets="@application.css" text="Menu" />
-                                                <Separator opacity="0.8" orientation="VERTICAL" prefHeight="200.0" prefWidth="2.0" style="-fx-background-color: #ffffff;" styleClass="greenPanel" stylesheets="@application.css" />
                                                 <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" styleClass="greenPanel" stylesheets="@application.css" text="Name" />
-                                                <Separator opacity="0.8" orientation="VERTICAL" prefHeight="200.0" prefWidth="2.0" style="-fx-background-color: #ffffff;" styleClass="greenPanel" stylesheets="@application.css" />
                                                 <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" styleClass="greenPanel" stylesheets="@application.css" text="Gender" />
-                                                <Separator opacity="0.8" orientation="VERTICAL" prefHeight="200.0" prefWidth="2.0" style="-fx-background-color: #ffffff;" styleClass="greenPanel" stylesheets="@application.css" />
                                                 <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" styleClass="greenPanel" stylesheets="@application.css" text="Description" />
-                                                <Separator opacity="0.8" orientation="VERTICAL" prefHeight="200.0" prefWidth="2.0" style="-fx-background-color: #ffffff;" styleClass="greenPanel" stylesheets="@application.css" />
                                              </children>
                                           </HBox>
                                        </top>
@@ -414,7 +431,12 @@
                                           <Pane prefHeight="200.0" prefWidth="140.0" styleClass="redPanel" stylesheets="@application.css" BorderPane.alignment="CENTER" />
                                        </right>
                                        <center>
-                                          <Pane fx:id="characterPane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+                                          <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <Pane fx:id="characterPane" layoutX="23.0" layoutY="56.0" prefHeight="721.0" prefWidth="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="440.0" AnchorPane.topAnchor="0.0" />
+                                                <Pane fx:id="charBookPane" layoutX="300.0" prefHeight="325.0" prefWidth="440.0" />
+                                             </children>
+                                          </AnchorPane>
                                        </center>
                                     </BorderPane>
                                  </children>
