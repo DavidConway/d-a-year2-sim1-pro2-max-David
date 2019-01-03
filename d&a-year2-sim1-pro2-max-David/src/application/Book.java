@@ -10,6 +10,7 @@ private int pubYear, numOfPages,hashNum, sort;
 
 
 //book constructors
+		public Book() {};
 
 		public Book(String title, String author, String publisher, int pubYear, int numOfPages, String genre, String plot, int sort) {
 		this.title = title;
