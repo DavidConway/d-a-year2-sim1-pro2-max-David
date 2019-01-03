@@ -179,7 +179,6 @@ public class Controller {
     	choiceBook.getItems().add(newBook);//adds the new book to the choice book
     	Main.books.add(newBook);
     	updateBookGrid();
-    	
     }
 
     @FXML
@@ -498,6 +497,7 @@ public class Controller {
     	}
     	sortCharacters(names);
     	updateCharGrid();
+    	
     }
     
     //METHODS FOR FILTERING
