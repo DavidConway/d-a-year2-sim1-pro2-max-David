@@ -306,11 +306,13 @@ public class Controller {
         		button.setOnAction(e -> {
 	        		if(grid == bookPane){
 	        			activeBook=(Book)Main.books.get(hash);
+	        			updateBookGrid();
 	        		}
 	        		else {
 	        			activeChar = (Character)Main.chars.get(hash);
+	        			updateCharGrid();
 	        		}
-	        		updateBookGrid();
+	        		
         		}
         		);
     			button.setPrefWidth(100);
@@ -366,9 +368,19 @@ public class Controller {
     
     void updateCharGrid()
     {
+    	characterPane.getChildren().clear();
     	for (int i = 0; i < Main.chars.size(); i++) {
     		Character temp = (Character)Main.chars.get(i);
     		addToGrid(characterPane, (temp.getSort()), i, temp.getName(), temp.getGender(), temp.getDescription());	
+    	}
+    	charBookPane.getChildren().clear();
+    	if (activeChar != null)
+    	{
+    		for (int i = 0; i < activeChar.getList().size(); i++) {
+	    		int num = activeChar.getBook(i);
+	    		Book temp = (Book) Main.books.getHash(num);
+	    		addToGrid(charBookPane, i , num, temp.getTitle());
+    		}
     	}
     }
     
