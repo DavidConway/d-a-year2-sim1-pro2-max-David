@@ -307,10 +307,20 @@ public class Controller {
 	        		if(grid == bookPane){
 	        			activeBook=(Book)Main.books.get(hash);
 	        			updateBookGrid();
+	        			textEditTitle.setText(activeBook.getTitle());
+	        		    textEditAuthor.setText(activeBook.getAuthor());
+	        		    textEditYear.setText(Integer.toString(activeBook.getPubYear()));
+	        		    textEditLength.setText(Integer.toString(activeBook.getNumOfPages()));
+	        		    textEditGenre.setText(activeBook.getGenre());
+	        		    textEditPlot.setText(activeBook.getPlot());
+	        		    textEditPublisher.setText(activeBook.getPublisher());
 	        		}
 	        		else {
 	        			activeChar = (Character)Main.chars.get(hash);
 	        			updateCharGrid();
+	        			editTextName.setText(activeChar.getName());
+	        		    editTextGender.setText(activeChar.getGender());
+	        		    editTextDescription.setText(activeChar.getDescription());
 	        		}
 	        		
         		}
