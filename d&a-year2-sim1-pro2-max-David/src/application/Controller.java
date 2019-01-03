@@ -213,7 +213,6 @@ public class Controller {
     			updateBookGrid();
     		}
     	}
-
     }
 
     @FXML
@@ -437,8 +436,13 @@ public class Controller {
     void sortBooks(Integer [] numbers)
     {
     	Integer[] sort = Main.sortInt(numbers);
+    	
+    	System.out.println("Size: " + Main.books.size());
     	for (int i = 0; i < Main.books.size(); i++){
+    		System.out.println("Looping: " + i);
+    		System.out.println(Main.books.get(sort[i]).getSort() + " : " + i);
     		((Book) Main.books.get(sort[i])).setSort(i);
+    		
     	}
     }
     

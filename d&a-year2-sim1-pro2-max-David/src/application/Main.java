@@ -73,14 +73,40 @@ public class Main extends Application {
 			{
 				if (args[i] > args[i + 1]) 
 				{
+					int tempInt = index[i];
 					int temp = args[i];
+					index[i] = (index[(i + 1)]);
 					args[i] = args[i + 1];
 					args[i + 1] = temp;
+					index[(i + 1)] = tempInt;
 					swapped = true;
 					break;
 				}
 			}
 		}
-		return args;
+		return index;
+		
 	}
+	static Integer [] sort(Integer arr[]) 
+    { 
+        int n = arr.length; 
+  
+        // One by one move boundary of unsorted subarray 
+        for (int i = 0; i < n-1; i++) 
+        { 
+            // Find the minimum element in unsorted array 
+            int min_idx = i; 
+            for (int j = i+1; j < n; j++) 
+                if (arr[j] < arr[min_idx]) 
+                    min_idx = j; 
+  
+            // Swap the found minimum element with the first 
+            // element 
+            int temp = arr[min_idx]; 
+            arr[min_idx] = arr[i]; 
+            arr[i] = temp; 
+        } 
+        return arr;
+    }
+	
 }
