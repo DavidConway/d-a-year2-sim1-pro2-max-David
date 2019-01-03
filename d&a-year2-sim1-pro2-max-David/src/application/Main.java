@@ -59,37 +59,15 @@ public class Main extends Application {
 		}
 		return index;
 	}
-
-	static Integer[] sortInt(Integer[] args) {
-		Integer[] index = new Integer[args.length];
-		boolean swapped = true;
 		
-		for (int i = 0; i < args.length; i++) {
-			index[i] = i; // INITIALIZING INTEGER ARRAY
-		}
-		while (swapped == true) {
-			swapped = false;
-			for (int i = 0; i < (args.length-1); i++) // LOOPS THROUGH TITLES
-			{
-				if (args[i] > args[i + 1]) 
-				{
-					int tempInt = index[i];
-					int temp = args[i];
-					index[i] = (index[(i + 1)]);
-					args[i] = args[i + 1];
-					args[i + 1] = temp;
-					index[(i + 1)] = tempInt;
-					swapped = true;
-					break;
-				}
-			}
-		}
-		return index;
-		
-	}
 	static Integer [] sort(Integer arr[]) 
     { 
+		Integer[] index = new Integer[arr.length];
         int n = arr.length; 
+        
+        for (int i = 0; i < arr.length; i++) {
+			index[i] = i; // INITIALIZING INTEGER ARRAY
+		}
   
         // One by one move boundary of unsorted subarray 
         for (int i = 0; i < n-1; i++) 
@@ -102,11 +80,14 @@ public class Main extends Application {
   
             // Swap the found minimum element with the first 
             // element 
+            int tempInt = index[min_idx];
             int temp = arr[min_idx]; 
+            index[min_idx] = index[i];
             arr[min_idx] = arr[i]; 
             arr[i] = temp; 
+            index[i] = tempInt;
         } 
-        return arr;
+        return index;
     }
 	
 }
