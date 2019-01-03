@@ -132,12 +132,12 @@ public class Controller {
     @FXML
     void initialize()
     {
-    	bookScrollPane.setMinViewportHeight(Screen.getPrimary().getBounds().getHeight());
+    	bookScrollPane.setMinViewportHeight(Screen.getPrimary().getBounds().getHeight());	//Setting up scrollpane
     	bookScrollPane.setFitToHeight(true);
     	updateBookGrid();
     	updateCharGrid();
     	
-    	file.getItems().clear();
+    	file.getItems().clear();				//Adding menu items 
     	MenuItem save = new MenuItem("Save");
 		file.getItems().add(save);
 		save.setOnAction(e -> save());
@@ -185,7 +185,6 @@ public class Controller {
     @FXML
     void addCharOnClick(ActionEvent event) {
     	Character newChar = new Character(textName.getText(), textGender.getText(), textDescription.getText(), Main.chars.size());
-    	Main.sortedChars.add(newChar);
     	Main.chars.add(newChar);
     	updateCharGrid();
     }
@@ -311,6 +310,7 @@ public class Controller {
 	        		else {
 	        			activeChar = (Character)Main.chars.get(hash);
 	        		}
+	        		updateBookGrid();
         		}
         		);
     			button.setPrefWidth(100);
@@ -366,7 +366,7 @@ public class Controller {
     
     void updateCharGrid()
     {
-    	for (int i = 0; i < Main.sortedChars.size(); i++) {
+    	for (int i = 0; i < Main.chars.size(); i++) {
     		Character temp = (Character)Main.chars.get(i);
     		addToGrid(characterPane, (temp.getSort()), i, temp.getName(), temp.getGender(), temp.getDescription());	
     	}

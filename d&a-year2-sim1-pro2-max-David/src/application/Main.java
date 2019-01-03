@@ -11,8 +11,6 @@ import javafx.scene.layout.Pane;
 public class Main extends Application {
 	public static HashTable books = new HashTable();
 	public static HashTable chars = new HashTable();
-	static LinkedList<Book> sortedBooks = new LinkedList<>();
-	static LinkedList<Character> sortedChars = new LinkedList<>();
 	
 	@Override
 	public void start(Stage primaryStage) {
