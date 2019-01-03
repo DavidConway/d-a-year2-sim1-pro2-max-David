@@ -176,9 +176,16 @@ public class Controller {
 		//
 		Book newBook = new Book(textTitle.getText(), textAuthor.getText(), textPublisher.getText(), pubYear, pageCount,
 				textGenre.getText(), textPlot.getText(), Main.books.size());
+		if (newBook.getTitle().isEmpty())
+		{
+			error("What's the book there now?", "At least give the book a name you absolute animal.");
+		}
+		else
+		{
 		choiceBook.getItems().add(newBook);// adds the new book to the choice book
 		Main.books.add(newBook);
 		updateBookGrid();
+		}
 	}
 
 	@FXML
