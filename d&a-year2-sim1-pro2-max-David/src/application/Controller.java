@@ -563,13 +563,15 @@ public class Controller {
 	void filterPublisher(ActionEvent event) {
 		bookPane.getChildren().clear();
 		boolean found = false;
+		int j = 0;
 		String publisher = filterPublisher.getText();
 		for (int i = 0; i < Main.books.size(); i++) {
 			if (((Book) Main.books.get(i)).getPublisher().contains(publisher)) {
-				addToGrid(bookPane, 0, 0, ((Book) Main.books.get(i)).getTitle(), ((Book) Main.books.get(i)).getAuthor(),
+				addToGrid(bookPane, j, 0, ((Book) Main.books.get(i)).getTitle(), ((Book) Main.books.get(i)).getAuthor(),
 						((Book) Main.books.get(i)).getPublisher(), ((Book) Main.books.get(i)).getGenre(),
 						Integer.toString(((Book) Main.books.get(i)).getPubYear()),
 						Integer.toString(((Book) Main.books.get(i)).getNumOfPages()));
+				j++;
 				found = true;
 			}
 		}

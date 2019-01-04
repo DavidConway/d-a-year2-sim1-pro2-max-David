@@ -1,22 +1,245 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<java version="1.8.0_192" class="java.beans.XMLDecoder">
+<java version="1.8.0_181" class="java.beans.XMLDecoder">
  <array class="application.Hashable" length="10">
   <void index="0">
    <object class="application.Book">
     <void property="author">
-     <string></string>
+     <string>Samuel Jackson</string>
     </void>
     <void property="genre">
-     <string></string>
+     <string>Childrens</string>
+    </void>
+    <void property="numOfPages">
+     <int>12</int>
     </void>
     <void property="plot">
-     <string></string>
+     <string>No pls 3am sheel</string>
+    </void>
+    <void property="pubYear">
+     <int>2006</int>
     </void>
     <void property="publisher">
-     <string></string>
+     <string>BookBoys</string>
+    </void>
+    <void property="sort">
+     <int>6</int>
     </void>
     <void property="title">
-     <string></string>
+     <string>Go the fuck to sleep</string>
+    </void>
+   </object>
+  </void>
+  <void index="1">
+   <object class="application.Book">
+    <void property="author">
+     <string>Gibson</string>
+    </void>
+    <void property="genre">
+     <string>Sci-fi</string>
+    </void>
+    <void property="hashNum">
+     <int>1</int>
+    </void>
+    <void property="numOfPages">
+     <int>500</int>
+    </void>
+    <void property="plot">
+     <string>Cyberpunk vibes</string>
+    </void>
+    <void property="pubYear">
+     <int>1955</int>
+    </void>
+    <void property="publisher">
+     <string>Goodlad Books</string>
+    </void>
+    <void property="sort">
+     <int>5</int>
+    </void>
+    <void property="title">
+     <string>Neuromancer</string>
+    </void>
+   </object>
+  </void>
+  <void index="2">
+   <object class="application.Book">
+    <void property="author">
+     <string>G.M.M.Marteen</string>
+    </void>
+    <void property="genre">
+     <string>Fantasy</string>
+    </void>
+    <void property="hashNum">
+     <int>2</int>
+    </void>
+    <void property="numOfPages">
+     <int>6000</int>
+    </void>
+    <void property="plot">
+     <string>Fire and ice and tits</string>
+    </void>
+    <void property="pubYear">
+     <int>1996</int>
+    </void>
+    <void property="publisher">
+     <string>Goodman Books</string>
+    </void>
+    <void property="sort">
+     <int>4</int>
+    </void>
+    <void property="title">
+     <string>A Song of Ice and Fire</string>
+    </void>
+   </object>
+  </void>
+  <void index="3">
+   <object class="application.Book">
+    <void property="author">
+     <string>J.K.Rowling</string>
+    </void>
+    <void property="genre">
+     <string>YA</string>
+    </void>
+    <void property="hashNum">
+     <int>3</int>
+    </void>
+    <void property="numOfPages">
+     <int>120</int>
+    </void>
+    <void property="plot">
+     <string>Yer a wizard arry</string>
+    </void>
+    <void property="pubYear">
+     <int>1997</int>
+    </void>
+    <void property="publisher">
+     <string>Penguin</string>
+    </void>
+    <void property="title">
+     <string>Philosopher&apos;s Stone</string>
+    </void>
+   </object>
+  </void>
+  <void index="5">
+   <object class="application.Book">
+    <void property="author">
+     <string>J.K.Rowling</string>
+    </void>
+    <void property="genre">
+     <string>YA</string>
+    </void>
+    <void property="hashNum">
+     <int>5</int>
+    </void>
+    <void property="numOfPages">
+     <int>155</int>
+    </void>
+    <void property="plot">
+     <string>Sticks and and shtones and hoes and cloaks</string>
+    </void>
+    <void property="pubYear">
+     <int>2007</int>
+    </void>
+    <void property="publisher">
+     <string>Penguin</string>
+    </void>
+    <void property="sort">
+     <int>2</int>
+    </void>
+    <void property="title">
+     <string>Deathly Hallows</string>
+    </void>
+   </object>
+  </void>
+  <void index="7">
+   <object class="application.Book">
+    <void property="author">
+     <string>Phillip K. Dick</string>
+    </void>
+    <void property="genre">
+     <string>Sci-fi</string>
+    </void>
+    <void property="hashNum">
+     <int>7</int>
+    </void>
+    <void property="numOfPages">
+     <int>155</int>
+    </void>
+    <void property="plot">
+     <string>electric sheep</string>
+    </void>
+    <void property="pubYear">
+     <int>1968</int>
+    </void>
+    <void property="publisher">
+     <string>DoubleDay</string>
+    </void>
+    <void property="sort">
+     <int>3</int>
+    </void>
+    <void property="title">
+     <string>Do Androids Dream</string>
+    </void>
+   </object>
+  </void>
+  <void index="8">
+   <object class="application.Book">
+    <void property="author">
+     <string>J.K.Rowling</string>
+    </void>
+    <void property="genre">
+     <string>YA</string>
+    </void>
+    <void property="hashNum">
+     <int>8</int>
+    </void>
+    <void property="numOfPages">
+     <int>130</int>
+    </void>
+    <void property="plot">
+     <string>Big Cave, Big Dog, Big Shnake</string>
+    </void>
+    <void property="pubYear">
+     <int>1998</int>
+    </void>
+    <void property="publisher">
+     <string>Penguin</string>
+    </void>
+    <void property="sort">
+     <int>1</int>
+    </void>
+    <void property="title">
+     <string>Chamber of Secrets</string>
+    </void>
+   </object>
+  </void>
+  <void index="9">
+   <object class="application.Book">
+    <void property="author">
+     <string>BDSM</string>
+    </void>
+    <void property="genre">
+     <string>Softcore</string>
+    </void>
+    <void property="hashNum">
+     <int>9</int>
+    </void>
+    <void property="numOfPages">
+     <int>200</int>
+    </void>
+    <void property="plot">
+     <string>Pls</string>
+    </void>
+    <void property="pubYear">
+     <int>2007</int>
+    </void>
+    <void property="publisher">
+     <string>BDSM Books</string>
+    </void>
+    <void property="sort">
+     <int>7</int>
+    </void>
+    <void property="title">
+     <string>50 Shades of Grey</string>
     </void>
    </object>
   </void>
