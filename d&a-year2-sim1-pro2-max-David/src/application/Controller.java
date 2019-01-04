@@ -690,6 +690,12 @@ public class Controller {
 			Main.books.hashArray = (Hashable[]) decoB.readObject();
 			decoB.close();
 			inBook.close();
+			
+			for(Hashable c : Main.books.hashArray){
+				if(c !=null) {
+				choiceBook.getItems().add((Book)c);
+				}
+			}
 
 			FileInputStream inChar = new FileInputStream(
 					new File("./d&a-year2-sim1-pro2-max-David/src/Characters.xml"));

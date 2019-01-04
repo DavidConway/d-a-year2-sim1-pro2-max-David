@@ -1,4 +1,170 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <java version="1.8.0_181" class="java.beans.XMLDecoder">
- <array class="application.Hashable" length="10"/>
+ <array class="application.Hashable" length="10">
+  <void index="0">
+   <object class="application.Character">
+    <void property="description">
+     <string>I am the lad</string>
+    </void>
+    <void property="gender">
+     <string>M</string>
+    </void>
+    <void property="name">
+     <string>BDSM Man</string>
+    </void>
+    <void property="sort">
+     <int>7</int>
+    </void>
+   </object>
+  </void>
+  <void index="1">
+   <object class="application.Character">
+    <void property="description">
+     <string>I am the wolad</string>
+    </void>
+    <void property="gender">
+     <string>f</string>
+    </void>
+    <void property="hashNum">
+     <int>1</int>
+    </void>
+    <void property="name">
+     <string>BDSM woman</string>
+    </void>
+    <void property="sort">
+     <int>8</int>
+    </void>
+   </object>
+  </void>
+  <void index="2">
+   <object class="application.Character">
+    <void property="description">
+     <string>wizerd</string>
+    </void>
+    <void property="gender">
+     <string>M</string>
+    </void>
+    <void property="hashNum">
+     <int>2</int>
+    </void>
+    <void property="name">
+     <string>Harry Potter</string>
+    </void>
+    <void property="sort">
+     <int>1</int>
+    </void>
+   </object>
+  </void>
+  <void index="3">
+   <object class="application.Character">
+    <void property="description">
+     <string>Ginger</string>
+    </void>
+    <void property="gender">
+     <string>M</string>
+    </void>
+    <void property="hashNum">
+     <int>3</int>
+    </void>
+    <void property="name">
+     <string>Ronald Weasle</string>
+    </void>
+    <void property="sort">
+     <int>4</int>
+    </void>
+   </object>
+  </void>
+  <void index="4">
+   <object class="application.Character">
+    <void property="description">
+     <string>Good lad</string>
+    </void>
+    <void property="gender">
+     <string>M</string>
+    </void>
+    <void property="hashNum">
+     <int>4</int>
+    </void>
+    <void property="name">
+     <string>Case</string>
+    </void>
+   </object>
+  </void>
+  <void index="5">
+   <object class="application.Character">
+    <void property="description">
+     <string>Say what again</string>
+    </void>
+    <void property="gender">
+     <string>M</string>
+    </void>
+    <void property="hashNum">
+     <int>5</int>
+    </void>
+    <void property="name">
+     <string>Samuel jackson</string>
+    </void>
+    <void property="sort">
+     <int>5</int>
+    </void>
+   </object>
+  </void>
+  <void index="6">
+   <object class="application.Character">
+    <void property="description">
+     <string>Filthy mudblood</string>
+    </void>
+    <void property="gender">
+     <string>F</string>
+    </void>
+    <void property="hashNum">
+     <int>6</int>
+    </void>
+    <void property="name">
+     <string>Hermione Granger</string>
+    </void>
+    <void property="sort">
+     <int>2</int>
+    </void>
+   </object>
+  </void>
+  <void index="8">
+   <object class="application.Character">
+    <void property="description">
+     <string>Zombie killer</string>
+    </void>
+    <void property="gender">
+     <string>M</string>
+    </void>
+    <void property="hashNum">
+     <int>8</int>
+    </void>
+    <void property="name">
+     <string>Jon Snew</string>
+    </void>
+    <void property="sort">
+     <int>3</int>
+    </void>
+   </object>
+  </void>
+  <void index="9">
+   <object class="application.Character">
+    <void property="description">
+     <string>I am the lad on the hioll</string>
+    </void>
+    <void property="gender">
+     <string>M</string>
+    </void>
+    <void property="hashNum">
+     <int>9</int>
+    </void>
+    <void property="name">
+     <string>R. Decker</string>
+    </void>
+    <void property="sort">
+     <int>6</int>
+    </void>
+   </object>
+  </void>
+ </array>
 </java>
