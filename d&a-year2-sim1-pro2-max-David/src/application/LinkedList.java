@@ -67,7 +67,7 @@ public class LinkedList<T> {
 				node.next.setIndex(node.next.getIndex()-1);
 				node = node.next;
 			}
-		}	
+		}
 	}
 
 	public void clear() {

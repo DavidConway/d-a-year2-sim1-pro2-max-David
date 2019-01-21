@@ -21,408 +21,632 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
-  <children>
-    <MenuBar style="-fx-background-color: #ffffff;" VBox.vgrow="NEVER">
-      <menus>
-        <Menu fx:id="file" mnemonicParsing="false" text="File">
-          <items>
-            <MenuItem mnemonicParsing="false" text="New" />
-            <MenuItem mnemonicParsing="false" text="Open…" />
-            <Menu mnemonicParsing="false" text="Open Recent" />
-            <SeparatorMenuItem mnemonicParsing="false" />
-            <MenuItem mnemonicParsing="false" text="Close" />
-            <MenuItem mnemonicParsing="false" text="Save" />
-            <MenuItem mnemonicParsing="false" text="Save As…" />
-            <MenuItem mnemonicParsing="false" text="Revert" />
-            <SeparatorMenuItem mnemonicParsing="false" />
-            <MenuItem mnemonicParsing="false" text="Preferences…" />
-            <SeparatorMenuItem mnemonicParsing="false" />
-            <MenuItem mnemonicParsing="false" text="Quit" />
-          </items>
-        </Menu>
-        <Menu fx:id="edit" mnemonicParsing="false" text="Edit">
-          <items>
-            <MenuItem mnemonicParsing="false" text="Undo" />
-            <MenuItem mnemonicParsing="false" text="Redo" />
-            <SeparatorMenuItem mnemonicParsing="false" />
-            <MenuItem mnemonicParsing="false" text="Cut" />
-            <MenuItem mnemonicParsing="false" text="Copy" />
-            <MenuItem mnemonicParsing="false" text="Paste" />
-            <MenuItem mnemonicParsing="false" text="Delete" />
-            <SeparatorMenuItem mnemonicParsing="false" />
-            <MenuItem mnemonicParsing="false" text="Select All" />
-            <MenuItem mnemonicParsing="false" text="Unselect All" />
-          </items>
-        </Menu>
-        <Menu fx:id="help" mnemonicParsing="false" text="Help">
-          <items>
-            <MenuItem mnemonicParsing="false" text="About MyHelloApp" />
-          </items>
-        </Menu>
-      </menus>
-    </MenuBar>
-    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="455.0" prefWidth="1274.0" VBox.vgrow="ALWAYS">
-         <children>
-            <BorderPane layoutY="88.0" prefHeight="455.0" prefWidth="640.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-               <left>
-                  <StackPane prefHeight="758.0" prefWidth="160.0">
-                     <children>
-                        <VBox prefHeight="770.0" prefWidth="200.0" style="-fx-background-color: #333333;" styleClass="leftPanel" stylesheets="@application.css">
-                           <children>
-                              <Accordion minWidth="-Infinity" prefWidth="200.0" style="-fx-background-color: #ffffff;">
-                                <panes>
-                                  <TitledPane animated="false" minWidth="-Infinity" prefWidth="160.0" text="Add Book">
-                                    <content>
-                                      <AnchorPane maxWidth="200.0" minWidth="-Infinity" prefHeight="210.0" prefWidth="160.0" styleClass="bluePanel" stylesheets="application/application.css">
-                                             <children>
-                                                <TextField fx:id="textTitle" layoutX="20.0" layoutY="10.0" prefHeight="20.0" prefWidth="160.0" promptText="Title">
-                                                   <padding>
-                                                      <Insets left="5.0" />
-                                                   </padding>
-                                                </TextField>
-                                                <TextField fx:id="textAuthor" layoutX="20.0" layoutY="40.0" prefHeight="20.0" prefWidth="160.0" promptText="Author">
-                                                   <padding>
-                                                      <Insets left="5.0" />
-                                                   </padding>
-                                                </TextField>
-                                                <TextField fx:id="textYear" layoutX="20.0" layoutY="100.0" prefHeight="20.0" prefWidth="160.0" promptText="Year">
-                                                   <padding>
-                                                      <Insets left="5.0" />
-                                                   </padding>
-                                                </TextField>
-                                                <TextField fx:id="textLength" layoutX="20.0" layoutY="160.0" prefHeight="20.0" prefWidth="160.0" promptText="Length">
-                                                   <padding>
-                                                      <Insets left="5.0" />
-                                                   </padding>
-                                                </TextField>
-                                                <TextField fx:id="textGenre" layoutX="20.0" layoutY="130.0" prefHeight="20.0" prefWidth="160.0" promptText="Genre">
-                                                   <padding>
-                                                      <Insets left="5.0" />
-                                                   </padding>
-                                                </TextField>
-                                                <TextArea fx:id="textPlot" layoutX="20.0" layoutY="190.0" prefHeight="60.0" prefWidth="160.0" promptText="Plot" />
-                                                <Button layoutX="20.0" layoutY="260.0" mnemonicParsing="false" onAction="#addBookOnClick" prefHeight="20.0" prefWidth="160.0" styleClass="greenPanel" text="Add">
-                                                   <padding>
-                                                      <Insets bottom="1.0" />
-                                                   </padding>
-                                                </Button>
-                                                <TextField fx:id="textPublisher" layoutX="20.0" layoutY="70.0" prefHeight="20.0" prefWidth="160.0" promptText="Publisher">
-                                                   <padding>
-                                                      <Insets left="5.0" />
-                                                   </padding>
-                                                </TextField>
-                                             </children>
-                                          </AnchorPane>
-                                    </content>
-                                  </TitledPane>
-                                  <TitledPane animated="false" minWidth="-Infinity" prefWidth="160.0" text="Add Character">
-                                       <content>
-                                          <AnchorPane minWidth="-Infinity" style="-fx-background-color: #cc0000;" styleClass="redPanel" stylesheets="@application.css">
-                                             <children>
-                                                <TextField fx:id="textName" layoutX="20.0" layoutY="10.0" prefHeight="20.0" prefWidth="160.0" promptText="Name">
-                                                   <padding>
-                                                      <Insets left="5.0" />
-                                                   </padding>
-                                                </TextField>
-                                                <TextField fx:id="textGender" layoutX="20.0" layoutY="40.0" prefHeight="20.0" prefWidth="160.0" promptText="Gender">
-                                                   <padding>
-                                                      <Insets left="5.0" />
-                                                   </padding>
-                                                </TextField>
-                                                <TextArea fx:id="textDescription" layoutX="20.0" layoutY="70.0" prefHeight="20.0" prefWidth="160.0" promptText="Description" />
-                                                <Button layoutX="20.0" layoutY="120.0" mnemonicParsing="false" onAction="#addCharOnClick" prefHeight="20.0" prefWidth="160.0" text="Add">
-                                                   <padding>
-                                                      <Insets bottom="1.0" />
-                                                   </padding>
-                                                </Button>
-                                             </children>
-                                          </AnchorPane>
-                                       </content>
-                                    </TitledPane>
-                                    <TitledPane animated="false" minWidth="-Infinity" prefWidth="160.0" text="Filter Books">
-                                       <content>
-                                          <AnchorPane maxWidth="200.0" minWidth="-Infinity" prefHeight="212.0" prefWidth="160.0" styleClass="bluePanel" stylesheets="application/application.css">
-                                             <children>
-                                                <TextField fx:id="filterTitle" layoutX="20.0" layoutY="10.0" prefHeight="20.0" prefWidth="160.0" promptText="Title">
-                                                   <padding>
-                                                      <Insets left="5.0" />
-                                                   </padding>
-                                                </TextField>
-                                                <TextField fx:id="filterAuthor" layoutX="20.0" layoutY="40.0" prefHeight="20.0" prefWidth="160.0" promptText="Author">
-                                                   <padding>
-                                                      <Insets left="5.0" />
-                                                   </padding>
-                                                </TextField>
-                                                <TextField fx:id="filterYear" layoutX="20.0" layoutY="70.0" prefHeight="20.0" prefWidth="160.0" promptText="Year">
-                                                   <padding>
-                                                      <Insets left="5.0" />
-                                                   </padding>
-                                                </TextField>
-                                                <TextField fx:id="filterLength" layoutX="20.0" layoutY="160.0" prefHeight="20.0" prefWidth="160.0" promptText="Length">
-                                                   <padding>
-                                                      <Insets left="5.0" />
-                                                   </padding>
-                                                </TextField>
-                                                <TextField fx:id="filterGenre" layoutX="20.0" layoutY="130.0" prefHeight="20.0" prefWidth="160.0" promptText="Genre">
-                                                   <padding>
-                                                      <Insets left="5.0" />
-                                                   </padding>
-                                                </TextField>
-                                                <Button layoutX="20.0" layoutY="190.0" mnemonicParsing="false" onAction="#resetBookSearch" prefHeight="20.0" prefWidth="150.0" styleClass="greenPanel" stylesheets="@application.css" text="Reset Search">
-                                                   <padding>
-                                                      <Insets bottom="1.0" />
-                                                   </padding>
-                                                </Button> 
-                                                <TextField fx:id="filterPublisher" layoutX="20.0" layoutY="100.0" prefHeight="20.0" prefWidth="160.0" promptText="Publisher">
-                                                   <padding>
-                                                      <Insets left="5.0" />
-                                                   </padding>
-                                                </TextField>
-                                                <Button layoutX="155.0" layoutY="10.0" mnemonicParsing="false" onAction="#filterTitle" prefHeight="20.0" prefWidth="20.0" styleClass="filterButton" stylesheets="@application.css">
-                                                   <padding>
-                                                      <Insets left="1.0" right="1.0" />
-                                                   </padding>
-                                                </Button>
-                                                <Button layoutX="155.0" layoutY="40.0" mnemonicParsing="false" onAction="#filterAuthor" prefHeight="20.0" prefWidth="20.0" styleClass="filterButton" stylesheets="@application.css">
-                                                   <padding>
-                                                      <Insets left="1.0" right="1.0" />
-                                                   </padding>
-                                                </Button>
-                                                <Button layoutX="155.0" layoutY="70.0" mnemonicParsing="false" onAction="#filterYear" prefHeight="20.0" prefWidth="20.0" styleClass="filterButton" stylesheets="@application.css">
-                                                   <padding>
-                                                      <Insets left="1.0" right="1.0" />
-                                                   </padding>
-                                                </Button>
-                                                <Button layoutX="155.0" layoutY="100.0" mnemonicParsing="false" onAction="#filterPublisher" prefHeight="20.0" prefWidth="20.0" styleClass="filterButton" stylesheets="@application.css">
-                                                   <padding>
-                                                      <Insets left="1.0" right="1.0" />
-                                                   </padding>
-                                                </Button>
-                                                <Button layoutX="155.0" layoutY="130.0" mnemonicParsing="false" onAction="#filterGenre" prefHeight="20.0" prefWidth="20.0" styleClass="filterButton" stylesheets="@application.css">
-                                                   <padding>
-                                                      <Insets left="1.0" right="1.0" />
-                                                   </padding>
-                                                </Button>
-                                                <Button layoutX="155.0" layoutY="160.0" mnemonicParsing="false" onAction="#filterLength" prefHeight="20.0" prefWidth="20.0" styleClass="filterButton" stylesheets="@application.css">
-                                                   <padding>
-                                                      <Insets left="1.0" right="1.0" />
-                                                   </padding>
-                                                </Button>
-                                             </children>
-                                          </AnchorPane>
-                                       </content>
-                                    </TitledPane>
-                                    <TitledPane animated="false" minWidth="-Infinity" prefWidth="160.0" text="Filter Characters">
-                                       <content>
-                                          <AnchorPane maxWidth="200.0" minWidth="-Infinity" prefHeight="73.0" prefWidth="198.0" styleClass="bluePanel" stylesheets="application/application.css">
-                                             <children>
-                                                <TextField fx:id="filterName" layoutX="20.0" layoutY="10.0" prefHeight="20.0" prefWidth="160.0" promptText="Name">
-                                                   <padding>
-                                                      <Insets left="5.0" />
-                                                   </padding>
-                                                </TextField>
-                                                <TextField fx:id="filterGender" layoutX="20.0" layoutY="40.0" prefHeight="20.0" prefWidth="160.0" promptText="Gender">
-                                                   <padding>
-                                                      <Insets left="5.0" />
-                                                   </padding>
-                                                </TextField>
-                                                <Button layoutX="19.0" layoutY="70.0" mnemonicParsing="false" onAction="#resetBookSearch" prefHeight="20.0" prefWidth="160.0" styleClass="greenPanel" stylesheets="@application.css" text="Reset Search">
-                                                   <padding>
-                                                      <Insets bottom="1.0" />
-                                                   </padding>
-                                                </Button>
-                                                <Button layoutX="155.0" layoutY="10.0" mnemonicParsing="false" onAction="#filterName" prefHeight="20.0" prefWidth="20.0" styleClass="filterButton" stylesheets="@application.css">
-                                                   <padding>
-                                                      <Insets left="1.0" right="1.0" />
-                                                   </padding>
-                                                </Button>
-                                                <Button layoutX="155.0" layoutY="40.0" mnemonicParsing="false" onAction="#filterGender" prefHeight="20.0" prefWidth="20.0" styleClass="filterButton" stylesheets="@application.css">
-                                                   <padding>
-                                                      <Insets left="1.0" right="1.0" />
-                                                   </padding>
-                                                </Button>
-                                             </children>
-                                          </AnchorPane>
-                                       </content>
-                                    </TitledPane>
-                                </panes>
-                              </Accordion>
-                           </children>
-                        </VBox>
-                     </children>
-                  </StackPane>
-               </left>
-               <center>
-                  <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
-                    <tabs>
-                      <Tab text="Books">
-                        <content>
-                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                                 <children>
-                                    <BorderPane prefHeight="401.0" prefWidth="540.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                       <left>
-                                          <VBox maxWidth="140.0" prefHeight="705.0" prefWidth="140.0" style="-fx-background-color: #008ae6;" styleClass="bluePanel" stylesheets="@application.css" BorderPane.alignment="CENTER">
-                                             <children>
-                                                <AnchorPane maxWidth="200.0" minWidth="-Infinity" prefHeight="210.0" prefWidth="200.0" styleClass="bluePanel" stylesheets="application/application.css">
-                                                   <children>
-                                                      <TextField fx:id="textEditTitle" layoutX="20.0" layoutY="10.0" prefHeight="20.0" prefWidth="160.0" promptText="Title">
-                                                         <padding>
-                                                            <Insets left="5.0" />
-                                                         </padding>
-                                                      </TextField>
-                                                      <TextField fx:id="textEditAuthor" layoutX="20.0" layoutY="40.0" prefHeight="20.0" prefWidth="160.0" promptText="Author">
-                                                         <padding>
-                                                            <Insets left="5.0" />
-                                                         </padding>
-                                                      </TextField>
-                                                      <TextField fx:id="textEditYear" layoutX="20.0" layoutY="100.0" prefHeight="20.0" prefWidth="160.0" promptText="Year">
-                                                         <padding>
-                                                            <Insets left="5.0" />
-                                                         </padding>
-                                                      </TextField>
-                                                      <TextField fx:id="textEditLength" layoutX="20.0" layoutY="160.0" prefHeight="20.0" prefWidth="160.0" promptText="Length">
-                                                         <padding>
-                                                            <Insets left="5.0" />
-                                                         </padding>
-                                                      </TextField>
-                                                      <TextField fx:id="textEditGenre" layoutX="20.0" layoutY="130.0" prefHeight="20.0" prefWidth="160.0" promptText="Genre">
-                                                         <padding>
-                                                            <Insets left="5.0" />
-                                                         </padding>
-                                                      </TextField>
-                                                      <TextArea fx:id="textEditPlot" layoutX="20.0" layoutY="190.0" prefHeight="60.0" prefWidth="160.0" promptText="Plot" />
-                                                      <Button layoutX="20.0" layoutY="260.0" mnemonicParsing="false" onAction="#editBookOnClick" prefHeight="20.0" prefWidth="160.0" styleClass="greenPanel" text="Edit">
-                                                         <padding>
-                                                            <Insets bottom="1.0" />
-                                                         </padding>
-                                                      </Button>
-                                                      <TextField fx:id="textEditPublisher" layoutX="20.0" layoutY="70.0" prefHeight="20.0" prefWidth="160.0" promptText="Publisher">
-                                                         <padding>
-                                                            <Insets left="5.0" />
-                                                         </padding>
-                                                      </TextField>
-                                                      <Button layoutX="20.0" layoutY="290.0" mnemonicParsing="false" onAction="#deleteBookOnClick" prefHeight="20.0" prefWidth="160.0" styleClass="greenPanel" text="Delete">
-                                                         <padding>
-                                                            <Insets bottom="1.0" />
-                                                         </padding>
-                                                      </Button>
-                                                   </children>
-                                                </AnchorPane>
-                                             </children></VBox>
-                                       </left>
-                                       <top>
-                                          <HBox prefHeight="26.0" prefWidth="200.0" style="-fx-background-color: #333333;" BorderPane.alignment="CENTER">
-                                             <children>
-                                                <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="200.0" styleClass="greenPanel" stylesheets="@application.css" text="Menu" />
-                                                <Button fx:id="titleButton" mnemonicParsing="false" onAction="#sortTitle" prefHeight="25.0" prefWidth="100.0" styleClass="greenPanel" stylesheets="@application.css" text="Title" />
-                                                <Button fx:id="authorButton" minWidth="1.0" mnemonicParsing="false" onAction="#sortAuthor" prefHeight="25.0" prefWidth="100.0" styleClass="greenPanel" stylesheets="@application.css" text="Author" />
-                                                <Button fx:id="publisherButton" mnemonicParsing="false" onAction="#sortPublisher" prefHeight="25.0" prefWidth="100.0" styleClass="greenPanel" stylesheets="@application.css" text="Publisher" />
-                                                <Button fx:id="genreButton" mnemonicParsing="false" onAction="#sortGenre" prefHeight="25.0" prefWidth="100.0" styleClass="greenPanel" stylesheets="@application.css" text="Genre" />
-                                                <Button fx:id="yearButton" mnemonicParsing="false" onAction="#sortYear" prefHeight="25.0" prefWidth="60.0" styleClass="greenPanel" stylesheets="@application.css" text="Year" />
-                                                <Button fx:id="pagesButton" mnemonicParsing="false" onAction="#sortPages" prefHeight="25.0" prefWidth="60.0" styleClass="greenPanel" stylesheets="@application.css" text="Pages" />
-                                             </children>
-                                          </HBox>
-                                       </top>
-                                       <right>
-                                          <Pane prefHeight="200.0" prefWidth="160.0" styleClass="bluePanel" stylesheets="@application.css" BorderPane.alignment="CENTER" />
-                                       </right>
-                                       <center>
-                                          <AnchorPane BorderPane.alignment="CENTER">
-                                             <children>
-                                                <HBox prefHeight="511.5" prefWidth="840.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                                   <children>
-                                                      <Pane maxHeight="-Infinity" minWidth="512.0" prefWidth="597.0">
-                                                         <children>
-                                                            <ScrollPane fx:id="bookScrollPane" pannable="true" prefHeight="413.0" prefWidth="536.0">
-                                                               <content>
-                                                                  <AnchorPane fx:id="bookPane" />
-                                                               </content>
-                                                            </ScrollPane>
-                                                         </children></Pane>
-                                                      <Pane fx:id="bookCharPane" minWidth="200.0" prefHeight="720.0" prefWidth="200.0" styleClass="redPanel" stylesheets="@application.css" />
-                                                   </children>
-                                                </HBox>
-                                             </children>
-                                          </AnchorPane>
-                                       </center>
-                                    </BorderPane>
-                                 </children>
-                              </AnchorPane>
-                        </content>
-                      </Tab>
-                      <Tab text="Characters">
-                        <content>
-                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                                 <children>
-                                    <BorderPane layoutX="31.0" layoutY="25.0" prefHeight="401.0" prefWidth="540.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                       <left>
-                                          <VBox prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #cc0000;" styleClass="redPanel" stylesheets="@application.css" BorderPane.alignment="CENTER">
-                                             <children>
-                                                <AnchorPane minWidth="-Infinity" prefHeight="304.0" prefWidth="200.0" style="-fx-background-color: #cc0000;" styleClass="redPanel" stylesheets="@application.css">
-                                                   <children>
-                                                      <TextField fx:id="editTextName" layoutX="20.0" layoutY="10.0" prefHeight="20.0" prefWidth="160.0" promptText="Name">
-                                                         <padding>
-                                                            <Insets left="5.0" />
-                                                         </padding>
-                                                      </TextField>
-                                                      <TextField fx:id="editTextGender" layoutX="20.0" layoutY="40.0" prefHeight="20.0" prefWidth="160.0" promptText="Gender">
-                                                         <padding>
-                                                            <Insets left="5.0" />
-                                                         </padding>
-                                                      </TextField>
-                                                      <TextArea fx:id="editTextDescription" layoutX="20.0" layoutY="70.0" prefHeight="20.0" prefWidth="160.0" promptText="Description" />
-                                                      <Button layoutX="20.0" layoutY="120.0" mnemonicParsing="false" onAction="#editCharOnClick" prefHeight="20.0" prefWidth="160.0" text="Edit">
-                                                         <padding>
-                                                            <Insets bottom="1.0" />
-                                                         </padding>
-                                                      </Button>
-                                                      <Button layoutX="20.0" layoutY="150.0" mnemonicParsing="false" onAction="#deleteCharOnClick" prefHeight="20.0" prefWidth="160.0" text="Delete">
-                                                         <padding>
-                                                            <Insets bottom="1.0" />
-                                                         </padding>
-                                                      </Button>
-                                                      <Button layoutX="20.0" layoutY="180.0" mnemonicParsing="false" onAction="#addToBookOnClick" prefHeight="20.0" prefWidth="160.0" styleClass="greenPanel" text="Add To Book">
-                                                         <padding>
-                                                            <Insets bottom="1.0" />
-                                                         </padding>
-                                                      </Button>
-                                                      <ComboBox fx:id="choiceBook" layoutX="20.0" layoutY="210.0" prefWidth="160.0" />
-                                                   </children>
-                                                </AnchorPane>
-                                             </children></VBox>
-                                       </left>
-                                       <top>
-                                          <HBox prefHeight="25.0" prefWidth="200.0" style="-fx-background-color: #333333;" BorderPane.alignment="CENTER">
-                                             <children>
-                                                <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="200.0" styleClass="greenPanel" stylesheets="@application.css" text="Menu" />
-                                                <Button mnemonicParsing="false" onAction="#sortName" prefHeight="25.0" prefWidth="100.0" styleClass="greenPanel" stylesheets="@application.css" text="Name" />
-                                                <Button mnemonicParsing="false" onAction="#sortGender" prefHeight="25.0" prefWidth="100.0" styleClass="greenPanel" stylesheets="@application.css" text="Gender" />
-                                                <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" styleClass="greenPanel" stylesheets="@application.css" text="Description" />
-                                             </children>
-                                          </HBox>
-                                       </top>
-                                       <right>
-                                          <Pane prefHeight="200.0" prefWidth="140.0" styleClass="redPanel" stylesheets="@application.css" BorderPane.alignment="CENTER" />
-                                       </right>
-                                       <center>
-                                          <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-                                             <children>
-                                                <Pane fx:id="characterPane" layoutX="23.0" layoutY="56.0" prefHeight="721.0" prefWidth="560.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="186.0" AnchorPane.topAnchor="0.0" />
-                                                <Pane fx:id="charBookPane" layoutX="560.0" prefHeight="325.0" prefWidth="180.0" />
-                                             </children>
-                                          </AnchorPane>
-                                       </center>
-                                    </BorderPane>
-                                 </children>
-                              </AnchorPane>
-                        </content>
-                      </Tab>
-                    </tabs>
-                  </TabPane>
-               </center>
-            </BorderPane>
-         </children>
-    </AnchorPane>
-  </children>
+<VBox maxHeight="-Infinity" maxWidth="-Infinity"
+	minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0"
+	prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.171"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="application.Controller">
+	<children>
+		<MenuBar style="-fx-background-color: #ffffff;"
+			VBox.vgrow="NEVER">
+			<menus>
+				<Menu fx:id="file" mnemonicParsing="false" text="File">
+					<items>
+						<MenuItem mnemonicParsing="false" text="New" />
+						<MenuItem mnemonicParsing="false" text="Open…" />
+						<Menu mnemonicParsing="false" text="Open Recent" />
+						<SeparatorMenuItem mnemonicParsing="false" />
+						<MenuItem mnemonicParsing="false" text="Close" />
+						<MenuItem mnemonicParsing="false" text="Save" />
+						<MenuItem mnemonicParsing="false" text="Save As…" />
+						<MenuItem mnemonicParsing="false" text="Revert" />
+						<SeparatorMenuItem mnemonicParsing="false" />
+						<MenuItem mnemonicParsing="false" text="Preferences…" />
+						<SeparatorMenuItem mnemonicParsing="false" />
+						<MenuItem mnemonicParsing="false" text="Quit" />
+					</items>
+				</Menu>
+				<Menu fx:id="edit" mnemonicParsing="false" text="Edit">
+					<items>
+						<MenuItem mnemonicParsing="false" text="Undo" />
+						<MenuItem mnemonicParsing="false" text="Redo" />
+						<SeparatorMenuItem mnemonicParsing="false" />
+						<MenuItem mnemonicParsing="false" text="Cut" />
+						<MenuItem mnemonicParsing="false" text="Copy" />
+						<MenuItem mnemonicParsing="false" text="Paste" />
+						<MenuItem mnemonicParsing="false" text="Delete" />
+						<SeparatorMenuItem mnemonicParsing="false" />
+						<MenuItem mnemonicParsing="false" text="Select All" />
+						<MenuItem mnemonicParsing="false" text="Unselect All" />
+					</items>
+				</Menu>
+				<Menu fx:id="help" mnemonicParsing="false" text="Help">
+					<items>
+						<MenuItem mnemonicParsing="false" text="About MyHelloApp" />
+					</items>
+				</Menu>
+			</menus>
+		</MenuBar>
+		<AnchorPane maxHeight="-1.0" maxWidth="-1.0"
+			prefHeight="455.0" prefWidth="1274.0" VBox.vgrow="ALWAYS">
+			<children>
+				<BorderPane layoutY="88.0" prefHeight="455.0"
+					prefWidth="640.0" style="-fx-background-color: #ffffff;"
+					AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+					AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+					<left>
+						<StackPane prefHeight="758.0" prefWidth="160.0">
+							<children>
+								<VBox prefHeight="770.0" prefWidth="200.0"
+									style="-fx-background-color: #333333;" styleClass="leftPanel"
+									stylesheets="@application.css">
+									<children>
+										<Accordion minWidth="-Infinity" prefWidth="200.0"
+											style="-fx-background-color: #ffffff;">
+											<panes>
+												<TitledPane animated="false" minWidth="-Infinity"
+													prefWidth="160.0" text="Add Book">
+													<content>
+														<AnchorPane maxWidth="200.0"
+															minWidth="-Infinity" prefHeight="210.0" prefWidth="160.0"
+															styleClass="bluePanel"
+															stylesheets="application/application.css">
+															<children>
+																<TextField fx:id="textTitle" layoutX="20.0"
+																	layoutY="10.0" prefHeight="20.0" prefWidth="160.0"
+																	promptText="Title">
+																	<padding>
+																		<Insets left="5.0" />
+																	</padding>
+																</TextField>
+																<TextField fx:id="textAuthor" layoutX="20.0"
+																	layoutY="40.0" prefHeight="20.0" prefWidth="160.0"
+																	promptText="Author">
+																	<padding>
+																		<Insets left="5.0" />
+																	</padding>
+																</TextField>
+																<TextField fx:id="textYear" layoutX="20.0"
+																	layoutY="100.0" prefHeight="20.0" prefWidth="160.0"
+																	promptText="Year">
+																	<padding>
+																		<Insets left="5.0" />
+																	</padding>
+																</TextField>
+																<TextField fx:id="textLength" layoutX="20.0"
+																	layoutY="160.0" prefHeight="20.0" prefWidth="160.0"
+																	promptText="Length">
+																	<padding>
+																		<Insets left="5.0" />
+																	</padding>
+																</TextField>
+																<TextField fx:id="textGenre" layoutX="20.0"
+																	layoutY="130.0" prefHeight="20.0" prefWidth="160.0"
+																	promptText="Genre">
+																	<padding>
+																		<Insets left="5.0" />
+																	</padding>
+																</TextField>
+																<TextArea fx:id="textPlot" layoutX="20.0"
+																	layoutY="190.0" prefHeight="60.0" prefWidth="160.0"
+																	promptText="Plot" />
+																<Button layoutX="20.0" layoutY="260.0"
+																	mnemonicParsing="false" onAction="#addBookOnClick"
+																	prefHeight="20.0" prefWidth="160.0"
+																	styleClass="greenPanel" text="Add">
+																	<padding>
+																		<Insets bottom="1.0" />
+																	</padding>
+																</Button>
+																<TextField fx:id="textPublisher"
+																	layoutX="20.0" layoutY="70.0" prefHeight="20.0"
+																	prefWidth="160.0" promptText="Publisher">
+																	<padding>
+																		<Insets left="5.0" />
+																	</padding>
+																</TextField>
+															</children>
+														</AnchorPane>
+													</content>
+												</TitledPane>
+												<TitledPane animated="false" minWidth="-Infinity"
+													prefWidth="160.0" text="Add Character">
+													<content>
+														<AnchorPane minWidth="-Infinity"
+															style="-fx-background-color: #cc0000;"
+															styleClass="redPanel" stylesheets="@application.css">
+															<children>
+																<TextField fx:id="textName" layoutX="20.0"
+																	layoutY="10.0" prefHeight="20.0" prefWidth="160.0"
+																	promptText="Name">
+																	<padding>
+																		<Insets left="5.0" />
+																	</padding>
+																</TextField>
+																<TextField fx:id="textGender" layoutX="20.0"
+																	layoutY="40.0" prefHeight="20.0" prefWidth="160.0"
+																	promptText="Gender">
+																	<padding>
+																		<Insets left="5.0" />
+																	</padding>
+																</TextField>
+																<TextArea fx:id="textDescription"
+																	layoutX="20.0" layoutY="70.0" prefHeight="20.0"
+																	prefWidth="160.0" promptText="Description" />
+																<Button layoutX="20.0" layoutY="120.0"
+																	mnemonicParsing="false" onAction="#addCharOnClick"
+																	prefHeight="20.0" prefWidth="160.0" text="Add">
+																	<padding>
+																		<Insets bottom="1.0" />
+																	</padding>
+																</Button>
+															</children>
+														</AnchorPane>
+													</content>
+												</TitledPane>
+												<TitledPane animated="false" minWidth="-Infinity"
+													prefWidth="160.0" text="Filter Books">
+													<content>
+														<AnchorPane maxWidth="200.0"
+															minWidth="-Infinity" prefHeight="212.0" prefWidth="160.0"
+															styleClass="bluePanel"
+															stylesheets="application/application.css">
+															<children>
+																<TextField fx:id="filterTitle" layoutX="20.0"
+																	layoutY="10.0" prefHeight="20.0" prefWidth="160.0"
+																	promptText="Title">
+																	<padding>
+																		<Insets left="5.0" />
+																	</padding>
+																</TextField>
+																<TextField fx:id="filterAuthor" layoutX="20.0"
+																	layoutY="40.0" prefHeight="20.0" prefWidth="160.0"
+																	promptText="Author">
+																	<padding>
+																		<Insets left="5.0" />
+																	</padding>
+																</TextField>
+																<TextField fx:id="filterYear" layoutX="20.0"
+																	layoutY="70.0" prefHeight="20.0" prefWidth="160.0"
+																	promptText="Year">
+																	<padding>
+																		<Insets left="5.0" />
+																	</padding>
+																</TextField>
+																<TextField fx:id="filterLength" layoutX="20.0"
+																	layoutY="160.0" prefHeight="20.0" prefWidth="160.0"
+																	promptText="Length">
+																	<padding>
+																		<Insets left="5.0" />
+																	</padding>
+																</TextField>
+																<TextField fx:id="filterGenre" layoutX="20.0"
+																	layoutY="130.0" prefHeight="20.0" prefWidth="160.0"
+																	promptText="Genre">
+																	<padding>
+																		<Insets left="5.0" />
+																	</padding>
+																</TextField>
+																<Button layoutX="20.0" layoutY="190.0"
+																	mnemonicParsing="false" onAction="#resetBookSearch"
+																	prefHeight="20.0" prefWidth="150.0"
+																	styleClass="greenPanel" stylesheets="@application.css"
+																	text="Reset Search">
+																	<padding>
+																		<Insets bottom="1.0" />
+																	</padding>
+																</Button>
+																<TextField fx:id="filterPublisher"
+																	layoutX="20.0" layoutY="100.0" prefHeight="20.0"
+																	prefWidth="160.0" promptText="Publisher">
+																	<padding>
+																		<Insets left="5.0" />
+																	</padding>
+																</TextField>
+																<Button layoutX="155.0" layoutY="10.0"
+																	mnemonicParsing="false" onAction="#filterTitle"
+																	prefHeight="20.0" prefWidth="20.0"
+																	styleClass="filterButton"
+																	stylesheets="@application.css">
+																	<padding>
+																		<Insets left="1.0" right="1.0" />
+																	</padding>
+																</Button>
+																<Button layoutX="155.0" layoutY="40.0"
+																	mnemonicParsing="false" onAction="#filterAuthor"
+																	prefHeight="20.0" prefWidth="20.0"
+																	styleClass="filterButton"
+																	stylesheets="@application.css">
+																	<padding>
+																		<Insets left="1.0" right="1.0" />
+																	</padding>
+																</Button>
+																<Button layoutX="155.0" layoutY="70.0"
+																	mnemonicParsing="false" onAction="#filterYear"
+																	prefHeight="20.0" prefWidth="20.0"
+																	styleClass="filterButton"
+																	stylesheets="@application.css">
+																	<padding>
+																		<Insets left="1.0" right="1.0" />
+																	</padding>
+																</Button>
+																<Button layoutX="155.0" layoutY="100.0"
+																	mnemonicParsing="false" onAction="#filterPublisher"
+																	prefHeight="20.0" prefWidth="20.0"
+																	styleClass="filterButton"
+																	stylesheets="@application.css">
+																	<padding>
+																		<Insets left="1.0" right="1.0" />
+																	</padding>
+																</Button>
+																<Button layoutX="155.0" layoutY="130.0"
+																	mnemonicParsing="false" onAction="#filterGenre"
+																	prefHeight="20.0" prefWidth="20.0"
+																	styleClass="filterButton"
+																	stylesheets="@application.css">
+																	<padding>
+																		<Insets left="1.0" right="1.0" />
+																	</padding>
+																</Button>
+																<Button layoutX="155.0" layoutY="160.0"
+																	mnemonicParsing="false" onAction="#filterLength"
+																	prefHeight="20.0" prefWidth="20.0"
+																	styleClass="filterButton"
+																	stylesheets="@application.css">
+																	<padding>
+																		<Insets left="1.0" right="1.0" />
+																	</padding>
+																</Button>
+															</children>
+														</AnchorPane>
+													</content>
+												</TitledPane>
+												<TitledPane animated="false" minWidth="-Infinity"
+													prefWidth="160.0" text="Filter Characters">
+													<content>
+														<AnchorPane maxWidth="200.0"
+															minWidth="-Infinity" prefHeight="73.0" prefWidth="198.0"
+															styleClass="bluePanel"
+															stylesheets="application/application.css">
+															<children>
+																<TextField fx:id="filterName" layoutX="20.0"
+																	layoutY="10.0" prefHeight="20.0" prefWidth="160.0"
+																	promptText="Name">
+																	<padding>
+																		<Insets left="5.0" />
+																	</padding>
+																</TextField>
+																<TextField fx:id="filterGender" layoutX="20.0"
+																	layoutY="40.0" prefHeight="20.0" prefWidth="160.0"
+																	promptText="Gender">
+																	<padding>
+																		<Insets left="5.0" />
+																	</padding>
+																</TextField>
+																<Button layoutX="19.0" layoutY="70.0"
+																	mnemonicParsing="false" onAction="#resetBookSearch"
+																	prefHeight="20.0" prefWidth="160.0"
+																	styleClass="greenPanel" stylesheets="@application.css"
+																	text="Reset Search">
+																	<padding>
+																		<Insets bottom="1.0" />
+																	</padding>
+																</Button>
+																<Button layoutX="155.0" layoutY="10.0"
+																	mnemonicParsing="false" onAction="#filterName"
+																	prefHeight="20.0" prefWidth="20.0"
+																	styleClass="filterButton"
+																	stylesheets="@application.css">
+																	<padding>
+																		<Insets left="1.0" right="1.0" />
+																	</padding>
+																</Button>
+																<Button layoutX="155.0" layoutY="40.0"
+																	mnemonicParsing="false" onAction="#filterGender"
+																	prefHeight="20.0" prefWidth="20.0"
+																	styleClass="filterButton"
+																	stylesheets="@application.css">
+																	<padding>
+																		<Insets left="1.0" right="1.0" />
+																	</padding>
+																</Button>
+															</children>
+														</AnchorPane>
+													</content>
+												</TitledPane>
+											</panes>
+										</Accordion>
+									</children>
+								</VBox>
+							</children>
+						</StackPane>
+					</left>
+					<center>
+						<TabPane prefHeight="200.0" prefWidth="200.0"
+							tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+							<tabs>
+								<Tab text="Books">
+									<content>
+										<AnchorPane minHeight="0.0" minWidth="0.0"
+											prefHeight="180.0" prefWidth="200.0">
+											<children>
+												<BorderPane prefHeight="401.0" prefWidth="540.0"
+													AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+													AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+													<left>
+														<VBox maxWidth="140.0" prefHeight="705.0"
+															prefWidth="140.0" style="-fx-background-color: #008ae6;"
+															styleClass="bluePanel" stylesheets="@application.css"
+															BorderPane.alignment="CENTER">
+															<children>
+																<AnchorPane maxWidth="200.0"
+																	minWidth="-Infinity" prefHeight="210.0"
+																	prefWidth="200.0" styleClass="bluePanel"
+																	stylesheets="application/application.css">
+																	<children>
+																		<TextField fx:id="textEditTitle"
+																			layoutX="20.0" layoutY="10.0" prefHeight="20.0"
+																			prefWidth="160.0" promptText="Title">
+																			<padding>
+																				<Insets left="5.0" />
+																			</padding>
+																		</TextField>
+																		<TextField fx:id="textEditAuthor"
+																			layoutX="20.0" layoutY="40.0" prefHeight="20.0"
+																			prefWidth="160.0" promptText="Author">
+																			<padding>
+																				<Insets left="5.0" />
+																			</padding>
+																		</TextField>
+																		<TextField fx:id="textEditYear"
+																			layoutX="20.0" layoutY="100.0" prefHeight="20.0"
+																			prefWidth="160.0" promptText="Year">
+																			<padding>
+																				<Insets left="5.0" />
+																			</padding>
+																		</TextField>
+																		<TextField fx:id="textEditLength"
+																			layoutX="20.0" layoutY="160.0" prefHeight="20.0"
+																			prefWidth="160.0" promptText="Length">
+																			<padding>
+																				<Insets left="5.0" />
+																			</padding>
+																		</TextField>
+																		<TextField fx:id="textEditGenre"
+																			layoutX="20.0" layoutY="130.0" prefHeight="20.0"
+																			prefWidth="160.0" promptText="Genre">
+																			<padding>
+																				<Insets left="5.0" />
+																			</padding>
+																		</TextField>
+																		<TextArea fx:id="textEditPlot" layoutX="20.0"
+																			layoutY="190.0" prefHeight="60.0" prefWidth="160.0"
+																			promptText="Plot" />
+																		<Button layoutX="20.0" layoutY="260.0"
+																			mnemonicParsing="false" onAction="#editBookOnClick"
+																			prefHeight="20.0" prefWidth="160.0"
+																			styleClass="greenPanel" text="Edit">
+																			<padding>
+																				<Insets bottom="1.0" />
+																			</padding>
+																		</Button>
+																		<TextField fx:id="textEditPublisher"
+																			layoutX="20.0" layoutY="70.0" prefHeight="20.0"
+																			prefWidth="160.0" promptText="Publisher">
+																			<padding>
+																				<Insets left="5.0" />
+																			</padding>
+																		</TextField>
+																		<Button layoutX="20.0" layoutY="290.0"
+																			mnemonicParsing="false" onAction="#deleteBookOnClick"
+																			prefHeight="20.0" prefWidth="160.0"
+																			styleClass="greenPanel" text="Delete">
+																			<padding>
+																				<Insets bottom="1.0" />
+																			</padding>
+																		</Button>
+																	</children>
+																</AnchorPane>
+															</children>
+														</VBox>
+													</left>
+													<top>
+														<HBox prefHeight="26.0" prefWidth="200.0"
+															style="-fx-background-color: #333333;"
+															BorderPane.alignment="CENTER">
+															<children>
+																<Button mnemonicParsing="false" prefHeight="25.0"
+																	prefWidth="200.0" styleClass="greenPanel"
+																	stylesheets="@application.css" text="Menu" />
+																<Button fx:id="titleButton"
+																	mnemonicParsing="false" onAction="#sortTitle"
+																	prefHeight="25.0" prefWidth="100.0"
+																	styleClass="greenPanel" stylesheets="@application.css"
+																	text="Title" />
+																<Button fx:id="authorButton" minWidth="1.0"
+																	mnemonicParsing="false" onAction="#sortAuthor"
+																	prefHeight="25.0" prefWidth="100.0"
+																	styleClass="greenPanel" stylesheets="@application.css"
+																	text="Author" />
+																<Button fx:id="publisherButton"
+																	mnemonicParsing="false" onAction="#sortPublisher"
+																	prefHeight="25.0" prefWidth="100.0"
+																	styleClass="greenPanel" stylesheets="@application.css"
+																	text="Publisher" />
+																<Button fx:id="genreButton"
+																	mnemonicParsing="false" onAction="#sortGenre"
+																	prefHeight="25.0" prefWidth="100.0"
+																	styleClass="greenPanel" stylesheets="@application.css"
+																	text="Genre" />
+																<Button fx:id="yearButton"
+																	mnemonicParsing="false" onAction="#sortYear"
+																	prefHeight="25.0" prefWidth="60.0"
+																	styleClass="greenPanel" stylesheets="@application.css"
+																	text="Year" />
+																<Button fx:id="pagesButton"
+																	mnemonicParsing="false" onAction="#sortPages"
+																	prefHeight="25.0" prefWidth="60.0"
+																	styleClass="greenPanel" stylesheets="@application.css"
+																	text="Pages" />
+															</children>
+														</HBox>
+													</top>
+													<right>
+														<Pane prefHeight="200.0" prefWidth="160.0"
+															styleClass="bluePanel" stylesheets="@application.css"
+															BorderPane.alignment="CENTER" />
+													</right>
+													<center>
+														<AnchorPane BorderPane.alignment="CENTER">
+															<children>
+																<HBox prefHeight="511.5" prefWidth="840.0"
+																	AnchorPane.bottomAnchor="0.0"
+																	AnchorPane.leftAnchor="0.0"
+																	AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+																	<children>
+																		<Pane maxHeight="-Infinity" minWidth="512.0"
+																			prefWidth="597.0">
+																			<children>
+																				<ScrollPane fx:id="bookScrollPane"
+																					pannable="true" prefHeight="413.0"
+																					prefWidth="536.0">
+																					<content>
+																						<AnchorPane fx:id="bookPane" />
+																					</content>
+																				</ScrollPane>
+																			</children>
+																		</Pane>
+																		<Pane fx:id="bookCharPane" minWidth="200.0"
+																			prefHeight="720.0" prefWidth="200.0"
+																			styleClass="redPanel" stylesheets="@application.css" />
+																	</children>
+																</HBox>
+															</children>
+														</AnchorPane>
+													</center>
+												</BorderPane>
+											</children>
+										</AnchorPane>
+									</content>
+								</Tab>
+								<Tab text="Characters">
+									<content>
+										<AnchorPane minHeight="0.0" minWidth="0.0"
+											prefHeight="180.0" prefWidth="200.0">
+											<children>
+												<BorderPane layoutX="31.0" layoutY="25.0"
+													prefHeight="401.0" prefWidth="540.0"
+													AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+													AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+													<left>
+														<VBox prefHeight="200.0" prefWidth="200.0"
+															style="-fx-background-color: #cc0000;"
+															styleClass="redPanel" stylesheets="@application.css"
+															BorderPane.alignment="CENTER">
+															<children>
+																<AnchorPane minWidth="-Infinity"
+																	prefHeight="304.0" prefWidth="200.0"
+																	style="-fx-background-color: #cc0000;"
+																	styleClass="redPanel" stylesheets="@application.css">
+																	<children>
+																		<TextField fx:id="editTextName"
+																			layoutX="20.0" layoutY="10.0" prefHeight="20.0"
+																			prefWidth="160.0" promptText="Name">
+																			<padding>
+																				<Insets left="5.0" />
+																			</padding>
+																		</TextField>
+																		<TextField fx:id="editTextGender"
+																			layoutX="20.0" layoutY="40.0" prefHeight="20.0"
+																			prefWidth="160.0" promptText="Gender">
+																			<padding>
+																				<Insets left="5.0" />
+																			</padding>
+																		</TextField>
+																		<TextArea fx:id="editTextDescription"
+																			layoutX="20.0" layoutY="70.0" prefHeight="20.0"
+																			prefWidth="160.0" promptText="Description" />
+																		<Button layoutX="20.0" layoutY="120.0"
+																			mnemonicParsing="false" onAction="#editCharOnClick"
+																			prefHeight="20.0" prefWidth="160.0" text="Edit">
+																			<padding>
+																				<Insets bottom="1.0" />
+																			</padding>
+																		</Button>
+																		<Button layoutX="20.0" layoutY="150.0"
+																			mnemonicParsing="false" onAction="#deleteCharOnClick"
+																			prefHeight="20.0" prefWidth="160.0" text="Delete">
+																			<padding>
+																				<Insets bottom="1.0" />
+																			</padding>
+																		</Button>
+																		<Button layoutX="20.0" layoutY="180.0"
+																			mnemonicParsing="false" onAction="#addToBookOnClick"
+																			prefHeight="20.0" prefWidth="160.0"
+																			styleClass="greenPanel" text="Add To Book">
+																			<padding>
+																				<Insets bottom="1.0" />
+																			</padding>
+																		</Button>
+																		<ComboBox fx:id="choiceBook" layoutX="20.0"
+																			layoutY="210.0" prefWidth="160.0" />
+																	</children>
+																</AnchorPane>
+															</children>
+														</VBox>
+													</left>
+													<top>
+														<HBox prefHeight="25.0" prefWidth="200.0"
+															style="-fx-background-color: #333333;"
+															BorderPane.alignment="CENTER">
+															<children>
+																<Button mnemonicParsing="false" prefHeight="25.0"
+																	prefWidth="200.0" styleClass="greenPanel"
+																	stylesheets="@application.css" text="Menu" />
+																<Button mnemonicParsing="false"
+																	onAction="#sortName" prefHeight="25.0"
+																	prefWidth="100.0" styleClass="greenPanel"
+																	stylesheets="@application.css" text="Name" />
+																<Button mnemonicParsing="false"
+																	onAction="#sortGender" prefHeight="25.0"
+																	prefWidth="100.0" styleClass="greenPanel"
+																	stylesheets="@application.css" text="Gender" />
+																<Button mnemonicParsing="false" prefHeight="25.0"
+																	prefWidth="100.0" styleClass="greenPanel"
+																	stylesheets="@application.css" text="Description" />
+															</children>
+														</HBox>
+													</top>
+													<right>
+														<Pane prefHeight="200.0" prefWidth="140.0"
+															styleClass="redPanel" stylesheets="@application.css"
+															BorderPane.alignment="CENTER" />
+													</right>
+													<center>
+														<AnchorPane prefHeight="200.0"
+															prefWidth="200.0" BorderPane.alignment="CENTER">
+															<children>
+																<Pane fx:id="characterPane" layoutX="23.0"
+																	layoutY="56.0" prefHeight="721.0" prefWidth="560.0"
+																	AnchorPane.bottomAnchor="0.0"
+																	AnchorPane.leftAnchor="0.0"
+																	AnchorPane.rightAnchor="186.0"
+																	AnchorPane.topAnchor="0.0" />
+																<Pane fx:id="charBookPane" layoutX="560.0"
+																	prefHeight="325.0" prefWidth="180.0" />
+															</children>
+														</AnchorPane>
+													</center>
+												</BorderPane>
+											</children>
+										</AnchorPane>
+									</content>
+								</Tab>
+							</tabs>
+						</TabPane>
+					</center>
+				</BorderPane>
+			</children>
+		</AnchorPane>
+	</children>
 </VBox>

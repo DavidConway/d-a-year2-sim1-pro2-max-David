@@ -1,19 +1,19 @@
 .root{
   -fx-background: #f5f5f5;
   
-  -fx-font: 14px Corbel;
-  -fx-prompt-text-fill: rgba(0,0,0,.3);
+  -fx-font: 14.0px Corbel;
+  -fx-prompt-text-fill: rgba(0.0,0.0,0.0,0.3);
 }
 
 .text-field, .button, .combo-box, .choice-box{
-	-fx-background-radius: 0;
+	-fx-background-radius: 0.0;
 	-fx-background-color: #f7f7f7f7;
-	-fx-border-radius: 0;
-	-fx-background-insets: 0, 0, 0, 0;
+	-fx-border-radius: 0.0;
+	-fx-background-insets: 0.0, 0.0, 0.0, 0.0;
 }
 
 .button{
-	-fx-border-radius: 0;
+	-fx-border-radius: 0.0;
 }
 .filterButton{
 	-fx-background-image: url('images/btn.jpg');
@@ -21,25 +21,25 @@
 	-fx-opacity: 0.55;
 }
 .filterButton.button:hover{
-	-fx-effect:innershadow(gaussian , white , 4  , .5 , 0 , 0 ); 
+	-fx-effect:innershadow(gaussian , white , 4.0  , 0.5 , 0.0 , 0.0 ); 
 }
 .filterButton.button:pressed{
-	-fx-effect:innershadow(gaussian , black , 2  , .1 , 0 , 0 ); 
+	-fx-effect:innershadow(gaussian , black , 2.0  , 0.1 , 0.0 , 0.0 ); 
 }
 .searchMenu{
 	-fx-background-image: url('images/fire2.jpg');
 }
 .separator .line {
-    -fx-border-width: 0;
+    -fx-border-width: 0.0;
 }
 
 .button:hover {
 	-fx-background-color: #c3c3c3;
-	-fx-effect:innershadow(gaussian , white , 15  , .6 , 0 , 0 ); 
+	-fx-effect:innershadow(gaussian , white , 15.0  , 0.6 , 0.0 , 0.0 ); 
 }
 
 .button:pressed{
-	-fx-effect:innershadow(gaussian , black , 12  , .1 , 0 , 0 ); 
+	-fx-effect:innershadow(gaussian , black , 12.0  , 0.1 , 0.0 , 0.0 ); 
 }
 
 .greenPanel{
@@ -53,13 +53,13 @@
 }
 
 .titled-pane:hover{
-	-fx-effect:innershadow(three-pass-box , white , 10  , -4 , 0 , 0 ); 
+	-fx-effect:innershadow(three-pass-box , white , 10.0  , -4.0 , 0.0 , 0.0 ); 
 	
 }
 
 .tab-pane *.tab-header-background {
 	-fx-background-image:url('images/centre.jpg');
-    -fx-effect: innershadow(two-pass-box , rgba(0,0,0,0.6) , 4, 0.0 , 0 , 0);
+    -fx-effect: innershadow(two-pass-box , rgba(0.0,0.0,0.0,0.6) , 4.0, 0.0 , 0.0 , 0.0);
     -fx-opacity: 0.2;
 }
 
@@ -78,31 +78,31 @@
 }
 
 .gridlabel{
-	-fx-background-radius: 1;
-	-fx-border-radius: 1;
+	-fx-background-radius: 1.0;
+	-fx-border-radius: 1.0;
 	-fx-border-color: #333333;
 	-fx-background-color: #ffffff;
-	-fx-font: 12px Corbel;
-	-fx-pref-height: 30;
-	-fx-effect: innershadow(two-pass-box , rgba(0,0,0,0.6) , 4, 0.0 , 0 , 0);
-	-fx-label-padding:0.0 5,5,5,5;
+	-fx-font: 12.0px Corbel;
+	-fx-pref-height: 30.0;
+	-fx-effect: innershadow(two-pass-box , rgba(0.0,0.0,0.0,0.6) , 4.0, 0.0 , 0.0 , 0.0);
+	-fx-label-padding:0.0 5.0,5.0,5.0,5.0;
 }
 
 .tab{
-	-fx-background-radius: 0;
+	-fx-background-radius: 0.0;
 	-fx-color: #ffffff;
-	-fx-border-radius: 0;
+	-fx-border-radius: 0.0;
 
 }
 
 .split-pane{
-	-fx-border-radius: 1;
+	-fx-border-radius: 1.0;
 	-fx-border-color: #333333;
-	-fx-background-radius: 00;
-	-fx-background-insets: 0, 0, 0, 0;
+	-fx-background-radius: 0.0;
+	-fx-background-insets: 0.0, 0.0, 0.0, 0.0;
 }
 .split-pane-divider {
-  -fx-padding: 2 ;
+  -fx-padding: 2.0 ;
 }
 
 .accordion {
@@ -110,13 +110,13 @@
 	
 }
 .select {
-	-fx-font: 12px Corbel;
+	-fx-font: 12.0px Corbel;
 	-fx-background-color: #ffffff;
-	-fx-background-radius: 1;
-	-fx-border-radius: 1;
+	-fx-background-radius: 1.0;
+	-fx-border-radius: 1.0;
 	-fx-border-color: #333333;
-	-fx-font-size: 14;
-	-fx-pref-height: 30;
+	-fx-font-size: 14.0;
+	-fx-pref-height: 30.0;
 }
 
 .scroll-pane > .viewport {
